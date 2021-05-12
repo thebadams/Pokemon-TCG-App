@@ -1,0 +1,52 @@
+#TitleBar {
+    background-color: #ee1515;
+}
+
+#linkBar{
+    background-color: #222224;
+
+}
+
+#title {
+    color: #f0f0f0;
+}
+
+#searchBtn{
+    background-color: #222224;
+}
+
+.navbar-item{
+    color: #f0f0f0;
+}
+
+#DecksBtn:hover{
+    background-color: #f0f0f0;
+    color: black;
+}
+
+
+
+/* Media Queries */
+
+
+@media only screen 
+and (min-width:1025px)
+ {
+    #searchField{
+        margin-left: 300px;
+        margin-right: 300px;
+    }
+}
+
+@media only screen 
+and (min-device-width : 320px)
+and (max-width:600px) {
+    .navbar-item{
+        color: #f0f0f0;
+    }
+    
+    #DecksBtn:hover{
+        background-color: #f0f0f0;
+        color: black;
+    }
+}
