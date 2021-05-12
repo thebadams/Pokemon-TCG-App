@@ -14,7 +14,15 @@ Pokemon.belongsTo(User, {
 
 //types belongsToMany pokemon through pokemon types type_id
 
-//pokemon belongs
+//pokemon belongsToMany Ability through pokemonAbilities through pokemon_id
+
+//
+
+//Ability belongsToMany Pokemon through pokemonAbilities ability_id
+
+//pokemon belongsToMany Attack through pokemonAttack pokemon_id
+
+//Attack belongsToMAny pokemon through attack_id
 
 
 
