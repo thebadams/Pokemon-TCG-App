@@ -14,6 +14,10 @@ PokemonType.init(
         type_id: {
             type:DataTypes.INTEGER,
             allowNull: false,
+            references: {
+                model: 'type',
+                key: 'id',
+            }
         },
         pokemon_id: {
             type:DataTypes.INTEGER,
@@ -29,7 +33,7 @@ PokemonType.init(
         timestamps: false,
         underscored: true,
         freezeTableName: true,
-        modelName: "type",
+        modelName: "pokemonType",
     },
 );
 
