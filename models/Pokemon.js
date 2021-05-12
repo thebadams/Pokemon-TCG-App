@@ -41,4 +41,4 @@ Pokemon.init(
   },
 );
 
-module.exports = Pokemon
+module.exports = Pokemon;
