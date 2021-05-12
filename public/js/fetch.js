@@ -7,3 +7,4 @@ async function searchAPI(query) {
     console.error(error);
   }
 }
+
