@@ -27,10 +27,7 @@ Ability.init(
         type:DataTypes.STRING,
         allowNull: false,
     },
-    ability_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
+
   },
   {
     sequelize,
