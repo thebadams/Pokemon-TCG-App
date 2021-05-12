@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class PokemonAbilities extends Model {}
+class Ability extends Model {}
 
-PokemonAbilities.init(
+Ability.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,21 +11,25 @@ PokemonAbilities.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    pokemon_id: {
-      type: DataTypes.INTEGER,
+    ability_name: {
+      type: DataTypes.STRING,
       allowNull: false,
-      references: {
-        model: "pokemon",
-        key: "id",
-      },
+    },
+    ability_effect: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    ability_text:{
+        type:DataTypes.STRING,
+        allowNull: false,
+    },
+    ability_type:{
+        type:DataTypes.STRING,
+        allowNull: false,
     },
     ability_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      references: {
-        model: "ability",
-        key: "id",
-      },
     },
   },
   {
@@ -33,8 +37,8 @@ PokemonAbilities.init(
     timestamps: false,
     underscored: true,
     freezeTableName: true,
-    modelName: "pokemonAbilities",
+    modelName: "ability",
   }
 );
 
-module.exports = PokemonAbilities;
+module.exports = Ability;

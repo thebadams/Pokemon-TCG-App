@@ -14,6 +14,8 @@ Pokemon.belongsTo(User, {
 
 //types belongsToMany pokemon through pokemon types type_id
 
+//pokemon belongs
+
 
 
 module.exports = Pokemon;
