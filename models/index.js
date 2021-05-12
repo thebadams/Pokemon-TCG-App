@@ -7,6 +7,13 @@ User.hasMany(Pokemon, {
 
 Pokemon.belongsTo(User, {
   foreignKey: 'user_id',
+  onDelete: 'cascade'
 });
+
+//pokemon belongsToMany types through pokemon types pokemon_id 
+
+//types belongsToMany pokemon through pokemon types type_id
+
+
 
 module.exports = Pokemon;
