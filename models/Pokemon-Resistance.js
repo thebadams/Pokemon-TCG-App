@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class PokemonType extends Model {}
+class PokemonResistance extends Model {}
 
-PokemonType.init(
+PokemonResistance.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,11 +11,11 @@ PokemonType.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    type_id: {
+    resistance_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'type',
+        model: 'resistance',
         key: 'id',
       },
     },
@@ -37,4 +37,4 @@ PokemonType.init(
   },
 );
 
-module.exports = PokemonType;
+module.exports = PokemonResistance;
