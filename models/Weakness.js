@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Weakness extends Model{}
+class Weakness extends Model {}
 
 Weakness.init(
   {
