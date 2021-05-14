@@ -35,3 +35,5 @@ router.put('/:id', async (res, req) => {
     res.status(500).json(error);
   }
 });
+
+module.exports = router;
