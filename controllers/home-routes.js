@@ -28,7 +28,29 @@ const { Card, User } = require('../models');
 // });
 
 router.get('/', async (req, res) => {
-    res.render('homepage', { title: 'Express' });
+  res.render('homepage', { title: 'Express' });
+});
+
+router.get('/battle', async (req, res) => {
+  res.render('battle', { title: 'Express' });
+});
+
+router.get('/pokedex', async (req, res) => {
+  res.render('pokedex', { title: 'Express' });
+});
+
+router.get('/profile', async (req, res) => {
+  res.render('profile', { title: 'Express' });
+});
+
+router.get('/login', (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  if (req.session.logged_in) {
+    res.redirect('/profile');
+    return;
+  }
+
+  res.render('login');
 });
 
 module.exports = router;
