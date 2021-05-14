@@ -1,5 +1,5 @@
 const sequelize = require('../config/connection');
-const { User, Project } = require('../models');
+const { User, Card, Deck } = require('../models');
 
 const userData = require('./userData.json');
 const projectData = require('./projectData.json');
@@ -23,3 +23,7 @@ const seedDatabase = async () => {
 };
 
 seedDatabase();
+
+const cardData = require('./card-data');
+const deckData = require('./deck-data');
+const userData = require('./user-data')
