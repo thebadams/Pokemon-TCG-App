@@ -1,7 +1,9 @@
 /* Pokeball Color Pallete
 https://www.color-hex.com/color-palette/1045 */
-
-
+:root {
+    --red:	#ee1515;
+    --black: #222224;
+}
 .navBar{
-    background-color:#222224 ;
+    background-color:var(--black) ;
 }
