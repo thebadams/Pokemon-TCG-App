@@ -4,15 +4,17 @@ const Weakness = require('./Weakness');
 const PokemonWeakness = require('./Pokemon-Weakness');
 const Resistance = require('./Resistance');
 const PokemonResistance = require('./Pokemon-Resistance');
+const Deck = require('./Deck');
+const Card = require('./Card');
 
-User.hasMany(Pokemon, {
-  foreignKey: 'user_id',
-});
+// User.hasMany(Pokemon, {
+//   foreignKey: 'user_id',
+// });
 
-Pokemon.belongsTo(User, {
-  foreignKey: 'user_id',
-  onDelete: 'cascade',
-});
+// Pokemon.belongsTo(User, {
+//   foreignKey: 'user_id',
+//   onDelete: 'cascade',
+// });
 
 //pokemon belongsToMany types through pokemon types pokemon_id 
 
@@ -33,6 +35,26 @@ Pokemon.hasMany(Resistance, {
 Resistance.belongsToMany(Pokemon, {
   through: PokemonResistance,
 });
+
+
+Deck.hasMany(Card, {
+  foreignKey: 'deck_id'
+});
+Card.belongsTo(Deck, {
+  foreignKey: 'deck_id',
+});
+
+User.hasMany(Deck, {
+  foreignKey: 'user_id',
+});
+Deck.belongsTo(Card, {
+  foreignKey: "user_id",
+});
+
+
+
+
+
 
 module.exports = Pokemon;
 
