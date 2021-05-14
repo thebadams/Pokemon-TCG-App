@@ -4,6 +4,7 @@ const Weakness = require('./Weakness');
 const PokemonWeakness = require('./Pokemon-Weakness');
 const Resistance = require('./Resistance');
 const PokemonResistance = require('./Pokemon-Resistance');
+
 User.hasMany(Pokemon, {
   foreignKey: 'user_id',
 });
@@ -34,3 +35,22 @@ Resistance.belongsToMany(Pokemon, {
 });
 
 module.exports = Pokemon;
+
+//---DECK-----
+//id pk
+//deck name
+// user_id references user.id
+
+//--associations---
+//deck.hasmany card
+//card belongsTo deck
+
+//user has many deck
+//deck belongsto user
+
+//-----CARD-----
+
+//card has id/ pk
+//card card name
+//card card_img 
+//card deck_id model deck key id
