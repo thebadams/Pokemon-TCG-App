@@ -44,8 +44,8 @@ router.get('/profile', async (req, res) => {
 });
 
 router.get('/trading', async (req, res) => {
-    res.render('trading', { title: 'Express' });
-  });
+  res.render('trading', { title: 'Express' });
+});
 
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
