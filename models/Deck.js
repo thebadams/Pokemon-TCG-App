@@ -1,4 +1,4 @@
-const { Model, Datatypes, DataTypes } = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 
@@ -24,6 +24,7 @@ Deck.init(
         key: 'id',
       }
     },
+   
   },
   {
     sequelize,
