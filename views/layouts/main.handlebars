@@ -1,153 +1,96 @@
-<!DOCTYPE html>
 <html>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pokemon Homepage Template
-  </title>
-  <script src="https://kit.fontawesome.com/0d8db3f55e.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-  <link rel="stylesheet" href="/css/style.css">
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pokemon Homepage Template
+    </title>
+    <script
+      src="https://kit.fontawesome.com/0d8db3f55e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+    />
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
 
-<body class="is-mobile">
-  <section class="hero is-large is-danger is-mobile">
-    <div class="hero body" id="TitleBar">
-      <p class="title">
-        <h1 class="title is-1 has-text-centered" id="title"><span class="iconify" data-icon="mdi-pokeball"
-            data-inline="false"></span>Pokédex<span class="iconify" data-icon="mdi-pokeball" data-inline="false"></span>
-        </h1>
-      </p>
-    </div>
-  </section>
+  <body class="is-mobile">
+    <section class="hero is-large is-danger is-mobile">
+      <div class="hero body" id="TitleBar">
+        <p class="title">
+          <h1 class="title is-1 has-text-centered" id="title"><span
+              class="iconify"
+              data-icon="mdi-pokeball"
+              data-inline="false"
+            ></span>Pokédex<span
+              class="iconify"
+              data-icon="mdi-pokeball"
+              data-inline="false"
+            ></span>
+          </h1>
+        </p>
+      </div>
+    </section>
 
-  <nav class="navbar has-shadow is-primary" id="linkBar">
-    <div class="navbar-end">
-      <a class="navbar-burger" id="burger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </a>
-    </div>
-    <div class="navbar-menu" id="nav-links">
-      <a class="navbar-item">Home</a>
-      <a class="navbar-item">Battle!</a>
-      <a class="navbar-item">Log in</a>
-      <a class="navbar-item">Log out</a>
+    <nav class="navbar has-shadow is-primary" id="linkBar">
       <div class="navbar-end">
-        <a class="navbar-item" id="profile">My Profile</a>
+        <a class="navbar-burger" id="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
       </div>
-    </div>
-  </nav>
-
-  <section class="section" id="searchField">
-    <div class="card">
-
-      <div class="card-content">
-        <input class="input is-large has-text-centered	" type="text" placeholder="User Input Here" id="search-input">
-      </div>
-      <footer class="card-footer">
-        <div class="card-footer-item">
-          <a class="button is-success is-medium" id="searchBtn">
-            <span class="icon-text">
-              <span class="icon">
-                <i class="fas fa-search"></i>
-              </span>
-              <span>Search</span>
-            </span>
-          </a>
+      <div class="navbar-menu" id="nav-links">
+        <a class="navbar-item">Home</a>
+        <a class="navbar-item">Battle!</a>
+        <a class="navbar-item">Profile</a>
+        <a class="navbar-item">Pokédex</a>
+        {{#if logged_in}}
+          <a class="nav-item" id="logout">Logout</a>
+        {{else}}
+          <a class="nav-item" href="/login">Login</a>
+        {{/if}}
+        <div class="navbar-end">
+          <a class="navbar-item" id="profile">My Profile</a>
         </div>
-      </footer>
-    </div>
-  </section>
-  <div class="modal save-modal">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-      <header class="modal-card-head">
-        <p class="button" id="save-title">Saved Decks</p>
-        <button class="delete save-dismiss" aria-label="close"></button>
-      </header>
-      <section class="modal-card-body">
-        <ol id="save-ol">
-
-</body>
-
-</html><!DOCTYPE html>
-<html>
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pokemon Homepage Template
-  </title>
-  <script src="https://kit.fontawesome.com/0d8db3f55e.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-  <link rel="stylesheet" href="/css/style.css">
-</head>
-
-<body class="is-mobile">
-  <section class="hero is-large is-danger is-mobile">
-    <div class="hero body" id="TitleBar">
-      <p class="title">
-        <h1 class="title is-1 has-text-centered" id="title"><span class="iconify" data-icon="mdi-pokeball"
-            data-inline="false"></span>Pokédex<span class="iconify" data-icon="mdi-pokeball" data-inline="false"></span>
-        </h1>
-      </p>
-    </div>
-  </section>
-
-  <nav class="navbar has-shadow is-primary" id="linkBar">
-    <div class="navbar-end">
-      <a class="navbar-burger" id="burger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </a>
-    </div>
-    <div class="navbar-menu" id="nav-links">
-      <a class="navbar-item">Home</a>
-      <a class="navbar-item">Battle!</a>
-      <a class="navbar-item">Log in</a>
-      <a class="navbar-item">Log out</a>
-      <div class="navbar-end">
-        <a class="navbar-item" id="profile">My Profile</a>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  <section class="section" id="searchField">
-    <div class="card">
+    <section class="section" id="searchField">
+      <div class="card">
 
-      <div class="card-content">
-        <input class="input is-large has-text-centered	" type="text" placeholder="User Input Here" id="search-input">
-      </div>
-      <footer class="card-footer">
-        <div class="card-footer-item">
-          <a class="button is-success is-medium" id="searchBtn">
-            <span class="icon-text">
-              <span class="icon">
-                <i class="fas fa-search"></i>
-              </span>
-              <span>Search</span>
-            </span>
-          </a>
+        <div class="card-content">
+          <input
+            class="input is-large has-text-centered"
+            type="text"
+            placeholder="User Input Here"
+            id="search-input"
+          />
         </div>
-      </footer>
-    </div>
-  </section>
-  <div class="modal save-modal">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-      <header class="modal-card-head">
-        <p class="button" id="save-title">Saved Decks</p>
-        <button class="delete save-dismiss" aria-label="close"></button>
-      </header>
-      <section class="modal-card-body">
-        <ol id="save-ol">
+        <footer class="card-footer">
+          <div class="card-footer-item">
+            <a class="button is-success is-medium" id="searchBtn">
+              <span class="icon-text">
+                <span class="icon">
+                  <i class="fas fa-search"></i>
+                </span>
+                <span>Search</span>
+              </span>
+            </a>
+          </div>
+        </footer>
+      </div>
+    </section>
 
-</body>
+   <!-- materialize javascript package -->
+    <script src="/js/materialize.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    {{#if logged_in}}
+      <script src="/js/logout.js"></script>
+    {{/if}}
+  </body>
 
 </html>
