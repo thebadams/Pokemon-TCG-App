@@ -20,4 +20,5 @@ https://www.color-hex.com/color-palette/1045 */
 
 .titleBody{
     display: flex;
+    justify-content: space-around;
 }
