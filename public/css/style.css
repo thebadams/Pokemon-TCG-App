@@ -22,3 +22,10 @@ https://www.color-hex.com/color-palette/1045 */
     display: flex;
     justify-content: space-around;
 }
+
+/* Background image for profile Decks sidenav */
+.profile-bg img{
+    float: left;
+    width: 300px;
+    height: 120px;
+}
