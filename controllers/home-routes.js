@@ -28,23 +28,23 @@ const { Card, User } = require('../models');
 // });
 
 router.get('/', async (req, res) => {
-  res.render('homepage', { title: 'Express' });
+  res.render('homepage', { logged_in: req.session.logged_in });
 });
 
 router.get('/battle', async (req, res) => {
-  res.render('battle', { title: 'Express' });
+  res.render('battle', { logged_in: req.session.logged_in });
 });
 
 router.get('/pokedex', async (req, res) => {
-  res.render('pokedex', { title: 'Express' });
+  res.render('pokedex', { logged_in: req.session.logged_in });
 });
 
 router.get('/profile', async (req, res) => {
-  res.render('profile', { title: 'Express' });
+  res.render('profile', { logged_in: req.session.logged_in });
 });
 
 router.get('/trading', async (req, res) => {
-  res.render('trading', { title: 'Express' });
+  res.render('trading', { logged_in: req.session.logged_in });
 });
 
 router.get('/login', (req, res) => {
