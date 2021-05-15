@@ -1,0 +1,50 @@
+<form class="searchForm">
+    <div class="row">
+        <div class="col s12">
+            <div class="row">
+                <div class="input-field col s5 m6">
+                    <i class="material-icons prefix">search</i>
+                    <input type="text" id="autocomplete-input" class="autocomplete">
+                    <label for="autocomplete-input">Search</label>
+                </div>
+                <div class="col s5">
+                    <button class="btn waves-effect waves-light btn-large" type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+{{!-- work in progress--}}
+<ul class="collapsible">
+    <li>
+        <div class="collapsible-header">Advanced Search</div>
+        <div class="collapsible-body"><span>
+                <ul>
+                    <li>
+                        <option>Option 1</option>
+                    </li>
+                    <li>
+                        <option>Option 2</option>
+                    </li>
+                    <li>
+                        <option>Option 3</option>
+                    </li>
+                    <li>
+                        <option>Option 4</option>
+                    </li>
+                    <li>
+                        <option>Option 5</option>
+                    </li>
+                </ul>
+            </span></div>
+    </li>
+</ul>
+
+{{#each cards as |card|}}
+
+{{> card-info card}}
+
+{{/each}}

@@ -1,0 +1,37 @@
+:root {
+    /* Pokeball Color Pallete
+https://www.color-hex.com/color-palette/1045 */
+    --red: #ee1515;
+    --black: #222224;
+    --white: #f0f0f0;
+    --blue: #21437C;
+    --yellow: #F4CB08;
+}
+
+.navBar {
+    background-color: var(--black);
+}
+
+.titleBanner {
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.titleBody {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Background image for profile Decks sidenav */
+.profile-bg img {
+    float: left;
+    width: 300px;
+    height: 120px;
+}
+
+/* Pokeball on decks pullout */
+.pokeball {
+    width: 30px;
+    height: 30px;
+    color: var(--red);
+}
