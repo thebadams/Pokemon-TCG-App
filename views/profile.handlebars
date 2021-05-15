@@ -35,13 +35,16 @@
   class="sidenav-trigger btn waves-effect waves-light"
 >My Decks</a>
 {{! Carousel of cards }}
+
+
 <div class="carousel">
-  <a href="#modal1"class="carousel-item modal-trigger"><img src="/images/bulbasaur.png" /></a>
+  {{#each cards as |card|}}
+  <a href="#{{card.id}}"class="carousel-item modal-trigger"><img src="{{card.card_image}}" /></a>
   <!-- Modal Structure -->
-  <div id="modal1" class="modal">
+  <div id="{{card.id}}" class="modal">
     <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
+      <h4>{{card.card_name}}</h4>
+      <p>{{card.description}}</p>
     </div>
     <div class="modal-footer">
       <a
@@ -50,9 +53,10 @@
       >Agree</a>
     </div>
   </div>
+  {{/each}}
 
-  <a class="carousel-item" href="#two!"><img src="/images/charmander.png" /></a>
+  {{!-- <a class="carousel-item" href="#two!"><img src="/images/charmander.png" /></a>
   <a class="carousel-item" href="#three!"><img src="/images/eevee.png" /></a>
   <a class="carousel-item" href="#four!"><img src="/images/mew.png" /></a>
   <a class="carousel-item" href="#five!"><img src="/images/mewtwo.png" /></a>
-</div>
+</div> --}}
