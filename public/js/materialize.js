@@ -50,3 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
 $(document).ready(function(){
   $('.collapsible').collapsible();
 });
+
+  $(document).ready(function(){
+    $('select').formSelect();
+  });
