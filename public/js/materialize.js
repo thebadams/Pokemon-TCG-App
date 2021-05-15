@@ -11,11 +11,11 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 //Modal
-document.addEventListener('DOMContentLoaded', function () {
-  var elems = document.querySelectorAll('.modal');
-  var instances = M.Modal.init(elems, document.options);
-});
 
+$(document).ready(function(){
+  $('.modal').modal();
+});
+        
 // Autocomplete search bar
 var pokeData = {
   "Pikachu": null,
@@ -42,7 +42,7 @@ $(document).ready(function() {
 
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('.collapsible');
-  var instances = M.Collapsible.init(elems, options);
+  var instances = M.Collapsible.init(elems, document.options);
 });
 
 // Or with jQuery
