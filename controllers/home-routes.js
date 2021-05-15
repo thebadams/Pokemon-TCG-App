@@ -40,6 +40,9 @@ router.get('/pokedex', async (req, res) => {
   try {
     const results = await pokemon.card.where({ q: 'name:Charizard' });
     const cards = results.data;
+
+    
+
   console.log(cards[0].images);
   res.render('pokedex', { cards });
   } catch (error) {
