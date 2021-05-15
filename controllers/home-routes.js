@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Card, User } = require('../models');
+const pokemon = require('../config/tcgsdk')
 // const withAuth = require('../utils/auth');
 
 // router.get('/', async (req, res) => {
@@ -36,7 +37,15 @@ router.get('/battle', async (req, res) => {
 });
 
 router.get('/pokedex', async (req, res) => {
-  res.render('pokedex', { logged_in: req.session.logged_in });
+  try {
+    const results = await pokemon.card.where({ q: 'name:Charizard' });
+    const cards = results.data;
+  console.log(cards[0].images);
+  res.render('pokedex', { cards });
+  } catch (error) {
+    console.log(error)
+  }
+  
 });
 
 router.get('/profile', async (req, res) => {
