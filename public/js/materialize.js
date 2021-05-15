@@ -17,6 +17,7 @@ $(document).ready(function(){
 });
         
 // Autocomplete search bar
+// Make it so it gets the data from the api.
 var pokeData = {
   "Pikachu": null,
   "Bulbasaur": null,

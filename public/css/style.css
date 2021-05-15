@@ -8,6 +8,15 @@ https://www.color-hex.com/color-palette/1045 */
     --yellow: #F4CB08;
 }
 
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+main {
+    flex: 1 0 auto;
+}
+
 .navBar {
     background-color: var(--black);
 }
