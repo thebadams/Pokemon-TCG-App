@@ -37,8 +37,8 @@ router.get('/battle', async (req, res) => {
 });
 
 router.get('/pokedex', async (req, res) => {
-  const results = await pokemon.card.where({ q: `name:${req.query.name}`})
-  const cards = results.data
+  const results = await pokemon.card.where({ q: `name:${req.query.name}`, pageSize: 12, page: 1 });
+  const cards = results.data;
   res.render('pokedex', { logged_in: req.session.logged_in, cards });
 });
 
