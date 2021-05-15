@@ -43,7 +43,11 @@ router.get('/pokedex', async (req, res) => {
 });
 
 router.get('/profile', async (req, res) => {
-  res.render('profile', { logged_in: req.session.logged_in });
+  const results = await Card.findAll({where: {
+    user_id: req.session.user_id,
+  }});
+  const cards = results.map((card)=> card.get({ plain: true }));
+  res.render('profile', { logged_in: req.session.logged_in, cards });
 });
 
 router.get('/trading', async (req, res) => {
