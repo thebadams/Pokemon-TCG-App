@@ -35,3 +35,7 @@ $(document).ready(function () {
     minLength: 1, // The minimum length of the input for the autocomplete to start. Default: 1.
   });
 });
+
+$(document).ready(function() {
+  $('#password-login, #password-signup').characterCounter();
+});
