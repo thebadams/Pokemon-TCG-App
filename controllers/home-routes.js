@@ -37,15 +37,9 @@ router.get('/battle', async (req, res) => {
 });
 
 router.get('/pokedex', async (req, res) => {
-  try {
-    const results = await pokemon.card.where({ q: 'name:Charizard' });
-    const cards = results.data;
-  console.log(cards[0].images);
-  res.render('pokedex', { cards });
-  } catch (error) {
-    console.log(error)
-  }
-  
+  const results = await pokemon.card.where({ q: `name:${req.query.name}`})
+  const cards = results.data
+  res.render('pokedex', { logged_in: req.session.logged_in, cards });
 });
 
 router.get('/profile', async (req, res) => {
