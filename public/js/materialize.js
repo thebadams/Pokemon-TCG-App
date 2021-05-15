@@ -39,3 +39,14 @@ $(document).ready(function () {
 $(document).ready(function() {
   $('#password-login, #password-signup').characterCounter();
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.collapsible');
+  var instances = M.Collapsible.init(elems, options);
+});
+
+// Or with jQuery
+
+$(document).ready(function(){
+  $('.collapsible').collapsible();
+});
