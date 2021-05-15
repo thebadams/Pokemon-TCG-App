@@ -9,7 +9,7 @@
                 </div>
                 <div class="col s5">
                     <button class="btn waves-effect waves-light btn-large" type="submit" name="action">Submit
-                    <i class="material-icons right">send</i>
+                        <i class="material-icons right">send</i>
                     </button>
                 </div>
             </div>
@@ -22,25 +22,16 @@
     <li>
         <div class="collapsible-header">Advanced Search</div>
         <div class="collapsible-body"><span>
-                <ul>
-                    <li>
-                        <option>Option 1</option>
-                    </li>
-                    <li>
-                        <option>Option 2</option>
-                    </li>
-                    <li>
-                        <option>Option 3</option>
-                    </li>
-                    <li>
-                        <option>Option 4</option>
-                    </li>
-                    <li>
-                        <option>Option 5</option>
-                    </li>
-                </ul>
+                <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Drop Me!</a>
             </span></div>
     </li>
+</ul>
+
+<ul id='dropdown1' class='dropdown-content'>
+    <li><a href="#!">one</a></li>
+    <li><a href="#!">two</a></li>
+    <li class="divider"></li>
+    <li><a href="#!">three</a></li>
 </ul>
 
 {{#each cards as |card|}}
