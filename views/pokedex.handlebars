@@ -1,14 +1,21 @@
-<div class="row">
-    <div class="col s12">
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="material-icons prefix">search</i>
-                <input type="text" id="autocomplete-input" class="autocomplete">
-                <label for="autocomplete-input">Search</label>
+<form class="searchForm">
+    <div class="row">
+        <div class="col s12">
+            <div class="row">
+                <div class="input-field col s5 m6">
+                    <i class="material-icons prefix">search</i>
+                    <input type="text" id="autocomplete-input" class="autocomplete">
+                    <label for="autocomplete-input">Search</label>
+                </div>
+                <div class="col s5">
+                    <button class="btn waves-effect waves-light btn-large" type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</form>
 
 {{!-- work in progress--}}
 <ul class="collapsible">
@@ -36,67 +43,8 @@
     </li>
 </ul>
 
-<div class="row">
-    <div class="col s12 m7">
-        <img class="card">
-        <class class="card-header">
-            <a href="/pokedex/{{id}}">{{card_name}}</a>
-            <img>{{card_image}}</class></img>
-    </div>
-    <div class="card-content">
-        <p>{{description}}</p>
-    </div>
-</div>
-</div>
-</div>
+{{#each cards as |card|}}
 
+{{> card-info card}}
 
-<div class="row">
-    {{#each cards as |card|}}
-    <div class="col s12 m3">
-        <div class="card">
-            <div class="card-image">
-                <img src="{{card.images.small}}" alt="{{card.name}}">
-                <a onclick="M.toast({html: 'Added To Deck!'})" class="btn-floating halfway-fab waves-effect waves-light red"><i
-                        class="material-icons">add</i></a>
-            </div>
-        </div>
-    </div>
-    {{/each}}
-</div>
-
-<script src="./js/pokedex.js"></script>
-{{!-- <div class="row">
-    <div class="col s12 m3">
-        <div class="card">
-            <div class="card-image">
-                <img src="/images/bulbasaur.png" alt="Bulbasaur">
-                <a onclick="M.toast({html: 'Added To Deck!'})" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-            </div>
-        </div>
-    </div>
-    <div class="col s12 m3">
-        <div class="card">
-            <div class="card-image">
-                <img src="/images/charmander.png" alt="Charmander">
-                <a onclick="M.toast({html: 'Added To Deck!'})" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-            </div>
-        </div>
-    </div>
-    <div class="col s12 m3">
-        <div class="card">
-            <div class="card-image">
-                <img src="/images/eevee.png" alt="Eevee">
-                <a onclick="M.toast({html: 'Added To Deck!'})" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-            </div>
-        </div>
-    </div>
-    <div class="col s12 m3">
-        <div class="card">
-            <div class="card-image">
-                <img src="/images/mew.png" alt="Mew">
-                <a onclick="M.toast({html: 'Added To Deck!'})" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-            </div>
-        </div>
-    </div>
-</div> --}}
+{{/each}}
