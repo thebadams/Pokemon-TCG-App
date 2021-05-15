@@ -5,11 +5,35 @@ const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
 
+//requirements to set up sockets.io
+const http = require('http');
+const socketio = require('socket.io');
+
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+//socket stuff
+const server = http.createServer(app);
+const io = socketio(server);
+
+//run when client connects
+io.on('connection', socket => {
+  console.log('New Connection....')
+
+  //Welcome message
+socket.emit('message', 'Welcome to BattleChat');
+
+//Broadcast when a user connects
+socket.broadcast.emit('message', 'A user has joined the chat');
+
+//Runs when client disconnects
+socket.on('disconnect', () => {
+  io.emit('message', 'A user has left the chat')
+})
+
+});
 
 // Set up Handlebars.js engine with custom helpers
 const hbs = exphbs.create({ helpers });
@@ -37,5 +61,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log(`Now listening on ${PORT}`));
+  server.listen(PORT, () => console.log(`Now listening on ${PORT}`));
 });
