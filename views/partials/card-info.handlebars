@@ -1,11 +1,16 @@
-<div class="row">
-    <div class="col s12 m2">
-        <div class="card">
-            <div class="card-image">
-                <img src="{{card.images.small}}" alt="{{card.name}}">
-                <a onclick="M.toast({html: 'Added To Deck!', classes: 'rounded red'})"
-                    class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+<div class="container">
+    <div class="row">
+        {{#each cards as |card|}}
+        <div class="col s4">
+            <div class="card" style="height: 343px; width: 257px;">
+                <div class="card-image">
+                    <img style="height: 343px; width: 257px;" src="{{card.images.small}}" alt="{{card.name}}">
+                    <a onclick="M.toast({html: 'Added To Deck!', classes: 'rounded red'})"
+                        class="btn-floating halfway-fab waves-effect waves-light red"><i
+                            class="material-icons">add</i></a>
+                </div>
             </div>
-        </div>
+            </div>
+        {{/each}}
     </div>
 </div>
