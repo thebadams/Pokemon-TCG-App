@@ -5,13 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Carousel
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   var elems = document.querySelectorAll('.carousel');
   var instances = M.Carousel.init(elems, document.options);
 });
 
 //Modal
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   var elems = document.querySelectorAll('.modal');
   var instances = M.Modal.init(elems, document.options);
 });
@@ -38,4 +38,15 @@ $(document).ready(function () {
 
 $(document).ready(function() {
   $('#password-login, #password-signup').characterCounter();
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.collapsible');
+  var instances = M.Collapsible.init(elems, options);
+});
+
+// Or with jQuery
+
+$(document).ready(function(){
+  $('.collapsible').collapsible();
 });
