@@ -36,31 +36,42 @@
 >My Decks</a>
 {{! Carousel of cards }}
 
-
 <div class="carousel">
   {{#each cards as |card|}}
-  <a href="#{{card.id}}"class="carousel-item modal-trigger"><img src="{{card.card_image}}" /></a>
-  <!-- Modal Structure -->
-  <div id="{{card.id}}" class="modal">
-    <div class="modal-content">
-      <h4>{{card.card_name}}</h4>
-      <p>{{card.description}}</p>
+    <a href="#{{card.id}}" class="carousel-item modal-trigger"><img
+        src="{{card.card_image}}"
+      /></a>
+    <!-- Modal Structure -->
+    <div id="{{card.id}}" class="modal">
+      <div class="modal-content">
+        <h4>{{card.card_name}}</h4>
+        <p>{{card.description}}</p>
+      </div>
+      <div class="modal-footer">
+        <div class="fixed-action-btn">
+          <a class="btn-floating btn-large red">
+            <i class="large material-icons">mode_edit</i>
+          </a>
+          <ul>
+            <li><a onclick="M.toast({html: 'Card Deleted From Deck', classes: 'rounded blue'})" class="btn-floating red modal-close"><i
+                  class="material-icons"
+                >delete_forever</i></a></li>
+            <li><a onclick="location.href='/trading'" class="btn-floating green modal-close"><i
+                  class="material-icons"
+                >people</i></a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div class="modal-footer">
-      <a
-        href="#!"
-        class="modal-close waves-effect waves-green btn-flat"
-      >Agree</a>
-    </div>
-  </div>
   {{/each}}
+</div>
 
-  {{!-- <a class="carousel-item" href="#two!"><img src="/images/charmander.png" /></a>
+{{! <a class="carousel-item" href="#two!"><img src="/images/charmander.png" /></a>
   <a class="carousel-item" href="#three!"><img src="/images/eevee.png" /></a>
   <a class="carousel-item" href="#four!"><img src="/images/mew.png" /></a>
   <a class="carousel-item" href="#five!"><img src="/images/mewtwo.png" /></a>
-</div> --}}
+</div> }}
 
-{{!-- <a href="#modal1" class="carousel-item modal-trigger"><img
+{{! <a href="#modal1" class="carousel-item modal-trigger"><img
       src="/images/bulbasaur.png"
-    /></a> --}}
+    /></a> }}

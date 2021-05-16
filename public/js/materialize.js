@@ -53,10 +53,19 @@ $(document).ready(() => {
 });
 
 function myFunction() {
-  var x = document.getElementById("toggle");
-  if (x.style.display === "none") {
-    x.style.display = "block";
+  const x = document.getElementById('toggle');
+  if (x.style.display === 'none') {
+    x.style.display = 'block';
   } else {
-    x.style.display = "none";
+    x.style.display = 'none';
   }
 }
+
+// Floating Action Button
+
+$(document).ready(() => {
+  $('.fixed-action-btn').floatingActionButton({
+    direction: 'left',
+    hoverEnabled: false,
+  });
+});
