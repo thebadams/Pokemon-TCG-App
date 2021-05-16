@@ -39,6 +39,10 @@ Card.init(
         key: 'id',
       },
     },
+    api_id: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   },
   {
     sequelize,
