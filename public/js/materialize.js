@@ -12,10 +12,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //Modal
 
-$(document).ready(function(){
+$(document).ready(function () {
   $('.modal').modal();
 });
-        
+
 // Autocomplete search bar
 // Make it so it gets the data from the api.
 var pokeData = {
@@ -37,17 +37,17 @@ $(document).ready(function () {
   });
 });
 
-$(document).ready(function() {
+$(document).ready(function () {
   $('#password-login, #password-signup').characterCounter();
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   var elems = document.querySelectorAll('.collapsible');
   var instances = M.Collapsible.init(elems, document.options);
 });
 
 // Or with jQuery
 
-$(document).ready(function(){
+$(document).ready(function () {
   $('.collapsible').collapsible();
 });
