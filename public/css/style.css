@@ -1,30 +1,40 @@
-
 :root {
     /* Pokeball Color Pallete
 https://www.color-hex.com/color-palette/1045 */
-    --red:	#ee1515;
+    --red: #ee1515;
     --black: #222224;
     --white: #f0f0f0;
     --blue: #21437C;
     --yellow: #F4CB08;
+    --teal: #26a69a;
 }
 
-.navBar{
-    background-color:var(--black) ;
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
-.titleBanner{
+main {
+    flex: 1 0 auto;
+}
+
+.navBar {
+    background-color: var(--black);
+}
+
+.titleBanner {
     background-color: var(--red);
     color: var(--white);
 }
 
-.titleBody{
+.titleBody {
     display: flex;
     justify-content: space-around;
 }
 
 /* Background image for profile Decks sidenav */
-.profile-bg img{
+.profile-bg img {
     float: left;
     width: 300px;
     height: 120px;
@@ -32,7 +42,36 @@ https://www.color-hex.com/color-palette/1045 */
 
 /* Pokeball on decks pullout */
 .pokeball {
-    width: 30px; 
+    width: 30px;
     height: 30px;
-    color:var(--red);
+    color: var(--red);
+}
+
+.browser-default {
+    font-size: 14px;
+    color: white;
+    font-size: 12pt;
+    background-color: var(--teal);
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    border-radius: 15px;
+}
+
+.ad-search {
+    background-color: var(--red);
+    border-radius: 15px;
+}
+
+#advanced-search-bar {
+    background-color: rgba(255, 0, 0, 0.4);
+    color: black;
+    border-radius: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.pill {
+    color: var(--blue);
+    font-weight: bold;
+    text-transform: uppercase;
 }
