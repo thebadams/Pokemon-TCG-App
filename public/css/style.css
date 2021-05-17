@@ -79,3 +79,11 @@ main {
 #data tr {
     display: none;
 }
+
+.progress {
+    width: 60%;
+    margin:auto;
+    left:0;
+    right:0;
+    position:fixed;
+}
