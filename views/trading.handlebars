@@ -1,0 +1,47 @@
+<div class="container hide-on-small-only">
+    <div class="row">
+        {{#if card}}
+        <div class="col s4">
+            <div class="card" style="height: 343px; width: 257px;">
+                <div class="card-image">
+                    <img style="height: 343px; width: 257px;" src="{{card.images.small}}" alt="{{card.name}}">
+                    <a onclick="M.toast({html: 'Added To Deck!', classes: 'rounded red'})"
+                        class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons add-btn"
+                            data-api="{{card.id}}" data-name="{{card.name}}" data-description="{{card.flavorText}}"
+                            data-image="{{card.images.small}}" data-user="{{@root.user_id}}">add</i></a>
+                </div>
+            </div>
+        </div>
+        {{/if}}
+    </div>
+</div>
+
+{{!-- chat function --}}
+<div class="row">
+
+    <div class="col s3 light-blue darken-4" id="leftPanel">
+        <h1>test 1</h1>
+    </div>
+
+
+    <div class="col s9 light-blue darken-2" id="rightPanel">
+        <h1>test 2</h1>
+    </div>
+
+</div>
+
+<div class="row red darken-3 " id="chatField">
+    <div class="row">
+        <div class="input-field col s5 m6">
+            <i class="material-icons prefix">mode_edit</i>
+            <input type="text" id="autocomplete-input" class="autocomplete">
+            <label for="autocomplete-input">Type Message Here</label>
+        </div>
+        <div class="col s5" style="margin-top: 2rem;">
+            <button class="btn waves-effect waves-light" type="submit" name="action">Send
+                <i class="iconify" data-icon="mdi-pokeball" data-inline="true" style="font-size: 16px;"></i>
+            </button>
+        </div>
+    </div>
+
+</div>

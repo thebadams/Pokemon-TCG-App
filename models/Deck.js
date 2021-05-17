@@ -24,7 +24,6 @@ Deck.init(
         key: 'id',
       }
     },
-   
   },
   {
     sequelize,

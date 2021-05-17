@@ -16,9 +16,9 @@ const Card = require('./Card');
 //   onDelete: 'cascade',
 // });
 
-//pokemon belongsToMany types through pokemon types pokemon_id 
+// pokemon belongsToMany types through pokemon types pokemon_id
 
-//types belongsToMany pokemon through pokemon types type_id
+// types belongsToMany pokemon through pokemon types type_id
 
 // Pokemon.hasMany(Weakness, {
 //   through: PokemonWeakness,
@@ -36,9 +36,8 @@ const Card = require('./Card');
 //   through: PokemonResistance,
 // });
 
-
 Deck.hasMany(Card, {
-  foreignKey: 'deck_id'
+  foreignKey: 'deck_id',
 });
 Card.belongsTo(Deck, {
   foreignKey: 'deck_id',
@@ -48,32 +47,34 @@ User.hasMany(Deck, {
   foreignKey: 'user_id',
 });
 Deck.belongsTo(User, {
-  foreignKey: "user_id",
+  foreignKey: 'user_id',
   onDelete: 'cascade',
 });
 
-
-
-
-
+User.hasMany(Card, {
+  foreignKey: 'user_id',
+});
+Card.belongsTo(User, {
+  foreignKey: 'user_id',
+});
 
 module.exports = { User, Card, Deck };
 
-//---DECK-----
-//id pk
-//deck name
+// ---DECK-----
+// id pk
+// deck name
 // user_id references user.id
 
-//--associations---
-//deck.hasmany card
-//card belongsTo deck
+// --associations---
+// deck.hasmany card
+// card belongsTo deck
 
-//user has many deck
-//deck belongsto user
+// user has many deck
+// deck belongsto user
 
-//-----CARD-----
+// -----CARD-----
 
-//card has id/ pk
-//card card name
-//card card_img 
-//card deck_id model deck key id
+// card has id/ pk
+// card card name
+// card card_img
+// card deck_id model deck key id
