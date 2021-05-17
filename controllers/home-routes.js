@@ -40,7 +40,7 @@ router.get('/pokedex', async (req, res) => {
   try {
     const results = await pokemon.card.where({ q: `name:${req.query.name}`, pageSize: 12, page: 1 });
     const cards = results.data;
-    res.render('pokedex', { logged_in: req.session.logged_in, cards });
+    res.render('pokedex', { logged_in: req.session.logged_in, cards, user_id: req.session.user_id });
   } catch (err) {
     res.status(500).json(err);
   }

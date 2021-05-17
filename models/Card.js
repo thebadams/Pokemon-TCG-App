@@ -41,7 +41,7 @@ Card.init(
     },
     api_id: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
   },
   {
