@@ -6,6 +6,19 @@ https://www.color-hex.com/color-palette/1045 */
     --white: #f0f0f0;
     --blue: #21437C;
     --yellow: #F4CB08;
+    --teal: #26a69a;
+    --grey: #e0e0e0;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: var(--grey);
+}
+
+main {
+    flex: 1 0 auto;
 }
 
 .navBar {
@@ -36,3 +49,35 @@ https://www.color-hex.com/color-palette/1045 */
     color: var(--red);
 }
 
+.browser-default {
+    font-size: 14px;
+    color: white;
+    font-size: 12pt;
+    background-color: var(--teal);
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    border-radius: 15px;
+}
+
+.ad-search {
+    background-color: var(--red);
+    border-radius: 15px;
+}
+
+#advanced-search-bar {
+    background-color: rgba(255, 0, 0, 0.4);
+    color: black;
+    border-radius: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.pill {
+    color: var(--blue);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#data tr {
+    display: none;
+}

@@ -1,6 +1,6 @@
 <html>
 
-<head>
+<header>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pokémon Homepage Template</title>
@@ -13,70 +13,75 @@
   <link rel="stylesheet" href="/css/style.css" />
   <!-- pokeball icon source  -->
   <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-  <script scr="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-</head>
+</header>
 
-<body>
-  <section class="titleBanner">
-    <div class="titleBody">
-      <h2>
-        <span class="iconify" data-icon="mdi-pokeball" data-inline="true">
-        </span>Pokémon Deck Builder<span class="iconify" data-icon="mdi-pokeball" data-inline="true"></span>
-      </h2>
-    </div>
-  </section>
-  <!-- Page header nav bar -->
+  <body>
+    <section class="titleBanner">
+      <div class="titleBody">
+        <h2>
+          <span class="iconify" data-icon="mdi-pokeball" data-inline="true">
+          </span>Pokémon Deck Builder<span class="iconify" data-icon="mdi-pokeball" data-inline="true"></span>
+        </h2>
+      </div>
+    </section>
+    
+    <!-- Page header nav bar -->
+    <nav>
+      <div class="navBar nav-wrapper">
+        <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+          <i class="material-icons">menu</i>
+        </a>
 
-  <nav>
-    <div class="navBar nav-wrapper">
-      <a href="#" class="sidenav-trigger" data-target="mobile-nav">
-        <i class="material-icons">menu</i>
-      </a>
-
-      <ul class="left hide-on-med-and-down">
-        <li><a href="/">Home</a></li>
-        <li><a href="/battle">Battle</a></li>
-        <li><a href="/pokedex">Pokedéx</a></li>
-        <li><a href="/trading">Trading</a></li>
+        <ul class="left hide-on-med-and-down">
+          <li><a href="/">Home</a></li>
+          <li><a href="/battle">Battle</a></li>
+          <li><a href="/pokedex">Pokedéx</a></li>
+          <li><a href="/trading">Trading</a></li>
+          {{#if logged_in}}
+          <li><a class="navbar-item" id="logout">Logout</a></li>
+          {{else}}
+          <li><a class="navbar-item" href="/login">Login</a></li>
+          {{/if}}
+        </ul>
         {{#if logged_in}}
-        <li><a class="navbar-item" id="logout">Logout</a></li>
-        {{else}}
-        <li><a class="navbar-item" href="/login">Login</a></li>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="/profile">My Trainer</a></li>
+        </ul>
         {{/if}}
-      </ul>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="/profile">My Trainer</a></li>
-      </ul>
-    </div>
-  </nav>
+      </div>
+    </nav>
 
-  <ul class="sidenav" id="mobile-nav">
-    <li><a href="/">Home</a></li>
-    <li><a href="/battle">Battle</a></li>
-    <li><a href="/pokedex">Pokedéx</a></li>
-    <li><a href="/trading">Trading</a></li>
-    {{#if logged_in}}
-    <li><a class="navbar-item" id="logout">Logout</a></li>
-    {{else}}
-    <li><a class="navbar-item" href="/login">Login</a></li>
-    {{/if}}
-    <li><a href="/profile">My Trainer</a></li>
-  </ul>
+    <ul class="sidenav" id="mobile-nav">
+      <li><a href="/">Home</a></li>
+      <li><a href="/battle">Battle</a></li>
+      <li><a href="/pokedex">Pokedéx</a></li>
+      <li><a href="/trading">Trading</a></li>
+      {{#if logged_in}}
+      <li><a class="navbar-item" id="logout">Logout</a></li>
+      {{else}}
+      <li><a class="navbar-item" href="/login">Login</a></li>
+      {{/if}}
+      <li><a href="/profile">My Trainer</a></li>
+    </ul>
 
-  <div>
-    {{{body}}}
-  </div>
+<main>
 
-  <footer></footer>
+{{{body}}}
 
-  <!-- materialize javascript package -->
-  <script src="/js/materialize.js"></script>
-  <script src="/js/pokedex.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
+</main>
+
+{{!-- its still showing up for all pages, still needs work! --}}
+{{> footer}}
+
+<!-- materialize javascript package -->
+<script src="/js/materialize.js"></script>
+<script src="/js/pokedex.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+{{#if logged_in}}
+<script src="/js/logout.js"></script>
+{{/if}}
 </body>
 
 </html>
