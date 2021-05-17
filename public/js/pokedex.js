@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 const searchForm = document.querySelector('#searchForm');
 const addBtns = document.querySelectorAll('.add-btn');
 console.log(addBtns);
@@ -10,13 +11,13 @@ const handleSearchForm = async (event) => {
 
 searchForm.addEventListener('submit', handleSearchForm);
 
-const addToCollection = async(event) => {
+const addToCollection = async (event) => {
   event.preventDefault();
   console.log(event.target);
   const api_id = event.target.dataset.api;
   const card_name = event.target.dataset.name;
   const description = event.target.dataset.description;
-  const card_image =event.target.dataset.image;
+  const card_image = event.target.dataset.image;
   const user_id = event.target.dataset.user;
   const info = {
     api_id,
@@ -25,6 +26,8 @@ const addToCollection = async(event) => {
     card_image,
     user_id,
   };
+  console.log(user_id);
+  console.log(info);
   try {
     const response = fetch('/api/cards/', {
       method: 'POST',
@@ -33,18 +36,18 @@ const addToCollection = async(event) => {
         'Content-Type': 'application/json',
       },
     });
-    if(response.ok) {
-      alert("Success!");
+    if (response.ok) {
+      alert('Success!');
     }
   } catch (error) {
     console.log(error);
   }
   // const response = await fetch('/api/cards/', {
   //   method: 'POST',
-    
-  // })
-}
 
-addBtns.forEach((el=> {
+  // })
+};
+
+addBtns.forEach(((el) => {
   el.addEventListener('click', addToCollection);
 }));

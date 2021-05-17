@@ -7,7 +7,7 @@
                     <img style="height: 343px; width: 257px;" src="{{card.images.small}}" alt="{{card.name}}">
                     <a onclick="M.toast({html: 'Added To Deck!', classes: 'rounded red'})"
                         class="btn-floating halfway-fab waves-effect waves-light red" ><i
-                            class="material-icons add-btn" data-api="{{card.id}}" data-name="{{card.name}}" data-description="{{card.flavorText}}" data-image="{{card.images.small}}" data-user="{{user_id}}">add</i></a>
+                            class="material-icons add-btn" data-api="{{card.id}}" data-name="{{card.name}}" data-description="{{card.flavorText}}" data-image="{{card.images.small}}" data-user="{{@root.user_id}}">add</i></a>
                 </div>
             </div>
             </div>
@@ -28,7 +28,7 @@
                             class="material-icons">add</i></a>
                 </div>
             </div>
-            </div>
+        </div>
         {{/each}}
     </div>
 </div>
