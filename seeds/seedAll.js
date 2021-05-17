@@ -4,7 +4,7 @@ const seedCard = require('./card-data');
 const seedDeck = require('./deck-data');
 
 const seedAll = async () => {
-  await sequelize.sync({ force: false });
+  await sequelize.sync({ force: true });
   console.log('---------------------DATABASE SYNCED-------------------------');
 
   await seedUser();
