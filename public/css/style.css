@@ -28,6 +28,7 @@ main {
 .titleBanner {
     background-color: var(--red);
     color: var(--white);
+    font-family: 'Pokemon';
 }
 
 .titleBody {
@@ -35,12 +36,6 @@ main {
     justify-content: space-around;
 }
 
-/* Background image for profile Decks sidenav */
-.profile-bg img {
-    float: left;
-    width: 300px;
-    height: 120px;
-}
 
 /* Pokeball on decks pullout */
 .pokeball {
@@ -88,4 +83,25 @@ main {
     left:0;
     right:0;
     position:fixed;
+}
+
+
+/* Profile styling */
+
+.collection-title {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Pokemon';
+}
+
+/* sizing of carousel */
+.carousel .carousel-item {
+    min-height: 400px;
+    width: 270px !important;}
+
+/* Background image for profile Decks sidenav */
+.profile-bg img {
+    float: left;
+    width: 300px;
+    height: 120px;
 }
