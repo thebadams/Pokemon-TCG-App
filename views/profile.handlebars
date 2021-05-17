@@ -1,3 +1,4 @@
+{{!-- Slide our nav bar for decks --}}
 <ul id="slide-out" class="sidenav">
   <li><div class="user-view">
       <div class="background profile-bg">
@@ -35,6 +36,9 @@
   class="sidenav-trigger btn waves-effect waves-light"
 >My Decks</a>
 {{! Carousel of cards }}
+
+<h1 class="collection-title">My Collection</h1>
+
 <div class="carousel">
   {{#each cards as |card|}}
     <a href="#modal{{card.id}}"  class="carousel-item modal-trigger"><img
