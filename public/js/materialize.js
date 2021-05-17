@@ -96,3 +96,8 @@ $(document).ready(() => {
       .animate({ opacity: 1 }, 300);
   });
 });
+
+// Preloader for Pokedex Page
+$(window).on('load', () => {
+  $('.progress').delay(250).fadeOut();
+});
