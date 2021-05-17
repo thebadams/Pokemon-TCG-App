@@ -44,6 +44,7 @@
     <div id="{{card.id}}" class="modal">
       <div class="modal-content">
         <h4>{{card.card_name}}</h4>
+        <img src="{{card.card_image}}" alt="{{card.card.name}}">
         <p>{{card.description}}</p>
       </div>
       <div class="modal-footer">
@@ -56,7 +57,7 @@
                   class="material-icons"
                 >delete_forever</i></a></li>
             <li><a onclick="location.href='/trading'" class="btn-floating green modal-close"><i
-                  class="material-icons"
+                  class="material-icons" data-api="{{card.id}}" data-name="{{card.name}}" data-description="{{card.flavorText}}" data-image="{{card.images.small}}" data-user="{{@root.user_id}}"
                 >people</i></a></li>
           </ul>
         </div>
