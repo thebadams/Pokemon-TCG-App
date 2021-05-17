@@ -23,7 +23,7 @@ const addToCollection = async(event) => {
     card_name,
     description,
     card_image,
-    user_id: 1,
+    user_id,
   };
   try {
     const response = fetch('/api/cards/', {
