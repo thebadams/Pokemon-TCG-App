@@ -32,9 +32,9 @@ router.get('/', async (req, res) => {
   res.render('homepage', { logged_in: req.session.logged_in });
 });
 
-router.get('/battle', async (req, res) => {
-  res.render('battle', { logged_in: req.session.logged_in });
-});
+// router.get('/battle', async (req, res) => {
+//   res.render('battle', { logged_in: req.session.logged_in });
+// });
 
 router.get('/pokedex', async (req, res) => {
   try {
