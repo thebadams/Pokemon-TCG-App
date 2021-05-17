@@ -70,3 +70,29 @@ $(document).ready(() => {
     hoverEnabled: false,
   });
 });
+
+// pagination logic
+
+$(document).ready(() => {
+  $('#data').after('<div id="nav"></div>');
+  const rowsShown = 4;
+  const rowsTotal = $('#data tbody tr').length;
+  const numPages = rowsTotal / rowsShown;
+  for (i = 0; i < numPages; i++) {
+    const pageNum = i + 1;
+    $('#nav').append(`<a href="#" rel="${i}">${pageNum}</a> `);
+  }
+  $('#data tbody tr').hide();
+  $('#data tbody tr').slice(0, rowsShown).show();
+  $('#nav a:first').addClass('active');
+  $('#nav a').bind('click', function () {
+    $('#nav a').removeClass('active');
+    $(this).addClass('active');
+    const currPage = $(this).attr('rel');
+    const startItem = currPage * rowsShown;
+    const endItem = startItem + rowsShown;
+    $('#data tbody tr').css('opacity', '0.0').hide().slice(startItem, endItem)
+      .css('display', 'table-row')
+      .animate({ opacity: 1 }, 300);
+  });
+});

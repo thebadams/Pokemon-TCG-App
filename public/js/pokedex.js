@@ -16,14 +16,14 @@ const addToCollection = async(event) => {
   const api_id = event.target.dataset.api;
   const card_name = event.target.dataset.name;
   const description = event.target.dataset.description;
-  const card_image =event.target.dataset.image;
+  const card_image = event.target.dataset.image;
   const user_id = event.target.dataset.user;
   const info = {
     api_id,
     card_name,
     description,
     card_image,
-    user_id: 1,
+    user_id,
   };
   try {
     const response = fetch('/api/cards/', {

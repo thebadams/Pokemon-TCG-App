@@ -75,3 +75,7 @@ main {
     font-weight: bold;
     text-transform: uppercase;
 }
+
+#data tr {
+    display: none;
+}
