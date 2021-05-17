@@ -28,6 +28,7 @@ main {
 .titleBanner {
     background-color: var(--red);
     color: var(--white);
+    font-family: 'Pokemon';
 }
 
 .titleBody {
@@ -90,6 +91,7 @@ main {
 .collection-title {
     display: flex;
     justify-content: space-around;
+    font-family: 'Pokemon';
 }
 
 /* sizing of carousel */
