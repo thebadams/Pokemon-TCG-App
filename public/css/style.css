@@ -105,3 +105,29 @@ main {
     width: 300px;
     height: 120px;
 }
+
+.modal-content {
+    background-image: url(../images/pokemon-bg.png);
+    background-color: #7FAE71;
+}
+
+#modal-footer {
+    background-color: #7FAE71;
+}
+
+.modal-content h4 {
+    font-family: 'Pokemon GB';
+    color: red;
+    text-align: center;
+}
+
+.modal-content img {
+    position: relative;
+    left: 30%;
+    padding: 10px;
+}
+
+.modal-content p {
+    font-family: "Pokemon GB";
+    text-align: center;
+}

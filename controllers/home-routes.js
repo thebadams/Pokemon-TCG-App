@@ -3,6 +3,39 @@ const { Card, User } = require('../models');
 const pokemon = require('../config/tcgsdk');
 // const withAuth = require('../utils/auth');
 
+// pagination logic !!
+
+// function paginatedResults(model) {
+//   return (req, res, next) => {
+//     const page = parseInt(req.query.page);
+//     const limit = parseInt(req.query.limit);
+
+//     const startIndex = (page - 1) * limit;
+//     const endIndex = page * limit;
+
+//     const results = {};
+
+//     if (endIndex < Card.length) {
+//       results.next = {
+//         page: page + 1,
+//         limit,
+//       };
+//     }
+
+//     if (startIndex > 0) {
+//       results.previous = {
+//         page: page - 1,
+//         limit,
+//       };
+//     }
+
+//     results.results = model.slice(startIndex, endIndex);
+
+//     res.paginatedResults = results;
+//     next();
+//   };
+// }
+
 // router.get('/', async (req, res) => {
 //   try {
 //     // Get all projects and JOIN with user data
@@ -59,6 +92,8 @@ router.get('/pokedex', async (req, res) => {
     const results = await pokemon.card.where({ q: `name:${req.query.name}`, pageSize: 12, page: 1 });
     const cards = results.data;
     res.render('pokedex', { logged_in: req.session.logged_in, cards, user_id: req.session.user_id });
+    // res.json(res.paginatedResults);
+    // console.log(res.paginatedResults);
   } catch (err) {
     res.status(500).json(err);
   }
