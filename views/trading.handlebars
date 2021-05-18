@@ -1,16 +1,8 @@
-<div class="container hide-on-small-only">
-    <div class="row">
-        {{#if card}}
-        <div class="col s4">
-            <div class="card" style="height: 343px; width: 257px;">
-                <div class="card-image">
-                    <img style="height: 343px; width: 257px;" src="{{card.images.small}}" alt="{{card.name}}">
-                    <a onclick="M.toast({html: 'Added To Deck!', classes: 'rounded red'})"
-                        class="btn-floating halfway-fab waves-effect waves-light red" ><i
-                            class="material-icons add-btn" data-api="{{card.id}}" data-name="{{card.name}}" data-description="{{card.flavorText}}" data-image="{{card.images.small}}" data-user="{{@root.user_id}}">add</i></a>
-                </div>
-            </div>
-            </div>
-        {{/if}}
+<div class="row">
+    <div class="col s6">
+        <div class="left-side"></div>
+    </div>
+    <div class="col s6">
+        <div class="right-side"></div>
     </div>
 </div>

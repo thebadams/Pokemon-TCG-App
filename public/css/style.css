@@ -7,12 +7,20 @@ https://www.color-hex.com/color-palette/1045 */
     --blue: #21437C;
     --yellow: #F4CB08;
     --teal: #26a69a;
+    --grey: #e0e0e0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    text-align: center;
 }
 
 body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    background-color: var(--grey);
 }
 
 main {
@@ -26,6 +34,7 @@ main {
 .titleBanner {
     background-color: var(--red);
     color: var(--white);
+    font-family: 'Pokemon';
 }
 
 .titleBody {
@@ -33,12 +42,6 @@ main {
     justify-content: space-around;
 }
 
-/* Background image for profile Decks sidenav */
-.profile-bg img {
-    float: left;
-    width: 300px;
-    height: 120px;
-}
 
 /* Pokeball on decks pullout */
 .pokeball {
@@ -79,3 +82,76 @@ main {
 #data tr {
     display: none;
 }
+
+.progress {
+    width: 60%;
+    margin:auto;
+    left:0;
+    right:0;
+    position:fixed;
+}
+
+
+/********************************** Profile styling *************************************/
+
+.collection-title {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Pokemon';
+}
+
+/* sizing of carousel */
+.carousel .carousel-item {
+    min-height: 400px;
+    width: 270px !important;}
+
+/* Background image for profile Decks sidenav */
+.profile-bg img {
+    float: left;
+    width: 300px;
+    height: 120px;
+}
+
+.modal-content {
+    background-image: url(../images/pokemon-bg.png);
+    background-color: #7FAE71;
+}
+
+#modal-footer {
+    background-color: #7FAE71;
+}
+
+.modal-content h4 {
+    font-family: 'Pokemon GB';
+    color: red;
+    text-align: center;
+}
+
+.modal-content img {
+    position: relative;
+    padding: 10px;
+}
+
+.modal-content p {
+    font-family: "Pokemon GB";
+    text-align: center;
+}
+
+
+.btn1 {
+    right: 10%
+}
+
+.right-side, .left-side {
+    height: 100vh;
+    width: 100%;
+};
+
+.left-side {
+    background-color: red;
+}
+
+.right-side {
+    background-color: blue;
+}
+
