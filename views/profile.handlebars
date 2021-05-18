@@ -1,5 +1,7 @@
+{{! Slide out nav bar for decks }}
 <ul id="slide-out" class="sidenav">
-  <li><div class="user-view">
+  <li>
+    <div class="user-view">
       <div class="background profile-bg">
         <img src="/images/profile.png" />
       </div>
@@ -7,27 +9,28 @@
       <a href="#email"><span
           class="white-text email"
         >dirtydan@gmail.com</span></a>
-    </div></li>
-  <li><a class="waves-effect" href="#!"><span
+    </div>
+  </li>
+  <li><a class="waves-effect blue btn" href="#!"><span
         class="iconify pokeball"
         data-icon="mdi:pokemon-go"
         data-inline="false"
-      ></span>Deck 1</a></li>
-  <li><a class="waves-effect" href="#!"><span
+      ></span>Water Deck</a></li>
+  <li><a class="waves-effect red btn" href="#!"><span
         class="iconify pokeball"
         data-icon="mdi:pokemon-go"
         data-inline="false"
-      ></span>Deck 2</a></li>
-  <li><a class="waves-effect" href="#!"><span
+      ></span>Fire Deck</a></li>
+  <li><a class="waves-effect yellow btn" href="#!"><span
         class="iconify pokeball"
         data-icon="mdi:pokemon-go"
         data-inline="false"
-      ></span>Deck 3</a></li>
-  <li><a class="waves-effect" href="#!"><span
+      ></span>Electric Deck</a></li>
+  <li><a class="waves-effect green btn" href="#!"><span
         class="iconify pokeball"
         data-icon="mdi:pokemon-go"
         data-inline="false"
-      ></span>Deck 4</a></li>
+      ></span>Marijuana Deck</a></li>
 </ul>
 <a
   href="#"
@@ -35,42 +38,73 @@
   class="sidenav-trigger btn waves-effect waves-light"
 >My Decks</a>
 {{! Carousel of cards }}
+
+<h1 class="collection-title">My Collection</h1>
+
 <div class="carousel">
   {{#each cards as |card|}}
-    <a href="#modal{{card.id}}"  class="carousel-item modal-trigger"><img
+    <a href="#modal{{card.id}}" class="carousel-item modal-trigger"><img
         src="{{card.card_image}}"
       /></a>
-{{/each}}
-  
-    
-    
-  
+  {{/each}}
 </div>
+
 {{#each cards as |card|}}
-<!-- Modal Structure -->
-<div id="modal{{card.id}}" class="modal">
-      <div class="modal-content">
-        <h4>{{card.card_name}}</h4>
-        <img src="{{card.card_image}}" alt="{{card.card.name}}">
-        <p>{{card.description}}</p>
+  <!-- Modal Structure -->
+  <div id="modal{{card.id}}" class="modal">
+    <div class="modal-content">
+      <h4>{{card.card_name}}</h4>
+      <img src="{{card.card_image}}" alt="{{card.card.name}}" />
+      <p>{{card.description}}</p>
+    </div>
+    <div class="modal-footer" id="modal-footer">
+      {{! FAB 1 }}
+      <div class="fixed-action-btn btn1">
+        <a class="btn-floating btn-large red">
+          <i class="large material-icons">mode_edit</i>
+        </a>
+        <ul>
+          <li><a
+              onclick="M.toast({html: '{{card.card_name}} Deleted From Deck', classes: 'rounded blue'})"
+              class="btn-floating red modal-close"
+            ><i class="material-icons">delete_forever</i></a></li>
+          <li><a
+              onclick="location.href='/trading'"
+              class="btn-floating green modal-close"
+            ><i
+                class="material-icons"
+                data-api="{{card.id}}"
+                data-name="{{card.name}}"
+                data-description="{{card.flavorText}}"
+                data-image="{{card.images.small}}"
+                data-user="{{@root.user_id}}"
+              >people</i></a></li>
+        </ul>
       </div>
-      <div class="modal-footer">
-        <div class="fixed-action-btn">
-          <a class="btn-floating btn-large red">
-            <i class="large material-icons">mode_edit</i>
-          </a>
-          <ul>
-            <li><a onclick="M.toast({html: '{{card.card_name}} Deleted From Deck', classes: 'rounded blue'})" class="btn-floating red modal-close"><i
-                  class="material-icons"
-                >delete_forever</i></a></li>
-            <li><a onclick="location.href='/trading'" class="btn-floating green modal-close"><i
-                  class="material-icons" data-api="{{card.id}}" data-name="{{card.name}}" data-description="{{card.flavorText}}" data-image="{{card.images.small}}" data-user="{{@root.user_id}}"
-                >people</i></a></li>
-            <li><a onclick="M.toast({html: '{{card.card_name}} Added to Deck', classes: 'rounded blue'})" class="btn-floating red modal-close"><i
-                  class="material-icons"
-                >add</i></a></li>
-          </ul>
-        </div>
+      {{! Add to deck FAB 2 }}
+      <div class="fixed-action-btn btn2">
+        <a class="btn-floating btn-large red">
+          <i class="large material-icons">add</i>
+        </a>
+        <ul>
+          <li><a
+              onclick="M.toast({html: '{{card.card_name}} Added to Water Deck', classes: 'rounded blue'})"
+              class="btn-floating blue modal-close"
+            >Deck</a></li>
+          <li><a
+              onclick="M.toast({html: '{{card.card_name}} Added to Fire Deck', classes: 'rounded red'})"
+              class="btn-floating red modal-close"
+            >Deck</a></li>
+          <li><a
+              onclick="M.toast({html: '{{card.card_name}} Added to Electric Deck', classes: 'rounded yellow'})"
+              class="btn-floating yellow modal-close"
+            >Deck</a></li>
+          <li><a
+              onclick="M.toast({html: '{{card.card_name}} Added to Marijuana Deck', classes: 'rounded green'})"
+              class="btn-floating green modal-close"
+            >Deck</a></li>
+        </ul>
       </div>
     </div>
-    {{/each}}
+  </div>
+{{/each}}

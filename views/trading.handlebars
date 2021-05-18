@@ -1,16 +1,66 @@
-<div class="container hide-on-small-only">
-    <div class="row">
-        {{#if card}}
-        <div class="col s4">
-            <div class="card" style="height: 343px; width: 257px;">
-                <div class="card-image">
-                    <img style="height: 343px; width: 257px;" src="{{card.images.small}}" alt="{{card.name}}">
-                    <a onclick="M.toast({html: 'Added To Deck!', classes: 'rounded red'})"
-                        class="btn-floating halfway-fab waves-effect waves-light red" ><i
-                            class="material-icons add-btn" data-api="{{card.id}}" data-name="{{card.name}}" data-description="{{card.flavorText}}" data-image="{{card.images.small}}" data-user="{{@root.user_id}}">add</i></a>
-                </div>
+<div class="l-flex-fix">
+    <div class="l-flex-parent">
+        <div class="t-purple l-flex-child l-grid-half">
+            <h4>The cards I want to Trade away</h4>
+            <div class="card-item">
+                <ul class="collapsible">
+                    <li>
+                        <div class="collapsible-header">
+                            <i class="material-icons">filter_drama</i>
+                            Pikachu
+                            <span class="new badge">2</span></div>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li>Pikachu</li>
+                                <li>Detective Pikachu</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">
+                            <i class="material-icons">place</i>
+                            Charizard
+                            <span class="badge">1</span></div>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li>Charizard</li>
+                                <li>Detective Charizard</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
             </div>
+        </div>
+        <div class="t-white l-flex-child l-grid-half">
+            <h4>The cards from other users</h4>
+            <div class="card-item">
+                <ul class="collapsible">
+                    <li>
+                        <div class="collapsible-header">
+                            <i class="material-icons">filter_drama</i>
+                            Eevee
+                            <span class="new badge">2</span></div>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li>Eevee</li>
+                                <li>Detective Eevee</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">
+                            <i class="material-icons">place</i>
+                            Mewtwo
+                            <span class="badge">1</span></div>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li>Mewtwo</li>
+                                <li>Detective Mewtwo</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
             </div>
-        {{/if}}
+        </div>
     </div>
 </div>
