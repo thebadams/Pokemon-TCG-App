@@ -28,6 +28,11 @@ main {
     flex: 1 0 auto;
 }
 
+#headerTitle{
+    color: var(--white);
+
+}
+
 .navBar {
     background-color: var(--black);
 }
