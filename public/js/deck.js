@@ -81,3 +81,97 @@ const addCardToDeck = async (event) => {
 addDeck.forEach((el) =>
 el.addEventListener("click", addCardToDeck));
 
+
+
+const waterD = document.querySelectorAll('.showD');
+
+const getSpecificDeck = async (event) => {
+  event.preventDefault();
+  console.log(event.target);
+  const id = event.target.dataset.number;
+  console.log(id);
+  const deck_name = event.target.dataset.name;
+  console.log(deck_name);
+
+  const card_name = event.target.dataset.card;
+  const description = event.target.dataset.text;
+  const card_image = event.target.dataset.cardimage;
+  const user_id = event.target.dataset.user;
+  // const deck_id = event.target.dataset
+
+  const showDeck = {
+    id,
+    deck_name,
+    user_id,
+    card_name,
+    description,
+    card_image,
+    // user_id
+    
+  }
+
+  // try {
+  
+    // const response = await fetch(`/api/decks/${id}`);
+    const myRequest = new Request(`/api/decks/${id}`);
+    const result = await fetch(myRequest);
+    const response = await result.json(showDeck);
+    const cardData = response.cards;
+    let cardName = document.querySelector('.card-name');
+    let cardImage = document.querySelector('.card-image');
+    console.log(cardImage)
+    // let cardDesc = document.querySelector('.card-desc');
+   console.log(cardData.length);
+    
+   cardData.forEach((card) => {
+     let lit = card.card_image;
+     console.log(lit);
+    
+      cardImage.setAttribute("src", lit);
+      console.log(cardImage);
+     
+    });
+    // for (var i = 0; i < cardData.length; i++) {
+    //   let lit = cardData[i].card_image;
+    //   console.log(lit);
+    //  cardImage.setAttribute("src", lit)
+    //   //  cardImage.setAttribute("src", lit);
+    //   //  console.log(cardImage);
+    // }
+
+
+
+    // const cardImg = cardData.map((card) => card.card_image)
+    // const lit = {};
+    // for (const el of cardImg) {
+      
+    //   lit[el]
+      
+    // }
+    // console.log(lit)
+    // return lit;
+    
+  //   // console.log(cards);
+  //   // console.log(holder);
+  //   const modalContent = document.querySelector('.modal-content');
+    
+    
+    
+  
+    // console.log(response);
+
+
+    if (response.ok) {
+      alert('Success!');
+      document.reload('/profile')
+    }
+  // } catch (err) {
+  //   console.log(error)
+  // }
+
+
+}
+
+// waterD.addEventListener('click', getSpecificDeck);
+waterD.forEach((el) =>
+el.addEventListener("click", getSpecificDeck));

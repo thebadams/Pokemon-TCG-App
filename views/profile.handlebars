@@ -13,22 +13,25 @@
         >{{cards.[0].user.email}}</span></a>
     </div>
   </li>
-  <li><a class="waves-effect blue btn" href="#!"><span
+  <li class="showD"><a class="waves-effect blue btn" id="water" href="#!"  data-number="{{decks.[0].id}}" data-cardimage="{{card.card_image}}"
+  data-text="{{card.description}}" data-card="{{card.card_name}}" data-name="{{decks.[0].deck_name}}" data-user="{{card.user_id}}"
+   ><span
         class="iconify pokeball"
         data-icon="mdi:pokemon-go"
         data-inline="false"
+       
       ></span>Water Deck</a></li>
-  <li><a class="waves-effect red btn" href="#!"><span
+  <li class="showD"><a class="waves-effect red btn" href="#!" data-number="{{decks.[1].id}}" ><span
         class="iconify pokeball"
         data-icon="mdi:pokemon-go"
         data-inline="false"
       ></span>Fire Deck</a></li>
-  <li><a class="waves-effect yellow btn" href="#!"><span
+  <li class="showD"><a class="waves-effect yellow btn" href="#!" data-number="{{decks.[2].id}}"><span
         class="iconify pokeball"
         data-icon="mdi:pokemon-go"
         data-inline="false"
       ></span>Electric Deck</a></li>
-  <li><a class="waves-effect green btn" href="#!"><span
+  <li class="showD"><a class="waves-effect green btn" href="#!" data-number="{{decks.[3].id}}"><span
         class="iconify pokeball"
         data-icon="mdi:pokemon-go"
         data-inline="false"
@@ -48,8 +51,8 @@
 
 <div class="carousel">
   {{#each cards as |card|}}
-    <a href="#modal{{card.id}}" class="carousel-item modal-trigger"><img
-        src="{{card.card_image}}"
+    <a href="#modal{{card.id}}" class="carousel-item modal-trigger "><img
+        src="{{card.card_image}}" class="card-image"
       /></a>
   {{/each}}
 </div>
@@ -59,9 +62,9 @@
   <!-- Modal Structure -->
   <div id="modal{{card.id}}" class="modal">
     <div class="modal-content">
-      <h4>{{card.card_name}}</h4>
-      <img src="{{card.card_image}}" alt="{{card.card.name}}" />
-      <p>{{card.description}}</p>
+      <h4 class="card-name">{{card.card_name}}</h4>
+      <img class="card-image" src="{{card.card_image}}" alt="{{card.card.name}}" />
+      <p class="card-desc">{{card.description}}</p>
     </div>
    
     <div class="modal-footer" id="modal-footer">
@@ -107,11 +110,11 @@
             >Deck</a></li>
           <li class="card-deck"><a
               onclick="M.toast({html: '{{card.card_name}} Added to Electric Deck', classes: 'rounded yellow'})"
-              class="btn-floating yellow modal-close" data-deck="{{@root.decks.[2].id}}"
+              class="btn-floating yellow modal-close" data-id="{{card.id}}" data-deck="{{@root.decks.[2].id}}"
             >Deck</a></li>
           <li class="card-deck"><a
               onclick="M.toast({html: '{{card.card_name}} Added to Marijuana Deck', classes: 'rounded green'})"
-              class="btn-floating green modal-close" data-deck="{{@root.decks.[3].id}}"
+              class="btn-floating green modal-close" data-id="{{card.id}}" data-deck="{{@root.decks.[3].id}}"
             >Deck</a></li>
         </ul>
       </div>

@@ -40,6 +40,10 @@ router.get('/:id', async (req, res) => {
           model: Card,
           attributes: ["id", "card_name", "description", "card_image", "deck_id", "user_id"],
         },
+        {
+          model: User,
+          attributes: ["username", "email"]
+        }
       ]
     });
 
