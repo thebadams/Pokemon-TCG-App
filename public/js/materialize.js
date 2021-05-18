@@ -139,8 +139,8 @@ $(window).on('load', () => {
 // homepage audio
 
 function play() {
-  let audio = document.getElementById("pallet");
+  const audio = document.getElementById('pallet');
   audio.volume = 0.10;
   audio.loop = true;
-  audio.play();
+  if (audio.paused) { audio.currentTime = 0; audio.play(); } else audio.pause();
 }

@@ -208,17 +208,55 @@ body {
     color: #000;
 }
 
-/* homepage */
+/* homepage!! */
 
 li {
     font-family: "Pokemon GB";
 }
 
-p{
+@font-face {
     font-family: "Pokemon GB";
+    src: url("https://dl.dropboxusercontent.com/u/10822923/Pokemon_GB/Pokemon_GB.eot?") format("eot"),
+        url("https://dl.dropboxusercontent.com/u/10822923/Pokemon_GB/Pokemon_GB.woff") format("woff"),
+        url("https://dl.dropboxusercontent.com/u/10822923/Pokemon_GB/Pokemon_GB.ttf") format("truetype"),
+        url("https://dl.dropboxusercontent.com/u/10822923/Pokemon_GB/Pokemon_GB.svg#PokemonGB") format("svg");
+    font-weight: normal;
+    font-style: normal;
 }
 
-#oakMobile{
-    display: flex;
-    justify-content: center;
+.box {
+    font-size: 18px;
+    font-family: "Pokemon GB", Arial, sans-serif;
+    color: red;
+    border-radius: 2px;
+    padding: 8px;
+    width: 450px;
+    line-height: 36px;
+    margin: auto;
+    background: white;
+    border: 1px solid white;
+    box-shadow: 0 1px 0 1px black,
+        inset 0 1px 0 1px black,
+        0 0 0 1px black,
+        inset 0 0 0 1px black;
+}
+
+.box>i {
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-top-color: black;
+    margin-top: 23px;
+    animation: bounce 0.5s ease-in-out 0 infinite alternate;
+    float: right;
+}
+
+@keyframes bounce {
+    from {
+        margin-top: 20px;
+    }
+
+    to {
+        margin-top: 23px;
+    }
 }
