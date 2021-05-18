@@ -5,7 +5,7 @@ console.log(addBtns);
 const handleSearchForm = async (event) => {
   event.preventDefault();
   const searchQuery = document.querySelector('#autocomplete-input').value.trim();
-  const params = `?name=${searchQuery}&page=${num}`;
+  const params = `?name=${searchQuery}`;
   document.location.replace(`/pokedex${params}`);
 };
 

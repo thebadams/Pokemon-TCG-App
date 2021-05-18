@@ -90,9 +90,16 @@ router.get('/pokedex', async (req, res) => {
   try {
     const results = await pokemon.card.where({ q: `name:${req.query.name}`, pageSize: 12, page: req.query.page });
     //construct an array to include each page number
+    const totalCount = results.totalCount;
+    const pageNum = Math.ceil(totalCount / 12);
+    const pages = [];
+    for(let i = 1; i<= pageNum; i++) {
+      pages.push(i);
+    }
+    console.log(pages);
     //pass that array into handlebars
     const cards = results.data;
-    res.render('pokedex', { logged_in: req.session.logged_in, cards, user_id: req.session.user_id });
+    res.render('pokedex', { logged_in: req.session.logged_in, cards, user_id: req.session.user_id, pages });
     // res.json(res.paginatedResults);
     // console.log(res.paginatedResults);
   } catch (err) {
