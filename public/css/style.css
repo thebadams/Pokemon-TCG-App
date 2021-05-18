@@ -279,3 +279,12 @@ p{
 .other-card:hover{
     background-color: var(--red);
 }
+
+/* selected cards */
+.trade{
+    background-color: var(--red);
+}
+
+.want{
+    background-color: var(--red);
+}
