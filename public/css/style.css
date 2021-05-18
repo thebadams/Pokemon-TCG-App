@@ -137,6 +137,11 @@ main {
     text-align: center;
 }
 
+
+.btn1 {
+    right: 10%
+}
+
 .right-side, .left-side {
     height: 100vh;
     width: 100%;
@@ -149,3 +154,4 @@ main {
 .right-side {
     background-color: blue;
 }
+
