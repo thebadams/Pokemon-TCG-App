@@ -4,7 +4,24 @@ const pokemon = require('../config/tcgsdk');
 // const withAuth = require('../utils/auth');
 
 // pagination logic !!
-
+//page num
+// page size
+//count per page
+//totalCount
+//100 results total // totalCount = 100
+//10 results per page //count = 10
+//page 1: 90 results unshown totalCount - count
+//page 2: 80 totalCount -(2*count)
+//totalcount - (pageNum*count)
+//if totalcount - pageNum*10 <= 0 we don't need another page
+//page 3: 70
+//page 4: 60
+//page 5: 50
+//page 6: 40
+//page 7: 30
+//page 8: 20
+//page 9: 10
+//page 10: 0
 // function paginatedResults(model) {
 //   return (req, res, next) => {
 //     const page = parseInt(req.query.page);
@@ -71,7 +88,9 @@ router.get('/', async (req, res) => {
 
 router.get('/pokedex', async (req, res) => {
   try {
-    const results = await pokemon.card.where({ q: `name:${req.query.name}`, pageSize: 12, page: 1 });
+    const results = await pokemon.card.where({ q: `name:${req.query.name}`, pageSize: 12, page: req.query.page });
+    //construct an array to include each page number
+    //pass that array into handlebars
     const cards = results.data;
     res.render('pokedex', { logged_in: req.session.logged_in, cards, user_id: req.session.user_id });
     // res.json(res.paginatedResults);
