@@ -67,7 +67,7 @@
           <li><a
               onclick="M.toast({html: '{{card.card_name}} Deleted From Deck', classes: 'rounded blue'})"
               class="btn-floating red modal-close"
-            ><i class="material-icons">delete_forever</i></a></li>
+            ><i class="material-icons deleteBtn" data-id="{{card.id}}">delete_forever</i></a></li>
           <li><a
               onclick="location.href='/trading'"
               class="btn-floating green modal-close"
