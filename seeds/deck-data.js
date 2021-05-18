@@ -6,25 +6,22 @@ const {
 
 const deckData = [
   {
-    deck_name: "Rogue",
+    deck_name: "Water Deck",
     user_id: 1
   },
   {
-    deck_name: "Sniper",
+    deck_name: "Fire Deck",
     user_id: 2
   },
   {
-    deck_name: "Speed",
+    deck_name: "Electric Deck",
     user_id: 3
   },
   {
-    deck_name: "Power",
+    deck_name: "Grass Deck",
     user_id: 4
   },
-  {
-    deck_name: "Troll",
-    user_id: 5
-  }
+ 
 ];
 
 const seedDeck = () => Deck.bulkCreate(deckData);
