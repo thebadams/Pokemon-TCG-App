@@ -89,7 +89,7 @@ router.get('/', async (req, res) => {
 
 router.get('/pokedex', async (req, res) => {
   try {
-    const results = await pokemon.card.where({ q: `name:${req.query.name}`, pageSize: 12, page: req.query.page });
+    const results = await pokemon.card.where({ q: `name:"${req.query.name}"`, pageSize: 12, page: req.query.page });
     //construct an array to include each page number
     const totalCount = results.totalCount;
     const pageNum = Math.ceil(totalCount / 12);
