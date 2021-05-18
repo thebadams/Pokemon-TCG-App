@@ -31,12 +31,11 @@ const getCardNames = async () => {
   const cards = data.data;
   const cardNames = cards.map((card) => card.name);
   const nameMap = {};
-  for(const el of cardNames) {
-    nameMap[el] = null
-  };
+  for (const el of cardNames) {
+    nameMap[el] = null;
+  }
   return nameMap;
 };
-
 
 // console.log(pokeData);
 // $(document).ready(() => {
@@ -49,19 +48,19 @@ const getCardNames = async () => {
 //     minLength: 1, // The minimum length of the input for the autocomplete to start. Default: 1.
 //   });
 // });
-document.addEventListener('DOMContentLoaded', async () =>{
+document.addEventListener('DOMContentLoaded', async () => {
   const elems = document.querySelectorAll('input.autocomplete');
-var instances = M.Autocomplete.init(elems, {
-  data:  await getCardNames(),
-  minLength: 1,
-  limit: 20,
-})
-})
+  const instances = M.Autocomplete.init(elems, {
+    data: await getCardNames(),
+    minLength: 1,
+    limit: 20,
+  });
+});
 
 // $.when(getCardNames()).done(function(names) {
 //   $('input.autocomplete').autocomplete({
 //   data: names,
-//   limit: 20, 
+//   limit: 20,
 //   onAutocomplete(val) {
 
 //   },
@@ -137,3 +136,11 @@ $(window).on('load', () => {
   $('.progress').delay(250).fadeOut();
 });
 
+// homepage audio
+
+function play() {
+  let audio = document.getElementById("pallet");
+  audio.volume = 0.10;
+  audio.loop = true;
+  audio.play();
+}

@@ -28,7 +28,7 @@ main {
     flex: 1 0 auto;
 }
 
-#headerTitle{
+#headerTitle {
     color: var(--white);
 
 }
@@ -142,26 +142,12 @@ main {
 .modal-content p {
     font-family: "Pokemon GB";
     text-align: center;
+    font-weight: bold;
 }
-
 
 .btn1 {
     right: 10%
 }
-
-/* .right-side, .left-side {
-    height: 100vh;
-    width: 100%;
-};
-
-.left-side {
-    background-color: red;
-}
-
-.right-side {
-    background-color: blue;
-}
- */
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
@@ -186,7 +172,7 @@ body {
 }
 
 .l-flex-parent {
-    
+
     display: flex;
     flex-direction: row;
 
@@ -220,4 +206,10 @@ body {
 .t-purple .card-item {
     background: #fff;
     color: #000;
+}
+
+/* homepage */
+
+li {
+    font-family: "Pokemon GB";
 }
