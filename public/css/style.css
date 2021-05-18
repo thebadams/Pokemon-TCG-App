@@ -131,3 +131,7 @@ main {
     font-family: "Pokemon GB";
     text-align: center;
 }
+
+.btn1 {
+    right: 10%
+}
