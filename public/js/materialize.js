@@ -18,24 +18,54 @@ $(document).ready(() => {
 
 // Autocomplete search bar
 // Make it so it gets the data from the api.
-const pokeData = {
-  Pikachu: null,
-  Bulbasaur: null,
-  Ivysaur: null,
-  Charmander: null,
-  Squirtle: null,
+// const pokeData = {
+//   Pikachu: null,
+//   Bulbasaur: null,
+//   Ivysaur: null,
+//   Charmander: null,
+//   Squirtle: null,
+// };
+const getCardNames = async () => {
+  const results = await fetch('https://api.pokemontcg.io/v2/cards');
+  const data = await results.json();
+  const cards = data.data;
+  const cardNames = cards.map((card) => card.name);
+  const nameMap = {};
+  for(const el of cardNames) {
+    nameMap[el] = null
+  };
+  return nameMap;
 };
 
-$(document).ready(() => {
-  $('input.autocomplete').autocomplete({
-    data: pokeData,
-    limit: 20, // The max amount of results that can be shown at once. Default: Infinity.
-    onAutocomplete(val) {
-      // Callback function when value is autcompleted.
-    },
-    minLength: 1, // The minimum length of the input for the autocomplete to start. Default: 1.
-  });
-});
+
+// console.log(pokeData);
+// $(document).ready(() => {
+//   $('input.autocomplete').autocomplete({
+//     data: pokeData,
+//     limit: 20, // The max amount of results that can be shown at once. Default: Infinity.
+//     onAutocomplete(val) {
+//       // Callback function when value is autcompleted.
+//     },
+//     minLength: 1, // The minimum length of the input for the autocomplete to start. Default: 1.
+//   });
+// });
+document.addEventListener('DOMContentLoaded', async () =>{
+  const elems = document.querySelectorAll('input.autocomplete');
+var instances = M.Autocomplete.init(elems, {
+  data:  await getCardNames(),
+})
+})
+
+// $.when(getCardNames()).done(function(names) {
+//   $('input.autocomplete').autocomplete({
+//   data: names,
+//   limit: 20, 
+//   onAutocomplete(val) {
+
+//   },
+//   minLength: 1,
+//   })
+// });
 
 $(document).ready(() => {
   $('#password-login, #password-signup').characterCounter();
