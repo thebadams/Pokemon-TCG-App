@@ -30,7 +30,7 @@
         class="iconify pokeball"
         data-icon="mdi:pokemon-go"
         data-inline="false"
-      ></span>Marijuana Deck</a></li>
+      ></span>Da Keef Deck Mon</a></li>
 </ul>
 <a
   href="#"
@@ -67,7 +67,7 @@
           <li><a
               onclick="M.toast({html: '{{card.card_name}} Deleted From Deck', classes: 'rounded blue'})"
               class="btn-floating red modal-close"
-            ><i class="material-icons">delete_forever</i></a></li>
+            ><i class="material-icons deleteBtn" data-id="{{card.id}}">delete_forever</i></a></li>
           <li><a
               onclick="location.href='/trading'"
               class="btn-floating green modal-close"
@@ -83,26 +83,26 @@
       </div>
       {{! Add to deck FAB 2 }}
       <div class="fixed-action-btn btn2">
-        <a class="btn-floating btn-large red">
+        <a class="btn-floating btn-large teal">
           <i class="large material-icons">add</i>
         </a>
         <ul>
           <li><a
               onclick="M.toast({html: '{{card.card_name}} Added to Water Deck', classes: 'rounded blue'})"
               class="btn-floating blue modal-close"
-            >Deck</a></li>
+            ><i class="material-icons">content_copy</i></a></li>
           <li><a
               onclick="M.toast({html: '{{card.card_name}} Added to Fire Deck', classes: 'rounded red'})"
               class="btn-floating red modal-close"
-            >Deck</a></li>
+            ><i class="material-icons">content_copy</i></a></li>
           <li><a
               onclick="M.toast({html: '{{card.card_name}} Added to Electric Deck', classes: 'rounded yellow'})"
               class="btn-floating yellow modal-close"
-            >Deck</a></li>
+            ><i class="material-icons">content_copy</i></a></li>
           <li><a
-              onclick="M.toast({html: '{{card.card_name}} Added to Marijuana Deck', classes: 'rounded green'})"
+              onclick="M.toast({html: '{{card.card_name}} Added to da Keef Deck Mon!', classes: 'rounded green'})"
               class="btn-floating green modal-close"
-            >Deck</a></li>
+            ><i class="material-icons">content_copy</i></a></li>
         </ul>
       </div>
     </div>

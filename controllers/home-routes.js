@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Card, User } = require('../models');
 const pokemon = require('../config/tcgsdk');
+const { Op } = require('sequelize');
 // const withAuth = require('../utils/auth');
 
 // pagination logic !!
@@ -120,8 +121,28 @@ router.get('/profile', async (req, res) => {
 });
 
 router.get('/trading', async (req, res) => {
-  res.render('trading', { logged_in: req.session.logged_in });
+  const userCardData =  await Card.findAll({
+    where: {
+      user_id: req.session.user_id,
+    }
+    
+  })
+  const userCards = userCardData.map((card)=> card.get({ plain: true }));
+  console.log(userCards);
+
+  const otherCardData = await Card.findAll({
+  where: {
+    user_id: {
+      [Op.ne]: req.session.user_id,
+    },
+  } 
 });
+
+  const otherCards = otherCardData.map((card)=> card.get({ plain: true }));
+console.log(otherCards);
+  res.render('trading', { logged_in: req.session.logged_in, userCards, otherCards });
+});
+
 
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
