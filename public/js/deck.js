@@ -113,38 +113,11 @@ const getSpecificDeck = async (event) => {
   // try {
   try {
 
-    // const response = await fetch(`/profile/${id}`);
-    // console.log(response);
-
-
-
-    // const response = await result.json();
-    // console.log(response)
-    // const cardData = response.cards;
-  //   let cardName = document.querySelector('.card-name');
-  //   let cardImage = document.querySelector('.card-image');
-  //   console.log(cardImage)
-  //   // let cardDesc = document.querySelector('.card-desc');
-  //  console.log(cardData.length);
-    
-  //  cardData.map((card) => {
-  //    let lit = card.card_image;
-  //    console.log(lit);
-    
-  //     cardImage.setAttribute("src", lit);
-  //     console.log(cardImage);
-     
-  //   });
-  
-
-      // alert('Success!');
-      document.location.replace(`/profile/${id}`)
+     document.location.replace(`/profile/${id}`)
     
   } catch (err) {
     console.log(err)
   }
-
-
 };
 
 // waterD.addEventListener('click', getSpecificDeck);

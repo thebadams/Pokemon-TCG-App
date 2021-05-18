@@ -130,7 +130,7 @@ router.get('/profile', withAuth, async (req, res) => {
   }
 });
 
-router.get('/profile/:id', async (req, res) => {
+router.get('/profile/:id', withAuth, async (req, res) => {
   try {
     const deckData = await Deck.findOne({
       where: {
@@ -154,8 +154,8 @@ router.get('/profile/:id', async (req, res) => {
     // res.status(200).json(decks);
     console.log(decks);
     res.status(200).render('deck', {
-      decks
-      // logged_in: req.session.logged_in,
+      decks,
+      logged_in: req.session.logged_in,
     })
  
 
