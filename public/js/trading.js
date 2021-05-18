@@ -5,6 +5,9 @@ const myCards = document.querySelectorAll('.my-card');
 const otherCards = document.querySelectorAll('.other-card');
 
 const myCardSelect = (event) => {
+  myCards.forEach((card)=> {
+    card.classList.remove('trade');
+  })
   event.target.classList.add('trade');
   console.log(event.target, "Clicked");
 }
@@ -14,6 +17,9 @@ myCards.forEach((card)=>{
 });
 
 const otherCardSelect = (event) => {
+  otherCards.forEach((card) => {
+    card.classList.remove('want');
+  })
   event.target.classList.add('want');
   console.log(event.target, "Want");
 }
