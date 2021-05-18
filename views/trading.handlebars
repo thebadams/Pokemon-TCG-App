@@ -12,7 +12,7 @@
                         <div class="collapsible-body">
                             <ul>
                                 {{#each userCards as |userCard|}}
-                                <li data-id="{{userCard.id}}">{{userCard.card_name}}</li>
+                                <li data-id="{{userCard.id}}" class="my-card">{{userCard.card_name}}</li>
                                 {{/each}}
                             </ul>
                         </div>
@@ -43,7 +43,7 @@
                         <div class="collapsible-body">
                             <ul>
                             {{#each otherCards as |otherCard|}}
-                            <li data-user="{{otherCard.user_id}}">{{otherCard.card_name}}</li>
+                            <li data-user="{{otherCard.user_id}}" class="other-card">{{otherCard.card_name}}</li>
                             {{/each}}
                             </ul>
                         </div>
@@ -65,3 +65,5 @@
         </div>
     </div>
 </div>
+<button id= "tradeBtn">Trade!</button>
+<script src="/js/trading.js"></script>
