@@ -1,7 +1,9 @@
 const router = require('express').Router();
-const { Card, User } = require('../models');
+const { Card, User, Deck } = require('../models');
 const pokemon = require('../config/tcgsdk');
-// const withAuth = require('../utils/auth');
+
+const withAuth = require('../utils/auth');
+
 
 // pagination logic !!
 
@@ -70,24 +72,6 @@ router.get('/', async (req, res) => {
 // });
 
 router.get('/pokedex', async (req, res) => {
-
-  try {
-    const results = await pokemon.card.where({ q: 'name:Charizard' });
-    const cards = results.data;
-
-    
-
-  console.log(cards[0].images);
-  res.render('pokedex', { cards });
-  } catch (error) {
-    console.log(error)
-  }
-  
-
-  const results = await pokemon.card.where({ q: `name:${req.query.name}`, pageSize: 12, page: 1 });
-  const cards = results.data;
-  res.render('pokedex', { logged_in: req.session.logged_in, cards });
-
   try {
     const results = await pokemon.card.where({ q: `name:${req.query.name}`, pageSize: 12, page: 1 });
     const cards = results.data;
@@ -97,20 +81,82 @@ router.get('/pokedex', async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
-
 });
 
-router.get('/profile', async (req, res) => {
+router.get('/profile', withAuth, async (req, res) => {
   try {
     const results = await Card.findAll({
-      where: { user_id: req.session.user_id },
+      where: { 
+        user_id: req.session.user_id 
+      },
+      include: [
+        {
+          model: User,
+          attributes: ["username", "email"],
+          include: {
+            model: Deck,
+            attributes: ["deck_name", "user_id"]
+          }
+        },
+        // {
+        //   model: Deck,
+        //   attributes: ["deck_name", "user_id"],
+        // }
+      ]
     });
+    
+   
+   
     const cards = results.map((card) => card.get({ plain: true }));
+   
+  
     res.render('profile', { logged_in: req.session.logged_in, cards });
   } catch (err) {
     res.status(500).json(err);
   }
 });
+
+// router.get('/profile', async (req, res) => {
+//   try {
+//     const userData = await User.findByPk(req.session.user_id, {
+//       attributes: { exclude: ["password"] },
+//       include: [
+//         {
+//           model: Card,
+//           attributes: ["id", "card_name", "description", "card_image", "deck_id", "user_id"],
+//         },
+//         {
+//           model: User,
+//           attributes: ["id", "username"],
+//         }
+//       ]
+//     });
+
+//    const user = userData.map((user) => user.get({ plain: true }));
+
+
+//     res.render('profile', {
+//       user,
+//       logged_in: true,
+//     });
+
+
+//   } catch (err) {
+//     res.status(500).json(err)
+//   }
+// })
+
+
+
+
+
+
+
+
+
+
+
+
 
 router.get('/trading', async (req, res) => {
   res.render('trading', { logged_in: req.session.logged_in });
