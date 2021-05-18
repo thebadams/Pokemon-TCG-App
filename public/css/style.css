@@ -213,3 +213,12 @@ body {
 li {
     font-family: "Pokemon GB";
 }
+
+p{
+    font-family: "Pokemon GB";
+}
+
+#oakMobile{
+    display: flex;
+    justify-content: center;
+}
