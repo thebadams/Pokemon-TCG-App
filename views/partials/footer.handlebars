@@ -14,6 +14,6 @@
     </div>
 </footer>
 
-{{#each page}}
-<li class="waves-effect"><a href="/p" id="{{page}}""><i class="material-icons">chevron_right</i></a></li>
+{{#each pageArray as page}}
+<li class="waves-effect" id="{{page}}"><a href="#!">{{page}}</a></li>
 {{/each}}

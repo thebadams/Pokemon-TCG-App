@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 const router = require('express').Router();
 const { Card, User } = require('../models');
 const pokemon = require('../config/tcgsdk');
@@ -88,11 +89,19 @@ router.get('/', async (req, res) => {
 
 router.get('/pokedex', async (req, res) => {
   try {
-    const results = await pokemon.card.where({ q: `name:${req.query.name}`, pageSize: 12, page: req.query.page });
+    const results = await pokemon.card.where({ q: `name:${req.query.name}`, pageSize: 12, page: req.query.page || 1 });
     //construct an array to include each page number
+    const totalResults = results.totalCount;
+    const pages = Math.ceil(totalResults / 12);
+    const pageArray = [];
+    for (let i = 1; i<=pages; i++) {
+      pageArray.push(i);
+    }
     //pass that array into handlebars
     const cards = results.data;
-    res.render('pokedex', { logged_in: req.session.logged_in, cards, user_id: req.session.user_id });
+    res.render('pokedex', {
+      logged_in: req.session.logged_in, cards, user_id: req.session.user_id, pageArray,
+    });
     // res.json(res.paginatedResults);
     // console.log(res.paginatedResults);
   } catch (err) {
