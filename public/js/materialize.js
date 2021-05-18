@@ -53,6 +53,8 @@ document.addEventListener('DOMContentLoaded', async () =>{
   const elems = document.querySelectorAll('input.autocomplete');
 var instances = M.Autocomplete.init(elems, {
   data:  await getCardNames(),
+  minLength: 1,
+  limit: 20,
 })
 })
 
