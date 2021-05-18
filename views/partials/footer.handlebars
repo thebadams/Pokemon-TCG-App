@@ -3,7 +3,8 @@
         <div class="col l6 s12">
         <ul class="pagination">
             <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-            <li class="active"><a href="#!">1</a></li>
+            {{!-- access page numbers by running an each statement and passing in {{#each pages as page}}  --}}
+            <li class="active"><a href="#!">{{pages.[1]}}</a></li>
             <li class="waves-effect"><a href="#!">2</a></li>
             <li class="waves-effect"><a href="#!">3</a></li>
             <li class="waves-effect"><a href="#!">4</a></li>
@@ -13,3 +14,7 @@
         </div>
     </div>
 </footer>
+
+{{!-- {{#each page}}
+<li class="waves-effect"><a href="/p" id="{{page}}""><i class="material-icons">chevron_right</i></a></li>
+{{/each}} --}}

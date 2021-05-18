@@ -1,8 +1,91 @@
 <div class="row">
-    <div class="col s6">
-        <div class="left-side"></div>
-    </div>
-    <div class="col s6">
-        <div class="right-side"></div>
+    <div class="l-flex-fix">
+        <div class="l-flex-parent">
+            <div class="col s5">
+                <div class="t-purple l-flex-child l-grid-half">
+                    <h4>The cards I want to Trade away</h4>
+                    <div class="card-item">
+                        <ul class="collapsible">
+                            <li>
+                                <div class="collapsible-header">
+                                    <i class="material-icons">filter_drama</i>
+                                    Pikachu
+                                    <span class="new badge">2</span></div>
+                                <div class="collapsible-body">
+                                    <ul>
+                                        {{#each userCards as |userCard|}}
+                                        <li data-id="{{userCard.id}}" data-user="{{userCard.user_id}}" class="my-card">
+                                            {{userCard.card_name}}</li>
+                                        {{/each}}
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header">
+                                    <i class="material-icons">place</i>
+                                    Charizard
+                                    <span class="badge">1</span></div>
+                                <div class="collapsible-body">
+                                    <ul>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col s2">
+                <div class="t-white l-flex-child">
+                    <div class="container-trade">
+                        <div class="vertical-center">
+                            <a class="waves-effect waves-light btn-large" id="tradeBtn">Trade</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s5">
+                <div class="t-white l-flex-child l-grid-half">
+                    <h4>The cards from other users</h4>
+                    <div class="card-item">
+                        <ul class="collapsible">
+                            <li>
+                                <div class="collapsible-header">
+                                    <i class="material-icons">filter_drama</i>
+                                    Eevee
+                                    <span class="new badge"></span></div>
+                                <div class="collapsible-body">
+                                    <ul>
+                                        {{#each otherCards as |otherCard|}}
+                                        <li data-user="{{otherCard.user_id}}" data-id="{{otherCard.id}}"
+                                            class="other-card">
+                                            {{otherCard.card_name}}</li>
+                                        {{/each}}
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header">
+                                    <i class="material-icons">place</i>
+                                    Mewtwo
+                                    <span class="badge"></span></div>
+                                <div class="collapsible-body">
+                                    <ul>
+                                        <li>Mewtwo</li>
+                                        <li>Detective Mewtwo</li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+{{!-- <div class="container-trade"> --}}
+{{!-- <div class="vertical-center">
+        <a class="waves-effect waves-light btn-large" id="tradeBtn">Trade</a>
+    </div>
+</div> --}}
+
+<script src="/js/trading.js"></script>
