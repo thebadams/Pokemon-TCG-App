@@ -65,9 +65,12 @@ function myFunction() {
 // Floating Action Button
 
 $(document).ready(() => {
-  $('.fixed-action-btn').floatingActionButton({
+  $('.btn1').floatingActionButton({
     direction: 'left',
     hoverEnabled: false,
+  });
+  $('.btn2').floatingActionButton({
+    direction: 'top',
   });
 });
 
@@ -101,3 +104,4 @@ $(document).ready(() => {
 $(window).on('load', () => {
   $('.progress').delay(250).fadeOut();
 });
+

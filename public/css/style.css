@@ -10,6 +10,12 @@ https://www.color-hex.com/color-palette/1045 */
     --grey: #e0e0e0;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    text-align: center;
+}
+
 body {
     display: flex;
     min-height: 100vh;
@@ -86,7 +92,7 @@ main {
 }
 
 
-/* Profile styling */
+/********************************** Profile styling *************************************/
 
 .collection-title {
     display: flex;
@@ -123,7 +129,6 @@ main {
 
 .modal-content img {
     position: relative;
-    left: 30%;
     padding: 10px;
 }
 
@@ -131,3 +136,22 @@ main {
     font-family: "Pokemon GB";
     text-align: center;
 }
+
+
+.btn1 {
+    right: 10%
+}
+
+.right-side, .left-side {
+    height: 100vh;
+    width: 100%;
+};
+
+.left-side {
+    background-color: red;
+}
+
+.right-side {
+    background-color: blue;
+}
+
