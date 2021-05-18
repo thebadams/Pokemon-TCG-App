@@ -26,6 +26,11 @@ const pokeData = {
   Squirtle: null,
 };
 
+
+
+
+
+
 $(document).ready(() => {
   $('input.autocomplete').autocomplete({
     data: pokeData,

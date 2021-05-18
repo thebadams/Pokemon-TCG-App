@@ -1,28 +1,25 @@
-// const deckBtns = document.querySelectorAll('.add-btn');
+const waterD = document.querySelectorAll('.waterD');
+console.log(waterD)
 
 // const createDeck = async (event) => {
 //   event.preventDefault();
 //   console.log(event.target);
-
-//   console.log(event.target);
-//   const api_id = event.target.dataset.api;
-//   const card_name = event.target.dataset.name;
-//   const description = event.target.dataset.description;
-//   const card_image = event.target.dataset.image;
 //   const user_id = event.target.dataset.user;
-//   const info = {
-//     api_id,
-//     card_name,
-//     description,
-//     card_image,
+//   const deck_name = event.target.dataset.name;
+ 
+//   // const deck_id = event.target.dataset.deck;
+
+
+//   const cardInfoForDeck = {
+//     deck_name,
 //     user_id,
 //   };
-//   console.log(user_id);
-//   console.log(info);
+//   console.log(cardInfoForDeck);
+
 //   try {
 //     const response = fetch('/api/decks', {
 //       method: 'POST',
-//       body: JSON.stringify(info),
+//       body: JSON.stringify(cardInfoForDeck),
 //       headers: {
 //         'Content-Type': 'application/json',
 //       },
@@ -37,8 +34,49 @@
 
 // };
 
-// deckBtns.forEach(((el) => {
-//   el.addEventListener('click', addToCollection);
-// }));
+// waterD.addEventListener("click", createDeck);
 
+
+const addCardToDeck = async (event) => {
+  event.preventDefault();
+  console.log(event.target)
+  const id = event.target.dataset.id;
+  console.log('inside the function')
+  const card_name = event.target.dataset.card;
+  const description = event.target.dataset.text;
+  // console.log(description)
+  const card_image = event.target.dataset.cardimage;
+  const user_id = event.target.dataset.user;
+  const deck_id = event.target.dataset.deck;
+  console.log(deck_id);
+  // console.log(deck_id)
+
+  const addingCard = {
+    // card_name,
+    // description,
+    // card_image,
+    // user_id,
+    deck_id,
+  };
+  console.log(addingCard);
+
+   try {
+    const response = fetch(`/api/cards/${id}`, {
+      method: 'PUT',
+      body: JSON.stringify(addingCard),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    if (response.ok) {
+      alert('Success!');
+    }
+  } catch (error) {
+    console.log(error);
+  }
+
+
+};
+waterD.forEach((el) =>
+el.addEventListener("click", addCardToDeck));
 

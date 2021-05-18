@@ -5,7 +5,7 @@ const { User, Card, Deck } = require('../../models');
 router.get('/', async (req, res) => {
   try {
     const deckData = await Deck.findAll({
-      attributes: ["deck_name", "user_id"],
+      attributes: ["id", "deck_name", "user_id"],
       include: [
         {
           model: Card,
@@ -34,23 +34,19 @@ router.get('/:id', async (req, res) => {
       where: {
         id: req.params.id,
       },
-      attributes: ["deck_name", "user_id"],
+      attributes: ["id", "deck_name", "user_id"],
       include: [
-       
         {
           model: Card,
           attributes: ["id", "card_name", "description", "card_image", "deck_id", "user_id"],
         },
       ]
     });
-
     if(!deckData) {
       res.status(404).json({ message: `No Deck with ID of ${req.params.id} found!` });
       return;
     }
     res.status(200).json(deckData);
-
-
   } catch (err) {
     res.status(500).json(err)
   }
@@ -63,7 +59,7 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
   try {
     const deck = await Deck.create(req.body);
-    // console.log(deck);
+    console.log(deck);
     res.status(200).json(deck);
   } catch (error) {
     res.status(500).json(error);
@@ -83,7 +79,7 @@ router.delete('/:id', async (res, req) => {
   }
 });
 
-router.put('/:id', async (res, req) => {
+router.put('/:id', async (req, res) => {
   try {
     const deck = await Deck.update(req.body, {
       where: {
