@@ -11,8 +11,9 @@
                             <span class="new badge">2</span></div>
                         <div class="collapsible-body">
                             <ul>
-                                <li>Pikachu</li>
-                                <li>Detective Pikachu</li>
+                                {{#each userCards as |userCard|}}
+                                <li data-id="{{userCard.id}}" data-user="{{userCard.user_id}}" class="my-card">{{userCard.card_name}}</li>
+                                {{/each}}
                             </ul>
                         </div>
                     </li>
@@ -23,8 +24,7 @@
                             <span class="badge">1</span></div>
                         <div class="collapsible-body">
                             <ul>
-                                <li>Charizard</li>
-                                <li>Detective Charizard</li>
+                               
                             </ul>
                         </div>
                     </li>
@@ -42,8 +42,9 @@
                             <span class="new badge">2</span></div>
                         <div class="collapsible-body">
                             <ul>
-                                <li>Eevee</li>
-                                <li>Detective Eevee</li>
+                            {{#each otherCards as |otherCard|}}
+                            <li data-user="{{otherCard.user_id}}" data-id="{{otherCard.id}}" class="other-card">{{otherCard.card_name}}</li>
+                            {{/each}}
                             </ul>
                         </div>
                     </li>
@@ -64,3 +65,5 @@
         </div>
     </div>
 </div>
+<button id= "tradeBtn">Trade!</button>
+<script src="/js/trading.js"></script>

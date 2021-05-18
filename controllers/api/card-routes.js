@@ -2,6 +2,15 @@ const router = require('express').Router();
 const { Card } = require('../../models');
 
 // add a new card
+
+router.get('/', async (req, res)=> {
+  try {
+    const cards = await Card.findAll()
+    res.status(200).json(cards);
+  } catch (error) {
+    res.status(500).json(error)
+  }
+})
 router.post('/', async (req, res) => {
   try {
     const card = await Card.create(req.body);
