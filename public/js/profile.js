@@ -21,22 +21,26 @@ const newFormHandler = async (event) => {
     }
   }
 };
-
+const deleteBtns = document.querySelectorAll('.deleteBtn');
 const delButtonHandler = async (event) => {
-  if (event.target.hasAttribute('data-id')) {
-    const id = event.target.getAttribute('data-id');
-
-    const response = await fetch(`/api/projects/${id}`, {
-      method: 'DELETE',
-    });
-
-    if (response.ok) {
-      document.location.replace('/profile');
-    } else {
-      alert('Failed to delete project');
-    }
-  }
+ const id = event.target.dataset.id;
+ try {
+   const result = await fetch(`/api/cards/${id}`, {
+     method: 'DELETE',
+     headers: {
+       'Content-Type': 'application/json',
+     },
+   });
+   console.log(result)
+ } catch (error) {
+   console.log(error);
+ }
+ document.location.replace('/profile');
 };
+
+deleteBtns.forEach((btn) => {
+  btn.addEventListener('click', delButtonHandler)
+})
 
 document
   .querySelector('.new-project-form')
