@@ -1,44 +1,59 @@
 {{!--
 <i class="iconify" data-icon="mdi-pokeball" data-inline="true" style="font-size: 16px;"></i> --}}
-
+{{!-- LOGIN FORM --}}
 <div class="row hide-on-small-only">
   <div class="col s4 pink darken-2 center-align">
-    <h2>TEST</h2>
+    <div class="container">
+      <h2>Log In</h2>
+    </div>
   </div>
 
-  <div class="col s4 teal lighten-2 center-align">
-    <h2>Login</h2>
-    {{!-- LOGIN FORM --}}
+  <div class="col s4 grey lighten-2 center-align">
+    <h2>Sign Up</h2>
+
+    {{!-- SIGN UP FORM --}}
     <div class="container">
       <div class="col s6">
-      <form class="form login-form">
-        <div class="row">
-          <div class="input-field row">
-            <input id="email-login" type="email" class="validate" />
-            <label for="email-login">Email</label>
+        <form class="form signup-form">
+          <div class="row">
+
+            <div class="input-field col s6">
+              <input id="username-signup" type="text" class="validate" />
+              <label for="username-signup">Username</label>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="input-field row">
-            <input id="password-login" type="password" class="validate" data-length="10" />
-            <label for="password-login">Password</label>
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="email-signup" type="email" class="validate" />
+              <label for="email-signup">Email</label>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="form-group">
-            <button class="btn waves-effect waves-light" type="submit" name="action">login
-              <i class="iconify" data-icon="mdi-pokeball" data-inline="true" style="font-size: 16px;"></i>
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="password-signup" type="password" class="validate" data-length="10" />
+              <label for="password-signup">Password</label>
+            </div>
           </div>
-        </div>
-      </form>
+          <div class="row">
+            <div class="form-group">
+              <button class="btn waves-effect waves-light" type="submit" name="action">Sign-Up
+                <i class="iconify" data-icon="mdi-pokeball" data-inline="true" style="font-size: 16px;"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
-</div>
   </div>
 
 
-  {{!-- SIGNUP FORM --}}
+  {{!-- PROFESSOR OAK --}}
   <div class="col s4 indigo darken-2 center-align">
-    <h2>TEST</h2>
+    <div class="container" style="width:100%">
+      <h3>Erm.. what was your name again?</h3>
+
+      <img src="/images/professorOak2.png" style="max-width:100%; max-height 100%;" />
+    </div>
   </div>
 
 
