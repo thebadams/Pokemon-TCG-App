@@ -264,3 +264,18 @@ p{
         margin-top: 23px;
     }
 }
+
+/* HOVER FEATURES  */
+.my-card{
+    cursor: pointer;
+}
+.my-card:hover{
+    background-color: var(--red);
+}
+.other-card{
+    cursor: pointer;
+}
+
+.other-card:hover{
+    background-color: var(--red);
+}
