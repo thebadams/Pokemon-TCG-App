@@ -118,7 +118,7 @@ router.get('/profile', withAuth, async (req, res) => {
     });
 
     const decks = deckData.map((card) => card.get({ plain: true }));
-   console.log(decks);
+  //  console.log(decks);
 
     
    const cards = results.map((card) => card.get({ plain: true }));
@@ -129,6 +129,46 @@ router.get('/profile', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+router.get('/profile/:id', async (req, res) => {
+  try {
+    const deckData = await Deck.findOne({
+      where: {
+        id: req.params.id,
+      },
+      attributes: ["id","deck_name", "user_id"],
+      include: [
+       {
+         model: Card,
+         attributes: ["id", "card_name", "description", "card_image", "deck_id", "user_id"],
+         include: {
+           model: User,
+           attributes: ["username"],
+         }
+       },
+      ]
+    });
+    const decks = deckData.get({ plain: true });
+    // console.log(decks);
+    // // console.log(decks.deck_name);
+    // res.status(200).json(decks);
+    console.log(decks);
+    res.status(200).render('deck', {
+      decks
+      // logged_in: req.session.logged_in,
+    })
+ 
+
+
+
+  } catch (err) {
+    res.status(500).json(err)
+  }
+})
+
+
+
+
 
 
 

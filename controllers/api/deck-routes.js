@@ -39,13 +39,37 @@ router.get('/:id', async (req, res) => {
         {
           model: Card,
           attributes: ["id", "card_name", "description", "card_image", "deck_id", "user_id"],
+          include: {
+            model: User,
+            attributes: ["username"],
+          }
         },
-        {
-          model: User,
-          attributes: ["username", "email"]
-        }
+        // {
+        //   model: User,
+        //   attributes: ["username", "email"]
+        // }
       ]
     });
+
+  //  const decks = await Deck.findOne({
+  //    where: {
+  //      user_id: req.session.user_id,
+  //    },
+  //    attributes: ["id","deck_name", "user_id"],
+  //    include: [
+  //     {
+  //       model: Card,
+  //       attributes: ["id", "card_name", "description", "card_image", "deck_id", "user_id"],
+  //       include: {
+  //         model: User,
+  //         attributes: ["username"],
+  //       }
+  //     },
+  //    ]
+  //  });
+  //  console.log(decks);
+
+
 
     if(!deckData) {
       res.status(404).json({ message: `No Deck with ID of ${req.params.id} found!` });

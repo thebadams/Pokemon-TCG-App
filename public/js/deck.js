@@ -111,66 +111,41 @@ const getSpecificDeck = async (event) => {
   }
 
   // try {
-  
-    // const response = await fetch(`/api/decks/${id}`);
-    const myRequest = new Request(`/api/decks/${id}`);
-    const result = await fetch(myRequest);
-    const response = await result.json(showDeck);
-    const cardData = response.cards;
-    let cardName = document.querySelector('.card-name');
-    let cardImage = document.querySelector('.card-image');
-    console.log(cardImage)
-    // let cardDesc = document.querySelector('.card-desc');
-   console.log(cardData.length);
-    
-   cardData.forEach((card) => {
-     let lit = card.card_image;
-     console.log(lit);
-    
-      cardImage.setAttribute("src", lit);
-      console.log(cardImage);
-     
-    });
-    // for (var i = 0; i < cardData.length; i++) {
-    //   let lit = cardData[i].card_image;
-    //   console.log(lit);
-    //  cardImage.setAttribute("src", lit)
-    //   //  cardImage.setAttribute("src", lit);
-    //   //  console.log(cardImage);
-    // }
+  try {
 
-
-
-    // const cardImg = cardData.map((card) => card.card_image)
-    // const lit = {};
-    // for (const el of cardImg) {
-      
-    //   lit[el]
-      
-    // }
-    // console.log(lit)
-    // return lit;
-    
-  //   // console.log(cards);
-  //   // console.log(holder);
-  //   const modalContent = document.querySelector('.modal-content');
-    
-    
-    
-  
+    // const response = await fetch(`/profile/${id}`);
     // console.log(response);
 
 
-    if (response.ok) {
-      alert('Success!');
-      document.reload('/profile')
-    }
-  // } catch (err) {
-  //   console.log(error)
-  // }
+
+    // const response = await result.json();
+    // console.log(response)
+    // const cardData = response.cards;
+  //   let cardName = document.querySelector('.card-name');
+  //   let cardImage = document.querySelector('.card-image');
+  //   console.log(cardImage)
+  //   // let cardDesc = document.querySelector('.card-desc');
+  //  console.log(cardData.length);
+    
+  //  cardData.map((card) => {
+  //    let lit = card.card_image;
+  //    console.log(lit);
+    
+  //     cardImage.setAttribute("src", lit);
+  //     console.log(cardImage);
+     
+  //   });
+  
+
+      // alert('Success!');
+      document.location.replace(`/profile/${id}`)
+    
+  } catch (err) {
+    console.log(err)
+  }
 
 
-}
+};
 
 // waterD.addEventListener('click', getSpecificDeck);
 waterD.forEach((el) =>

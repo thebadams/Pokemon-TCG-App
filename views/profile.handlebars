@@ -1,5 +1,8 @@
 {{! Slide out nav bar for decks }}
+
+
 {{#if logged_in}}
+
 
 <ul id="slide-out" class="sidenav">
   <li>
@@ -38,7 +41,7 @@
       ></span>Marijuana Deck</a></li>
 </ul>
 <a
-  href="#"
+  href="/profile/{{deck.id}}"
   data-target="slide-out"
   class="sidenav-trigger btn waves-effect waves-light"
 >My Decks</a>
@@ -51,6 +54,7 @@
 
 <div class="carousel">
   {{#each cards as |card|}}
+
     <a href="#modal{{card.id}}" class="carousel-item modal-trigger "><img
         src="{{card.card_image}}" class="card-image"
       /></a>
@@ -58,7 +62,7 @@
 </div>
 
 {{#each cards as |card|}}
-
+ 
   <!-- Modal Structure -->
   <div id="modal{{card.id}}" class="modal">
     <div class="modal-content">
