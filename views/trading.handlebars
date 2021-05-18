@@ -24,8 +24,7 @@
                             <span class="badge">1</span></div>
                         <div class="collapsible-body">
                             <ul>
-                                <li>Charizard</li>
-                                <li>Detective Charizard</li>
+                               
                             </ul>
                         </div>
                     </li>
@@ -43,8 +42,9 @@
                             <span class="new badge">2</span></div>
                         <div class="collapsible-body">
                             <ul>
-                                <li>Eevee</li>
-                                <li>Detective Eevee</li>
+                            {{#each otherCards as |otherCard|}}
+                            <li data-user="{{otherCard.user_id}}">{{otherCard.card_name}}</li>
+                            {{/each}}
                             </ul>
                         </div>
                     </li>

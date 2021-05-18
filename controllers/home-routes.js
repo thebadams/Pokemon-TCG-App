@@ -137,8 +137,10 @@ router.get('/trading', async (req, res) => {
     },
   } 
 });
-console.log(otherCardData)
-  res.render('trading', { logged_in: req.session.logged_in, userCards });
+
+  const otherCards = otherCardData.map((card)=> card.get({ plain: true }));
+console.log(otherCards);
+  res.render('trading', { logged_in: req.session.logged_in, userCards, otherCards });
 });
 
 
