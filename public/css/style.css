@@ -160,7 +160,7 @@ body {
 * {
     box-sizing: border-box;
 }
-
+/* 
 .card-item {
     padding: 1em;
     border-radius: 5px;
@@ -206,7 +206,7 @@ body {
 .t-purple .card-item {
     background: #fff;
     color: #000;
-}
+} */
 
 /* FONT STYLING  */
 
@@ -214,7 +214,7 @@ li {
     font-family: "Pokemon GB";
 }
 
-p{
+p {
     font-family: "Pokemon GB";
 }
 
@@ -266,16 +266,18 @@ p{
 }
 
 /* HOVER FEATURES  */
-.my-card{
-    cursor: pointer;
-}
-.my-card:hover{
-    background-color: var(--red);
-}
-.other-card{
+.my-card {
     cursor: pointer;
 }
 
-.other-card:hover{
+.my-card:hover {
+    background-color: var(--red);
+}
+
+.other-card {
+    cursor: pointer;
+}
+
+.other-card:hover {
     background-color: var(--red);
 }
