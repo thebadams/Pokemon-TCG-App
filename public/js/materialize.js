@@ -104,3 +104,4 @@ $(document).ready(() => {
 $(window).on('load', () => {
   $('.progress').delay(250).fadeOut();
 });
+
