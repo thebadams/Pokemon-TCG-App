@@ -104,7 +104,7 @@ router.get('/pokedex', async (req, res) => {
     // res.json(res.paginatedResults);
     // console.log(res.paginatedResults);
   } catch (err) {
-    res.status(500).json(err);
+    res.status(500).render('404');
   }
 });
 
@@ -116,7 +116,7 @@ router.get('/profile', async (req, res) => {
     const cards = results.map((card) => card.get({ plain: true }));
     res.render('profile', { logged_in: req.session.logged_in, cards });
   } catch (err) {
-    res.status(500).json(err);
+    res.status(500).render(404);
   }
 });
 
