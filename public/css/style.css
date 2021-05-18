@@ -208,9 +208,13 @@ body {
     color: #000;
 }
 
-/* homepage!! */
+/* FONT STYLING  */
 
 li {
+    font-family: "Pokemon GB";
+}
+
+p{
     font-family: "Pokemon GB";
 }
 
