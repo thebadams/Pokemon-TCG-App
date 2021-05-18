@@ -60,9 +60,10 @@ router.get('/:id', async (req, res) => {
 
 
 
-router.post('/', async (res, req) => {
+router.post('/', async (req, res) => {
   try {
     const deck = await Deck.create(req.body);
+    // console.log(deck);
     res.status(200).json(deck);
   } catch (error) {
     res.status(500).json(error);

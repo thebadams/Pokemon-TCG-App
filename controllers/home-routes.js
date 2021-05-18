@@ -98,17 +98,14 @@ router.get('/profile', withAuth, async (req, res) => {
             attributes: ["deck_name", "user_id"]
           }
         },
-        // {
-        //   model: Deck,
-        //   attributes: ["deck_name", "user_id"],
-        // }
+        {
+          model: Deck,
+          attributes: ["deck_name", "user_id"],
+        }
       ]
     });
     
-   
-   
-    const cards = results.map((card) => card.get({ plain: true }));
-   
+   const cards = results.map((card) => card.get({ plain: true }));
   
     res.render('profile', { logged_in: req.session.logged_in, cards });
   } catch (err) {

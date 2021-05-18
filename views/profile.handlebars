@@ -1,14 +1,16 @@
 {{! Slide out nav bar for decks }}
+{{#if logged_in}}
+
 <ul id="slide-out" class="sidenav">
   <li>
     <div class="user-view">
       <div class="background profile-bg">
         <img src="/images/profile.png" />
       </div>
-      <a href="#name"><span class="white-text name">Dirty Dan</span></a>
+      <a href="#name"><span class="white-text name">{{cards.[0].user.username}}</span></a>
       <a href="#email"><span
           class="white-text email"
-        >dirtydan@gmail.com</span></a>
+        >{{cards.[0].user.email}}</span></a>
     </div>
   </li>
   <li><a class="waves-effect blue btn" href="#!"><span
@@ -37,7 +39,10 @@
   data-target="slide-out"
   class="sidenav-trigger btn waves-effect waves-light"
 >My Decks</a>
+
+{{/if}}
 {{! Carousel of cards }}
+
 
 <h1 class="collection-title">My Collection</h1>
 
@@ -108,3 +113,5 @@
     </div>
   </div>
 {{/each}}
+
+<script src="/js/deck.js"></script>

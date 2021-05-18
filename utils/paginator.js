@@ -1,1 +1,0 @@
-Handlebars.registerHelper('pagination', (currentPage, totalPage, size, options))
