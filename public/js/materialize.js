@@ -16,15 +16,15 @@ $(document).ready(() => {
   $('.modal').modal();
 });
 
+// Audio
+function play() {
+  const audio = document.getElementById('pallet');
+  audio.volume = 0.10;
+  audio.loop = true;
+  if (audio.paused) { audio.currentTime = 0; audio.play(); } else audio.pause();
+};
+
 // Autocomplete search bar
-// Make it so it gets the data from the api.
-// const pokeData = {
-//   Pikachu: null,
-//   Bulbasaur: null,
-//   Ivysaur: null,
-//   Charmander: null,
-//   Squirtle: null,
-// };
 const getCardNames = async () => {
   const results = await fetch('https://api.pokemontcg.io/v2/cards');
   const data = await results.json();
