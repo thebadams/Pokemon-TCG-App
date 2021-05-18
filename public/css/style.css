@@ -10,7 +10,8 @@ https://www.color-hex.com/color-palette/1045 */
     --grey: #e0e0e0;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     text-align: center;
@@ -85,10 +86,10 @@ main {
 
 .progress {
     width: 60%;
-    margin:auto;
-    left:0;
-    right:0;
-    position:fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    position: fixed;
 }
 
 
@@ -103,7 +104,8 @@ main {
 /* sizing of carousel */
 .carousel .carousel-item {
     min-height: 400px;
-    width: 270px !important;}
+    width: 270px !important;
+}
 
 /* Background image for profile Decks sidenav */
 .profile-bg img {
@@ -142,7 +144,7 @@ main {
     right: 10%
 }
 
-.right-side, .left-side {
+/* .right-side, .left-side {
     height: 100vh;
     width: 100%;
 };
@@ -154,4 +156,63 @@ main {
 .right-side {
     background-color: blue;
 }
+ */
 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+    font-family: 'Open sans', sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.card-item {
+    padding: 1em;
+    border-radius: 5px;
+    max-width: 15em;
+}
+
+.l-grid-half {
+    width: 50%;
+}
+
+.l-flex-parent {
+    
+    display: flex;
+    flex-direction: row;
+
+}
+
+.l-flex-child {
+    padding: 1em;
+    min-height: 100vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.t-purple {
+    background-color: var(--blue);
+    color: #fff;
+}
+
+.t-white {
+    background-color: #fff;
+    color: var(--blue);
+}
+
+.t-white .card-item {
+    background: var(--blue);
+    color: black;
+}
+
+.t-purple .card-item {
+    background: #fff;
+    color: #000;
+}
