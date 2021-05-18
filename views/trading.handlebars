@@ -11,8 +11,9 @@
                             <span class="new badge">2</span></div>
                         <div class="collapsible-body">
                             <ul>
-                                <li>Pikachu</li>
-                                <li>Detective Pikachu</li>
+                                {{#each userCards as |userCard|}}
+                                <li data-id="{{userCard.id}}">{{userCard.card_name}}</li>
+                                {{/each}}
                             </ul>
                         </div>
                     </li>
