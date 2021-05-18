@@ -1,5 +1,5 @@
-const waterD = document.querySelectorAll('.waterD');
-console.log(waterD)
+const addDeck = document.querySelectorAll('.card-deck');
+console.log(addDeck)
 
 // const createDeck = async (event) => {
 //   event.preventDefault();
@@ -34,13 +34,14 @@ console.log(waterD)
 
 // };
 
-// waterD.addEventListener("click", createDeck);
+// addDeck.addEventListener("click", createDeck);
 
 
 const addCardToDeck = async (event) => {
   event.preventDefault();
   console.log(event.target)
   const id = event.target.dataset.id;
+  console.log(id);
   console.log('inside the function')
   const card_name = event.target.dataset.card;
   const description = event.target.dataset.text;
@@ -77,6 +78,6 @@ const addCardToDeck = async (event) => {
 
 
 };
-waterD.forEach((el) =>
+addDeck.forEach((el) =>
 el.addEventListener("click", addCardToDeck));
 

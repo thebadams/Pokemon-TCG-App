@@ -42,6 +42,7 @@ router.get('/:id', async (req, res) => {
         },
       ]
     });
+
     if(!deckData) {
       res.status(404).json({ message: `No Deck with ID of ${req.params.id} found!` });
       return;

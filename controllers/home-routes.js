@@ -112,9 +112,9 @@ router.get('/profile', withAuth, async (req, res) => {
     //   attributes: ["id"]
     // });
     const deckData = await Deck.findAll({
-      where: {
-        user_id: req.session.user_id,
-      }
+      // where: {
+      //   user_id: req.session.user_id,
+      // }
     });
 
     const decks = deckData.map((card) => card.get({ plain: true }));
@@ -122,7 +122,7 @@ router.get('/profile', withAuth, async (req, res) => {
 
     
    const cards = results.map((card) => card.get({ plain: true }));
-   console.log(cards);
+  //  console.log(cards);
   
     res.render('profile', { logged_in: req.session.logged_in, cards, decks });
   } catch (err) {
