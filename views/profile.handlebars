@@ -54,7 +54,7 @@
   <div id="modal{{card.id}}" class="modal">
     <div class="modal-content">
       <h4>{{card.card_name}}</h4>
-      <img src="{{card.card_image}}" alt="{{card.card.name}}" />
+      <img src="{{card.card_image}}" alt="{{card.card_name}}" />
       <p>{{card.description}}</p>
     </div>
     <div class="modal-footer" id="modal-footer">
@@ -88,19 +88,19 @@
         </a>
         <ul>
           <li><a
-              onclick="M.toast({html: '{{card.card_name}} Added to Water Deck', classes: 'rounded blue'})"
+              onclick="M.toast({html: `{{card.card_name}} Added to Water Deck`, classes: 'rounded blue'})"
               class="btn-floating blue modal-close"
             ><i class="material-icons">content_copy</i></a></li>
           <li><a
-              onclick="M.toast({html: '{{card.card_name}} Added to Fire Deck', classes: 'rounded red'})"
+              onclick="M.toast({html: `{{card.card_name}} Added to Fire Deck`, classes: 'rounded red'})"
               class="btn-floating red modal-close"
             ><i class="material-icons">content_copy</i></a></li>
           <li><a
-              onclick="M.toast({html: '{{card.card_name}} Added to Electric Deck', classes: 'rounded yellow'})"
+              onclick="M.toast({html: `{{card.card_name}} Added to Electric Deck`, classes: 'rounded yellow'})"
               class="btn-floating yellow modal-close"
             ><i class="material-icons">content_copy</i></a></li>
           <li><a
-              onclick="M.toast({html: '{{card.card_name}} Added to da Keef Deck Mon!', classes: 'rounded green'})"
+              onclick="M.toast({html: `{{card.card_name}} Added to da Keef Deck Mon!`, classes: 'rounded green'})"
               class="btn-floating green modal-close"
             ><i class="material-icons">content_copy</i></a></li>
         </ul>
