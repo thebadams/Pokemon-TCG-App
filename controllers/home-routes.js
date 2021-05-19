@@ -88,6 +88,7 @@ router.get('/', async (req, res) => {
 // });
 
 router.get('/pokedex', async (req, res) => {
+  console.log(req.query)
   try {
     const results = await pokemon.card.where({ q: `name:"${req.query.name}"`, pageSize: 12, page: req.query.page });
     //construct an array to include each page number
@@ -100,7 +101,14 @@ router.get('/pokedex', async (req, res) => {
     console.log(pages);
     //pass that array into handlebars
     const cards = results.data;
-    res.render('pokedex', { logged_in: req.session.logged_in, cards, user_id: req.session.user_id, pages, pagination: true });
+    res.render('pokedex', {
+      logged_in: req.session.logged_in,
+      cards,
+      user_id: req.session.user_id,
+      pages,
+      pagination: true,
+      query: req.query.name,
+    });
     // res.json(res.paginatedResults);
     // console.log(res.paginatedResults);
   } catch (err) {
