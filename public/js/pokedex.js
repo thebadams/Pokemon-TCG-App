@@ -51,7 +51,7 @@ const addToCollection = async (event) => {
 addBtns.forEach(((el) => {
   el.addEventListener('click', addToCollection);
 }));
-const pageNum = parseInt(document.location.search.at(document.location.search.length - 1))
+const pageNum = parseInt(document.location.search.charAt(document.location.search.length - 1))
 console.log(pageNum);
 const pageEls = document.querySelectorAll('.pageEl');
 pageEls.forEach((el) => {
@@ -62,5 +62,5 @@ pageEls.forEach((el) => {
 
 
 if (document.location.search) {
-  $('#toggle-img').hide();
+  document.querySelector('#toggle-img').classList.add('hide');
 };
