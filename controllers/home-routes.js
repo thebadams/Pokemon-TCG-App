@@ -188,7 +188,7 @@ router.get('/profile/:id', withAuth, async (req, res) => {
     // console.log(decks);
     // // console.log(decks.deck_name);
     // res.status(200).json(decks);
-    console.log(decks);
+   
     res.status(200).render('deck', {
       decks,
       logged_in: req.session.logged_in,
