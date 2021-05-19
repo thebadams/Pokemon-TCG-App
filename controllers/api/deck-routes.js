@@ -95,18 +95,6 @@ router.post('/', async (req, res) => {
   }
 });
 
-router.delete('/:id', async (res, req) => {
-  try {
-    const deck = await Deck.destroy({
-      where: {
-        id: req.params.id,
-      },
-    });
-    res.status(200).json(deck);
-  } catch (error) {
-    res.status(500).json(error);
-  }
-});
 
 router.put('/:id', async (req, res) => {
   try {
@@ -120,5 +108,21 @@ router.put('/:id', async (req, res) => {
     res.status(500).json(error);
   }
 });
+
+
+router.delete('/:id', async (res, req) => {
+  try {
+    const deck = await Deck.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+    res.status(200).json(deck);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+
+
 
 module.exports = router;

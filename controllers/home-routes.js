@@ -154,7 +154,7 @@ router.get('/profile', withAuth, async (req, res) => {
     });
 
     const decks = deckData.map((card) => card.get({ plain: true }));
-  //  console.log(decks);
+   console.log(decks);
 
     
    const cards = results.map((card) => card.get({ plain: true }));
@@ -166,7 +166,7 @@ router.get('/profile', withAuth, async (req, res) => {
   }
 });
 
-router.get('/profile/:id', withAuth, async (req, res) => {
+router.get('/profile/:id', async (req, res) => {
   try {
     const deckData = await Deck.findOne({
       where: {
