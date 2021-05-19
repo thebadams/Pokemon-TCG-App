@@ -118,7 +118,7 @@ $(window).on('load', () => {
 
 function play() {
   const audio = document.getElementById('pallet');
-  audio.volume = 0.10;
+  audio.volume = 0.25;
   audio.loop = true;
   if (audio.paused) { audio.currentTime = 0; audio.play(); } else audio.pause();
 }
