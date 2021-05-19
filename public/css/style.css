@@ -162,6 +162,9 @@ main {
 
 
 
+/* TRADING PAGE STYLING */
+
+
 .card-item {
     padding: 1em;
     border-radius: 5px;
@@ -339,5 +342,8 @@ p {
     
 }
 
-/* TRADING PAGE STYLING */
+/* FOOTER STYLING */
 
+.page-footer{
+    background-color: var(--grey);
+}
