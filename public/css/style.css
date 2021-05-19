@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 :root {
     /* Pokeball Color Pallete
 https://www.color-hex.com/color-palette/1045 */
@@ -8,6 +12,7 @@ https://www.color-hex.com/color-palette/1045 */
     --yellow: #F4CB08;
     --teal: #26a69a;
     --grey: #e0e0e0;
+    --cheeks: #F4869F;
 }
 
 html,
@@ -22,6 +27,10 @@ body {
     min-height: 100vh;
     flex-direction: column;
     background-color: var(--grey);
+    font-family: 'Open sans', sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+
 }
 
 main {
@@ -149,35 +158,18 @@ main {
     right: 12%
 }
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-
-body {
-    font-family: 'Open sans', sans-serif;
-    font-size: 100%;
-    line-height: 1.5;
-}
-
-* {
-    box-sizing: border-box;
-}
-
 .card-item {
     padding: 1em;
     border-radius: 5px;
     max-width: 15em;
 }
-
 .l-grid-half {
     width: 50%;
 }
-
 .l-flex-parent {
-
     display: flex;
     flex-direction: row;
-
 }
-
 .l-flex-child {
     padding: 1em;
     min-height: 100vh;
@@ -185,27 +177,31 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-
 }
-
 .t-purple {
     background-color: var(--blue);
     color: #fff;
 }
-
 .t-white {
     background-color: #fff;
     color: var(--blue);
 }
-
 .t-white .card-item {
     background: var(--blue);
     color: black;
 }
-
 .t-purple .card-item {
     background: #fff;
     color: #000;
+}
+
+#tradeBtn {
+    display: inline-block;
+    top: 50%;
+}
+
+.btn-color {
+    background-image: linear-gradient(to left, white, white 50%, #21437C 50%, #21437C);
 }
 
 /* FONT STYLING  */
@@ -214,18 +210,8 @@ li {
     font-family: "Pokemon GB";
 }
 
-p{
+p {
     font-family: "Pokemon GB";
-}
-
-@font-face {
-    font-family: "Pokemon GB";
-    src: url("https://dl.dropboxusercontent.com/u/10822923/Pokemon_GB/Pokemon_GB.eot?") format("eot"),
-        url("https://dl.dropboxusercontent.com/u/10822923/Pokemon_GB/Pokemon_GB.woff") format("woff"),
-        url("https://dl.dropboxusercontent.com/u/10822923/Pokemon_GB/Pokemon_GB.ttf") format("truetype"),
-        url("https://dl.dropboxusercontent.com/u/10822923/Pokemon_GB/Pokemon_GB.svg#PokemonGB") format("svg");
-    font-weight: normal;
-    font-style: normal;
 }
 
 .box {
@@ -266,17 +252,19 @@ p{
 }
 
 /* HOVER FEATURES  */
-.my-card{
-    cursor: pointer;
-}
-.my-card:hover{
-    background-color: var(--red);
-}
-.other-card{
+.my-card {
     cursor: pointer;
 }
 
-.other-card:hover{
+.my-card:hover {
+    background-color: var(--red);
+}
+
+.other-card {
+    cursor: pointer;
+}
+
+.other-card:hover {
     background-color: var(--red);
 }
 
@@ -288,3 +276,54 @@ p{
 .want{
     background-color: var(--red);
 }
+
+
+/*****************************    404 page styling     **************************/
+
+
+.page-404 {
+    overflow: hidden;
+    cursor: none
+}
+    
+.loading {
+    background-color: #FFF;
+    width: 100%;
+    display: fixed;
+    font-family: "Pokemon GB";
+}
+
+.loading img {
+    display: block;
+    min-height: 209px;
+    min-width: 200px;
+    padding-top: 20px;
+}
+
+.mouse {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    background-color: var(--cheeks);
+    position: absolute;
+    animation: mouseAnimation .5s infinite ease-in-out alternate;
+    left: 0;
+    top: 0
+}
+
+@keyframes mouseAnimation {
+    
+    from {
+        width: 25px;
+        height: 25px
+    }
+    
+    to {
+        width: 15px;
+        height: 15px
+    }
+    
+}
+
+/* TRADING PAGE STYLING */
+

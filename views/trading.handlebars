@@ -7,8 +7,8 @@
                     <li>
                         <div class="collapsible-header">
                             <i class="material-icons">filter_drama</i>
-                            Pikachu
-                            <span class="new badge">2</span></div>
+                            User Cards
+                            <span></span></div>
                         <div class="collapsible-body">
                             <ul>
                                 {{#each userCards as |userCard|}}
@@ -18,19 +18,14 @@
                             </ul>
                         </div>
                     </li>
-                    <li>
-                        <div class="collapsible-header">
-                            <i class="material-icons">place</i>
-                            Charizard
-                            <span class="badge">1</span></div>
-                        <div class="collapsible-body">
-                            <ul>
-                            </ul>
-                        </div>
-                    </li>
                 </ul>
             </div>
         </div>
+
+        <div class="btn-color">
+                <a class="waves-effect waves-light btn-large" id="tradeBtn">Trade</a>
+        </div>
+
         <div class="t-white l-flex-child l-grid-half">
             <h4>The cards from other users</h4>
             <div class="card-item">
@@ -38,8 +33,8 @@
                     <li>
                         <div class="collapsible-header">
                             <i class="material-icons">filter_drama</i>
-                            Eevee
-                            <span class="new badge"></span></div>
+                            Other User's Card
+                            <span></span></div>
                         <div class="collapsible-body">
                             <ul>
                                 {{#each otherCards as |otherCard|}}
@@ -49,22 +44,10 @@
                             </ul>
                         </div>
                     </li>
-                    <li>
-                        <div class="collapsible-header">
-                            <i class="material-icons">place</i>
-                            Mewtwo
-                            <span class="badge"></span></div>
-                        <div class="collapsible-body">
-                            <ul>
-                                <li>Mewtwo</li>
-                                <li>Detective Mewtwo</li>
-                            </ul>
-                        </div>
-                    </li>
                 </ul>
             </div>
         </div>
     </div>
 </div>
-<button id="tradeBtn">Trade!</button>
+
 <script src="/js/trading.js"></script>
