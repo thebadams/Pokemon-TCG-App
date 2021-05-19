@@ -365,3 +365,9 @@ p {
 .page-footer{
     background-color: var(--grey);
 }
+
+
+
+.cards-container {
+    filter: drop-shadow(25px 25px 10px grey);
+}
