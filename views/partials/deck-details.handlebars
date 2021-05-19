@@ -1,46 +1,8 @@
 
 <!---carousel-->
+{{#each decks.cards as |card|}}
  <a href="#modal{{card.id}}" class="carousel-item modal-trigger "><img
         src="{{card_image}}" class="card-image"
       /></a>
 
- 
-
-      <!--modal-->
-      <div id="modal{{card.id}}" class="modal">
-
-        <div class="modal-content">
-      <h4 class="card-name">{{card_name}}</h4>
-      <img class="card-image" src="{{card_image}}" alt="{{card_name}}" />
-      <p class="card-desc">{{description}}</p>
-    </div>
-
-     <div class="modal-footer" id="modal-footer">
-      {{! FAB 1 }}
-      <div class="fixed-action-btn btn1">
-        <a class="btn-floating btn-large red">
-          <i class="large material-icons">mode_edit</i>
-        </a>
-        <ul>
-          <li><a
-              onclick="M.toast({html: '{{card.card_name}} Deleted From Deck', classes: 'rounded blue'})"
-              class="btn-floating red modal-close"
-            ><i class="material-icons">delete_forever</i></a></li>
-          <li><a
-              onclick="location.href='/trading'"
-              class="btn-floating green modal-close"
-            ><i
-                class="material-icons"
-                data-api="{{card.id}}"
-                data-name="{{card.name}}"
-                data-description="{{card.flavorText}}"
-                data-image="{{card.images.small}}"
-                data-user="{{@root.user_id}}"
-              >people</i></a></li>
-        </ul>
-      </div>
-
-
-     </div>
-
-    </div>
+{{/each}}
