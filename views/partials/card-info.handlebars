@@ -1,19 +1,24 @@
-<div class="container hide-on-small-only">
-    <div class="row">
-        {{#each cards as |card|}}
-        <div class="col s4">
-            <div class="card" style="height: 343px; width: 257px;">
-                <div class="card-image">
-                    <img style="height: 343px; width: 257px;" src="{{card.images.small}}" alt="{{card.name}}">
-                    <a onclick="M.toast({html: 'Added To Deck!', classes: 'rounded red'})"
-                        class="btn-floating halfway-fab waves-effect waves-light red" ><i
-                            class="material-icons add-btn" data-api="{{card.id}}" data-name="{{card.name}}" data-description="{{card.flavorText}}" data-image="{{card.images.small}}" data-user="{{@root.user_id}}">add</i></a>
+<div class="cards-container">
+    <div class="container hide-on-small-only">
+        <div class="row">
+            {{#each cards as |card|}}
+            <div class="col s4">
+                <div class="card" style="height: 343px; width: 257px;">
+                    <div class="card-image">
+                        <img style="height: 343px; width: 257px;" src="{{card.images.small}}" alt="{{card.name}}">
+                        <a onclick="M.toast({html: 'Added To Deck!', classes: 'rounded red'})"
+                            class="btn-floating halfway-fab waves-effect waves-light red"><i
+                                class="material-icons add-btn" data-api="{{card.id}}" data-name="{{card.name}}"
+                                data-description="{{card.flavorText}}" data-image="{{card.images.small}}"
+                                data-user="{{@root.user_id}}">add</i></a>
+                    </div>
                 </div>
             </div>
-            </div>
-        {{/each}}
+            {{/each}}
+        </div>
     </div>
 </div>
+
 
 {{!-- MOBILE STYLING --}}
 <div class="container show-on-small hide-on-med-and-up">
@@ -24,7 +29,9 @@
                 <div class="card-image">
                     <img style="height: 343px; width: 257px;" src="{{card.images.small}}" alt="{{card.name}}">
                     <a onclick="M.toast({html: 'Added To Deck!', classes: 'rounded red'})"
-                        class="btn-floating halfway-fab waves-effect waves-light red"><i data-api="{{card.id}}" data-name="{{card.name}}" data-description="{{card.flavorText}}" data-image="{{card.images.small}}" data-user="{{@root.user_id}}"
+                        class="btn-floating halfway-fab waves-effect waves-light red"><i data-api="{{card.id}}"
+                            data-name="{{card.name}}" data-description="{{card.flavorText}}"
+                            data-image="{{card.images.small}}" data-user="{{@root.user_id}}"
                             class="material-icons">add</i></a>
                 </div>
             </div>

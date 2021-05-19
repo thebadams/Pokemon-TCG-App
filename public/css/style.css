@@ -180,6 +180,9 @@ main {
 
 
 
+/* TRADING PAGE STYLING */
+
+
 .card-item {
     padding: 1em;
     border-radius: 5px;
@@ -357,5 +360,14 @@ p {
     
 }
 
-/* TRADING PAGE STYLING */
+/* FOOTER STYLING */
 
+.page-footer{
+    background-color: var(--grey);
+}
+
+
+
+.cards-container {
+    filter: drop-shadow(25px 25px 10px grey);
+}
