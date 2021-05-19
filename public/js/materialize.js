@@ -144,3 +144,17 @@ function play() {
   audio.loop = true;
   if (audio.paused) { audio.currentTime = 0; audio.play(); } else audio.pause();
 }
+
+// show and hide img in the pokedex page
+// function toggleImg() {
+//   var x = document.getElementById("toggle-img");
+//   x.style.display === "none"
+// }
+
+
+
+// $('#toggleImg').submit(function () {
+//   $('#firstform').hide();
+//   $('#hidedform').show();
+//       return false;
+// });

@@ -16,7 +16,7 @@ const addToCollection = async (event) => {
   console.log(event.target);
   const api_id = event.target.dataset.api;
   const card_name = event.target.dataset.name;
-  const description = event.target.dataset.description;
+  const { description } = event.target.dataset;
   const card_image = event.target.dataset.image;
   const user_id = event.target.dataset.user;
   const info = {
@@ -51,3 +51,12 @@ const addToCollection = async (event) => {
 addBtns.forEach(((el) => {
   el.addEventListener('click', addToCollection);
 }));
+
+
+$('#toggleImg').submit((e) => {
+  e.preventDefault();
+});
+
+if (document.location.search) {
+  $('#toggle-img').hide();
+};
