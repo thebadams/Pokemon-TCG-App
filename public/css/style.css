@@ -109,6 +109,24 @@ main {
 
 /********************************** Profile styling *************************************/
 
+
+/* styling of yellow toasts */
+.yellow {
+    color: #000;
+}
+
+/* deck name and email */
+.white-text {
+    padding-right: 200px;
+}
+
+.email {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+/* collection title */
+
 .collection-title {
     display: flex;
     justify-content: space-around;
