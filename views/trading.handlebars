@@ -1,46 +1,62 @@
-<div class="l-flex-fix">
-    <div class="l-flex-parent">
-        <div class="t-purple l-flex-child l-grid-half">
+<div class="row pink lighten-2" style="height: 100%;">
+    <div class="purple darken-1 col s5" style="margin-top: 10%;">
+        <div class="col s12">
             <h4>The cards I want to Trade away</h4>
-            <div class="card-item">
-                <ul class="collapsible">
-                    <li>
-                        <div class="collapsible-header">
-                            <i class="material-icons">filter_drama</i>
-                            Pikachu
-                            <span class="new badge">2</span></div>
-                        <div class="collapsible-body">
-                            <ul>
-                                {{#each userCards as |userCard|}}
-                                <li data-id="{{userCard.id}}" data-user="{{userCard.user_id}}" class="my-card">
-                                    {{userCard.card_name}}</li>
-                                {{/each}}
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header">
-                            <i class="material-icons">place</i>
-                            Charizard
-                            <span class="badge">1</span></div>
-                        <div class="collapsible-body">
-                            <ul>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
+            <div class="col s3"></div>
+            <div class="card-item col s6">
+                <div class="col s12">
+                    <ul class="collapsible">
+                        <li>
+                            <div class="collapsible-header col s12">
+                                <i class="material-icons">filter_drama</i>
+                                Pikachu
+                                <span class="new badge">2</span>
+                            </div>
+                            <div class="collapsible-body col s12">
+                                <ul>
+                                    {{#each userCards as |userCard|}}
+                                    <li data-id="{{userCard.id}}" data-user="{{userCard.user_id}}" class="my-card">
+                                        {{userCard.card_name}}</li>
+                                    {{/each}}
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header col s12">
+                                <i class="material-icons">place</i>
+                                Charizard
+                                <span class="badge">1</span>
+                            </div>
+                            <div class="collapsible-body col s12">
+                                <ul>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
+            <div class="col s3"></div>
+
         </div>
-        <div class="t-white l-flex-child l-grid-half">
+    </div>
+    <div class="col s2 lime" style="margin-top: 20%;">
+
+        <button class="col s12 btn" id="tradeBtn">Trade!</button>
+    </div>
+    <div class="col s5 deep-orange lighten-2" style="margin-top: 10%;">
+        <div class="col s12">
             <h4>The cards from other users</h4>
-            <div class="card-item">
+            <div class="col s3"></div>
+            <div class="card-item col s6">
                 <ul class="collapsible">
                     <li>
-                        <div class="collapsible-header">
+                        <div class="collapsible-header col s12">
                             <i class="material-icons">filter_drama</i>
                             Eevee
-                            <span class="new badge"></span></div>
-                        <div class="collapsible-body">
+                            <span class="new badge"></span>
+                        </div>
+                        <div class="collapsible-body col s12">
                             <ul>
                                 {{#each otherCards as |otherCard|}}
                                 <li data-user="{{otherCard.user_id}}" data-id="{{otherCard.id}}" class="other-card">
@@ -50,11 +66,12 @@
                         </div>
                     </li>
                     <li>
-                        <div class="collapsible-header">
+                        <div class="collapsible-header col s12">
                             <i class="material-icons">place</i>
                             Mewtwo
-                            <span class="badge"></span></div>
-                        <div class="collapsible-body">
+                            <span class="badge"></span>
+                        </div>
+                        <div class="collapsible-body col s12">
                             <ul>
                                 <li>Mewtwo</li>
                                 <li>Detective Mewtwo</li>
@@ -63,8 +80,9 @@
                     </li>
                 </ul>
             </div>
+            <div class="col s3"></div>
         </div>
     </div>
 </div>
-<button id="tradeBtn">Trade!</button>
+
 <script src="/js/trading.js"></script>
