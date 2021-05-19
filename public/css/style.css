@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 :root {
     /* Pokeball Color Pallete
 https://www.color-hex.com/color-palette/1045 */
@@ -23,6 +27,10 @@ body {
     min-height: 100vh;
     flex-direction: column;
     background-color: var(--grey);
+    font-family: 'Open sans', sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+
 }
 
 main {
@@ -152,15 +160,8 @@ main {
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-body {
-    font-family: 'Open sans', sans-serif;
-    font-size: 100%;
-    line-height: 1.5;
-}
 
-* {
-    box-sizing: border-box;
-}
+
 /* 
 .card-item {
     padding: 1em;
@@ -341,3 +342,4 @@ p {
     
 }
 
+/* TRADING PAGE STYLING */
