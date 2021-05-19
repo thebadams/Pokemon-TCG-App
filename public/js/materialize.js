@@ -37,17 +37,6 @@ const getCardNames = async () => {
   return nameMap;
 };
 
-// console.log(pokeData);
-// $(document).ready(() => {
-//   $('input.autocomplete').autocomplete({
-//     data: pokeData,
-//     limit: 20, // The max amount of results that can be shown at once. Default: Infinity.
-//     onAutocomplete(val) {
-//       // Callback function when value is autcompleted.
-//     },
-//     minLength: 1, // The minimum length of the input for the autocomplete to start. Default: 1.
-//   });
-// });
 document.addEventListener('DOMContentLoaded', async () => {
   const elems = document.querySelectorAll('input.autocomplete');
   const instances = M.Autocomplete.init(elems, {
@@ -56,17 +45,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     limit: 20,
   });
 });
-
-// $.when(getCardNames()).done(function(names) {
-//   $('input.autocomplete').autocomplete({
-//   data: names,
-//   limit: 20,
-//   onAutocomplete(val) {
-
-//   },
-//   minLength: 1,
-//   })
-// });
 
 $(document).ready(() => {
   $('#password-login, #password-signup').characterCounter();
@@ -144,17 +122,3 @@ function play() {
   audio.loop = true;
   if (audio.paused) { audio.currentTime = 0; audio.play(); } else audio.pause();
 }
-
-// show and hide img in the pokedex page
-// function toggleImg() {
-//   var x = document.getElementById("toggle-img");
-//   x.style.display === "none"
-// }
-
-
-
-// $('#toggleImg').submit(function () {
-//   $('#firstform').hide();
-//   $('#hidedform').show();
-//       return false;
-// });
