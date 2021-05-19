@@ -88,6 +88,7 @@ router.get('/', async (req, res) => {
 // });
 
 router.get('/pokedex', async (req, res) => {
+  console.log(req.query)
   try {
     const results = await pokemon.card.where({ q: `name:"${req.query.name}"`, pageSize: 12, page: req.query.page });
     //construct an array to include each page number
@@ -100,11 +101,21 @@ router.get('/pokedex', async (req, res) => {
     console.log(pages);
     //pass that array into handlebars
     const cards = results.data;
-    res.render('pokedex', { logged_in: req.session.logged_in, cards, user_id: req.session.user_id, pages, pagination: true });
+    const options = {
+      logged_in: req.session.logged_in,
+      cards,
+      user_id: req.session.user_id,
+      pages,
+      pagination: true,
+      query: req.query.name,
+      activePage: req.query.page || 1,
+    };
+      console.log(options);
+    res.render('pokedex', options);
     // res.json(res.paginatedResults);
     // console.log(res.paginatedResults);
   } catch (err) {
-    res.status(500).json(err);
+    res.status(500).render('404', { logged_in: req.session.logged_in });
   }
 });
 
@@ -151,7 +162,7 @@ router.get('/profile', withAuth, async (req, res) => {
   
     res.render('profile', { logged_in: req.session.logged_in, cards, decks });
   } catch (err) {
-    res.status(500).json(err);
+    res.status(500).render(404);
   }
 });
 
@@ -199,7 +210,7 @@ router.get('/profile/:id', withAuth, async (req, res) => {
 
 
 router.get('/trading', async (req, res) => {
-  const userCardData =  await Card.findAll({
+  const userCardData = await Card.findAll({
     where: {
       user_id: req.session.user_id,
     }

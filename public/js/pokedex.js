@@ -51,11 +51,15 @@ const addToCollection = async (event) => {
 addBtns.forEach(((el) => {
   el.addEventListener('click', addToCollection);
 }));
-
-
-$('#toggleImg').submit((e) => {
-  e.preventDefault();
+const pageNum = parseInt(document.location.search.at(document.location.search.length - 1))
+console.log(pageNum);
+const pageEls = document.querySelectorAll('.pageEl');
+pageEls.forEach((el) => {
+  if(parseInt(el.dataset.value) === pageNum) {
+    el.classList.add('active');
+  }
 });
+
 
 if (document.location.search) {
   $('#toggle-img').hide();

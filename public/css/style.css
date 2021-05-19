@@ -158,10 +158,13 @@ main {
     right: 12%
 }
 
+<<<<<<< HEAD
 /* @import url(https://fonts.googleapis.com/css?family=Open+Sans); */
 
 
 
+=======
+>>>>>>> 9801ebdaad74b91e66acf4e2641d8971f97d912a
 .card-item {
     padding: 1em;
     border-radius: 5px;
@@ -218,6 +221,7 @@ p {
     font-family: "Pokemon GB";
 }
 
+<<<<<<< HEAD
 /* @font-face {
     font-family: "Pokemon GB";
     src: url("https://dl.dropboxusercontent.com/u/10822923/Pokemon_GB/Pokemon_GB.eot?") format("eot"),
@@ -228,6 +232,8 @@ p {
     font-style: normal;
 } */
 
+=======
+>>>>>>> 9801ebdaad74b91e66acf4e2641d8971f97d912a
 .box {
     font-size: 18px;
     font-family: "Pokemon GB", Arial, sans-serif;
