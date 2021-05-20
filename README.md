@@ -37,7 +37,7 @@ npm run start
 
 # License
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://github.com/thebadams/Pokemon-TCG-App/blob/development-trunk/LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://github.com/thebadams/Pokemon-TCG-App/blob/development-trunk/LICENSE)
 
 
 # Screenshot
@@ -50,13 +50,13 @@ Example of how deployed application should run:
 
 Reach out at:
 
-[![Brian](https://img.shields.io/badge/GitHub-Brian-FF7000.svg?style=for-the-badge&logo=github)](https://github.com/thebadams)
+[![Brian](https://img.shields.io/badge/GitHub-Brian-FF7000.svg?style=flat-square&logo=github)](https://github.com/thebadams)
 
-[![Cliff](https://img.shields.io/badge/GitHub-Clifford-1515CA.svg?style=for-the-badge&logo=github)](https://github.com/CliffordMorin)
+[![Cliff](https://img.shields.io/badge/GitHub-Clifford-1515CA.svg?style=flat-square&logo=github)](https://github.com/CliffordMorin)
 
-[![Ben](https://img.shields.io/badge/GitHub-Ben-368016.svg?style=for-the-badge&logo=github)](https://github.com/bdurham227)
+[![Ben](https://img.shields.io/badge/GitHub-Ben-368016.svg?style=flat-square&logo=github)](https://github.com/bdurham227)
 
-[![Tak](https://img.shields.io/badge/GitHub-Takuya-7F11C9.svg?style=for-the-badge&logo=github)](https://github.com/TakuyaMats)
+[![Tak](https://img.shields.io/badge/GitHub-Takuya-7F11C9.svg?style=flat-square&logo=github)](https://github.com/TakuyaMats)
 
-[![Jasper](https://img.shields.io/badge/GitHub-Jasper-B01030.svg?style=for-the-badge&logo=github)](https://github.com/KuyaJasper)
+[![Jasper](https://img.shields.io/badge/GitHub-Jasper-B01030.svg?style=flat-square&logo=github)](https://github.com/KuyaJasper)
 
