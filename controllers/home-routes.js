@@ -209,7 +209,7 @@ router.get('/profile/:id', async (req, res) => {
 
 
 
-router.get('/trading', async (req, res) => {
+router.get('/trading',async (req, res) => {
   const userCardData = await Card.findAll({
     where: {
       user_id: req.session.user_id,
