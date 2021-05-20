@@ -5,12 +5,12 @@
 Rutgers Coding Bootcamp Project. Using the MVC method.
 
 # Table of Contents
+  * [Installation](#Installation)
+  * [Usage](#Usage)
+  * [License](#License)
+  * [Screenshot](#Screenshot)
+  * [Contributions](#Contributions)
 
-- [Installation](#Installation)
-- [Usage](#Usage)
-- [License](#License)
-- [Screenshot](#Screenshot)
-- [Questions](#Questions)
 
 # Installation
 
@@ -36,7 +36,7 @@ npm run start
 
 # License
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://github.com/thebadams/Pokemon-TCG-App/blob/development-trunk/LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://github.com/thebadams/Pokemon-TCG-App/blob/development-trunk/LICENSE)
 
 # Screenshot
 
@@ -44,16 +44,13 @@ Example of how deployed application should run:
 
 ![ScreenshotRecording](INSERT SCREEN RECORDING HERE)
 
-# Questions
+# Contributions
 
-Reach out at:
 
-[![Brian](https://img.shields.io/badge/GitHub-Brian-FF7000.svg?style=for-the-badge&logo=github)](https://github.com/thebadams)
-
-[![Cliff](https://img.shields.io/badge/GitHub-Clifford-1515CA.svg?style=for-the-badge&logo=github)](https://github.com/CliffordMorin)
-
-[![Ben](https://img.shields.io/badge/GitHub-Ben-368016.svg?style=for-the-badge&logo=github)](https://github.com/bdurham227)
-
-[![Takuya](https://img.shields.io/badge/GitHub-Takuya-7F11C9.svg?style=for-the-badge&logo=github)](https://github.com/TakuyaMats)
-
-[![Jasper](https://img.shields.io/badge/GitHub-Jasper-B01030.svg?style=for-the-badge&logo=github)](https://github.com/KuyaJasper)
+Name | Responsibility | GitHub
+-------- | ---------- | ---------
+Brian Adams | Backend | [![Brian](https://img.shields.io/badge/GitHub-Brian-FF7000.svg?style=flat-square&logo=github)](https://github.com/thebadams) 
+Clifford Morin | Frontend | [![Cliff](https://img.shields.io/badge/GitHub-Clifford-1515CA.svg?style=flat-square&logo=github)](https://github.com/CliffordMorin)
+Ben Durham  | Backend | [![Ben](https://img.shields.io/badge/GitHub-Ben-368016.svg?style=flat-square&logo=github)](https://github.com/bdurham227)
+Takuya Matsumoto | Frontend | [![Tak](https://img.shields.io/badge/GitHub-Takuya-7F11C9.svg?style=flat-square&logo=github)](https://github.com/TakuyaMats)
+Jasper Abarquez  | Frontend | [![Jasper](https://img.shields.io/badge/GitHub-Jasper-B01030.svg?style=flat-square&logo=github)](https://github.com/KuyaJasper) 
