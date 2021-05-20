@@ -17,7 +17,14 @@ const loginFormHandler = async (event) => {
       // If successful, redirect the browser to the profile page
       document.location.replace('/profile');
     } else {
-      alert(response.statusText);
+      const passwordInput = document.querySelector('#email-login');
+      const emailInput = document.querySelector('#email-login');
+      const loginMsgs = document.querySelectorAll('.error-login');
+      passwordInput.classList.add('invalid');
+      emailInput.classList.add('invalid');
+      loginMsgs.forEach((msg) => {
+        msg.classList.remove('hide');
+      });
     }
   }
 };
@@ -39,7 +46,10 @@ const signupFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/profile');
     } else {
-      alert(response.statusText);
+      const signupMsg = document.querySelectorAll('.error-signup');
+      signupMsg.forEach((msg) => {
+        msg.classList.remove('hide');
+      });
     }
   }
 };
