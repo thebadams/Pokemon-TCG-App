@@ -37,7 +37,7 @@ npm run start
 
 # License
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://github.com/thebadams/Pokemon-TCG-App/blob/development-trunk/LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/thebadams/Pokemon-TCG-App/blob/development-trunk/LICENSE)
 
 
 # Screenshot
@@ -50,7 +50,13 @@ Example of how deployed application should run:
 
 Reach out at:
 
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/KuyaJasper)
+[![Brian](https://img.shields.io/badge/GitHub-Brian-black.svg)](https://github.com/thebadams)
 
-[![Email badge](https://img.shields.io/badge/Email-abarquezj1@gmail.com-red.svg)](mailto:abarquezj1@gmail.com)
+[![Cliff](https://img.shields.io/badge/GitHub-Clifford-blue.svg)](https://github.com/CliffordMorin)
+
+[![Ben](https://img.shields.io/badge/GitHub-Ben-green.svg)](https://github.com/bdurham227)
+
+[![Tak](https://img.shields.io/badge/GitHub-Takuya-purple.svg)](https://github.com/TakuyaMats)
+
+[![Jasper](https://img.shields.io/badge/GitHub-Jasper-red.svg)](https://github.com/KuyaJasper)
 
