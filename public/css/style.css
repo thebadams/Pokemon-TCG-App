@@ -379,7 +379,6 @@ p {
 
 .scene {
     font-size: 62.5%;
-    padding: 20rem;
     text-align: center;
 }
 
@@ -393,4 +392,177 @@ p {
     background: url('https://wallpaperaccess.com/full/8611.jpg') 50% 50% no-repeat fixed;
     background-size: cover;
     border-radius: 50%;
+}
+
+
+/* chat feature */
+
+#gameboy {
+    position: relative;
+    margin: 100px auto;
+    height: 490px;
+    width: 650px;
+    background: #EEE;
+    border-radius: 10px 10px 30px 10px;
+    overflow: hidden;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+#gameboy:before {
+    position: absolute;
+    width: 660px;
+    height: 10px;
+    left: -1px;
+    border-bottom: 3px solid #C0C0C0;
+    content: "";
+}
+
+#gameboy:after {
+    position: absolute;
+    width: 620px;
+    height: 10px;
+    left: 12px;
+    border-left: 3px solid #C0C0C0;
+    border-right: 3px solid #C0C0C0;
+    content: "";
+}
+
+#screen {
+    /* z-index: 1; */
+    position: absolute;
+    width: 626px;
+    height: 320px;
+    left: 12px;
+    top: 20px;
+    background: #777;
+    border-radius: 5px 5px 20px 5px
+}
+
+#screen:before {
+    position: absolute;
+    width: 580px;
+    height: 280px;
+    top: 13px;
+    left: 23px;
+    background: #AE9B32;
+    box-shadow: inset 2px 2px rgba(0, 0, 0, 0.1);
+    content: "";
+}
+
+#screen:after {
+    position: absolute;
+    height: 5px;
+    width: 5px;
+    top: 145px;
+    left: 9px;
+    border-radius: 100%;
+    background: #B00;
+    content: "";
+}
+
+#dpad {
+    position: absolute;
+    width: 13px;
+    height: 40px;
+    top: 370px;
+    left: 45px;
+    background: #444;
+    border-radius: 3px;
+    z-index: 998;
+}
+
+#dpad:after {
+    position: absolute;
+    width: 40px;
+    height: 13px;
+    top: 13px;
+    left: -13px;
+    background: #444;
+    border-radius: 3px;
+    content: "";
+    z-index: 999;
+}
+
+#dpad:before {
+    position: absolute;
+    height: 13px;
+    width: 13px;
+    top: 13px;
+    border-radius: 100%;
+    background: #333;
+    content: "";
+    z-index: 1000;
+}
+
+#bevel {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 365px;
+    left: 25px;
+    background: #DFDFDF;
+    border-radius: 100%;
+}
+
+#bevel:before {
+    position: absolute;
+    width: 25px;
+    height: 50px;
+    left: 561px;
+    background: #DFDFDF;
+    border-radius: 12px;
+    -webkit-transform: rotate(45deg);
+    content: "";
+}
+
+#bevel:after {
+    position: absolute;
+    height: 20px;
+    width: 3px;
+    top: 80px;
+    left: 100px;
+    border-radius: 2px;
+    background: #DDD;
+    -webkit-transform: rotate(-45deg);
+    box-shadow: 7px 0px #DDD,
+        14px 0px #DDD,
+        21px 0px #DDD,
+        28px 0px #DDD,
+        35px 0px #DDD;
+    content: "";
+}
+
+#bt1 {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 390px;
+    right: 51px;
+    border-radius: 100%;
+    background: #A93671;
+    box-shadow: 18px -18px #A93671;
+}
+
+#bt2 {
+    position: absolute;
+    height: 25px;
+    width: 6px;
+    bottom: 25px;
+    left: 320px;
+    background: #999;
+    border-radius: 3px;
+    -webkit-transform: rotate(45deg);
+}
+
+/* inside chat */
+
+.chat-container {
+    z-index: 1;
+    position: absolute;
+    width: 580px;
+    /* height: 30px; */
+    top: 30px;
+    left: 35px;
+    background: var(--pastelRed);
+    border-radius: 5px 5px 5px 5px;
 }
