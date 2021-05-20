@@ -79,10 +79,6 @@ pageEls.forEach((el) => {
   }
 });
 
-
-
-
-
 if (document.location.search) {
   document.querySelector('#toggle-img').classList.add('hide');
 };
