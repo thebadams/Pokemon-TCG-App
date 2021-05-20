@@ -8,7 +8,7 @@ Rutgers Coding Bootcamp Project. Using the MVC method.
   * [Usage](#Usage)
   * [License](#License)
   * [Screenshot](#Screenshot)
-  * [Questions](#Questions)
+  * [Contributions](#Contributions)
 
 # Installation
 Please clone/fork this repository to get the full functionality.
@@ -46,17 +46,13 @@ Example of how deployed application should run:
 
 ![ScreenshotRecording](INSERT SCREEN RECORDING HERE)
 
-# Questions
+# Contributions
 
-Reach out at:
 
-[![Brian](https://img.shields.io/badge/GitHub-Brian-FF7000.svg?style=flat-square&logo=github)](https://github.com/thebadams)
-
-[![Cliff](https://img.shields.io/badge/GitHub-Clifford-1515CA.svg?style=flat-square&logo=github)](https://github.com/CliffordMorin)
-
-[![Ben](https://img.shields.io/badge/GitHub-Ben-368016.svg?style=flat-square&logo=github)](https://github.com/bdurham227)
-
-[![Tak](https://img.shields.io/badge/GitHub-Takuya-7F11C9.svg?style=flat-square&logo=github)](https://github.com/TakuyaMats)
-
-[![Jasper](https://img.shields.io/badge/GitHub-Jasper-B01030.svg?style=flat-square&logo=github)](https://github.com/KuyaJasper)
-
+Name | Responsibility | GitHub
+-------- | ---------- | ---------
+Brian Adams | Backend | [![Brian](https://img.shields.io/badge/GitHub-Brian-FF7000.svg?style=flat-square&logo=github)](https://github.com/thebadams) 
+Clifford Morin | Frontend | [![Cliff](https://img.shields.io/badge/GitHub-Clifford-1515CA.svg?style=flat-square&logo=github)](https://github.com/CliffordMorin)
+Ben Durham  | Backend | [![Ben](https://img.shields.io/badge/GitHub-Ben-368016.svg?style=flat-square&logo=github)](https://github.com/bdurham227)
+Takuya Matsumoto | Frontend | [![Tak](https://img.shields.io/badge/GitHub-Takuya-7F11C9.svg?style=flat-square&logo=github)](https://github.com/TakuyaMats)
+Jasper Abarquez  | Frontend | [![Jasper](https://img.shields.io/badge/GitHub-Jasper-B01030.svg?style=flat-square&logo=github)](https://github.com/KuyaJasper) 
