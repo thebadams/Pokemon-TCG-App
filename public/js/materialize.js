@@ -109,6 +109,44 @@ $(document).ready(() => {
 //   });
 // });
 
+//pagination logic ----Left and Right Arrows
+// $(document).ready(() => {
+//   let pageItem = $(".pagination li").not(".previous, .next");
+//   let previous = $(".pagination li.previous");
+//   let next = $(".pagination li.next");
+
+
+//   pageItem.click(function () {
+//     pageItem.removeClass("active");
+//     $(this).not(".previous, .next").addClass("active");
+//   });
+
+
+//   next.click(function () {
+//     $("li.active").removeClass("active").next().addClass("active");
+//   });
+
+//   previous.click(function () {
+//     $("li.active").removeClass("active").previous().addClass("active");
+//   });
+
+
+
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Preloader for Pokedex Page
 $(window).on('load', () => {
   $('.progress').delay(250).fadeOut();

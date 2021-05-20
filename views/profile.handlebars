@@ -106,20 +106,22 @@
               onclick="M.toast({html: '{{card.card_name}} Added to Water Deck', classes: 'rounded blue'})"
               class="btn-floating blue modal-close" data-id="{{card.id}}" data-name="water" data-user="{{card.user_id}}"
                data-cardimage="{{card.card_image}}" 
-              data-text="{{card.description}}" data-card="{{card.card_name}}" data-deck="{{@root.decks.[0].id}}"
-            ><i class="material-icons">content_copy</i></a></li>
+              data-text="{{card.description}}" data-card="{{card.card_name}}" 
+            ><i class="material-icons" data-id="{{card.id}}" data-deck="{{@root.decks.[0].id}}">content_copy</i></a></li>
+
           <li class="card-deck"><a
               onclick="M.toast({html: '{{card.card_name}} Added to Fire Deck', classes: 'rounded red'})"
               class="btn-floating red modal-close" data-id="{{card.id}}" data-deck="{{@root.decks.[1].id}}"
-            ><i class="material-icons">content_copy</i></a></li>
+            ><i class="material-icons" data-id="{{card.id}}" data-deck="{{@root.decks.[1].id}}">content_copy</i></a></li>
+
           <li class="card-deck"><a
               onclick="M.toast({html: '{{card.card_name}} Added to Electric Deck', classes: 'rounded yellow'})"
               class="btn-floating yellow modal-close" data-id="{{card.id}}" data-deck="{{@root.decks.[2].id}}"
-            ><i class="material-icons">content_copy</i></a></li>
+            ><i class="material-icons"  data-id="{{card.id}}" data-deck="{{@root.decks.[2].id}}">content_copy</i></a></li>
           <li class="card-deck"><a
               onclick="M.toast({html: '{{card.card_name}} Added to Grass Deck', classes: 'rounded green'})"
               class="btn-floating green modal-close" data-id="{{card.id}}" data-deck="{{@root.decks.[3].id}}"
-            ><i class="material-icons">content_copy</i></a></li>
+            ><i class="material-icons"  data-id="{{card.id}}" data-deck="{{@root.decks.[3].id}}">content_copy</i></a></li>
         </ul>
       </div>
       

@@ -51,7 +51,26 @@ const addToCollection = async (event) => {
 addBtns.forEach(((el) => {
   el.addEventListener('click', addToCollection);
 }));
-const pageNum = parseInt(document.location.search.charAt(document.location.search.length - 1))
+// let pageNum = parseInt(document.location.search.charAt(document.location.search.length - 1))
+// console.log(pageNum);
+// if (isNaN(pageNum)) {
+//   pageNum = 1;
+// }
+// const pageEls = document.querySelectorAll('.pageEl');
+// pageEls.forEach((el) => {
+//   if(parseInt(el.dataset.value) === pageNum) {
+//     el.classList.add('active');
+//   }
+
+// });
+let pageNum = 1;
+
+if (pageNum === 1) {
+  $('.previous').disabled = true;
+}
+if (document.location.search.includes("page=")) {
+  pageNum = parseInt(document.location.search.charAt(document.location.search.length - 1))
+}
 console.log(pageNum);
 const pageEls = document.querySelectorAll('.pageEl');
 pageEls.forEach((el) => {
@@ -59,6 +78,9 @@ pageEls.forEach((el) => {
     el.classList.add('active');
   }
 });
+
+
+
 
 
 if (document.location.search) {
