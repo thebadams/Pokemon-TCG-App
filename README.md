@@ -37,7 +37,7 @@ npm run start
 
 # License
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-red.svg)](INSERT LICENSE LINK)
+[![License: MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://github.com/thebadams/Pokemon-TCG-App/blob/development-trunk/LICENSE)
 
 
 # Screenshot
