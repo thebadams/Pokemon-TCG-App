@@ -2,12 +2,18 @@
     <div class="container center-align">
         <div class="col l6 s12">
         <ul class="pagination">
-            <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+            <li class="previous"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+            {{!-- access page numbers by running an each statement and passing in {{#each pages as page}}  --}}
+
             {{#each pages as |page| }}
             <li class="pageEl" data-value="{{page}}"><a href="/pokedex?name={{@root.query}}&page={{page}}" >{{page}}</a></li>
             {{/each}}
-            <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+            <li class="waves-effect next" ><a href="#!"><i class="material-icons">chevron_right</i></a></li>
         </ul>
         </div>
     </div>
 </footer>
+
+{{!-- {{#each page}}
+<li class="waves-effect"><a href="/p" id="{{page}}""><i class="material-icons">chevron_right</i></a></li>
+{{/each}} --}}
