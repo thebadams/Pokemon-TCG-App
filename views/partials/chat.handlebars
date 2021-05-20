@@ -1,7 +1,19 @@
 <div id="gameboy">
-    <div id="chat"class="chat-container">
+    <div id="chat" class="chat-container">
         <div class="chat-header">
             <p>Let's Chat!</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="chat-form-container">
+            <form id="chat-form">
+                <div class="col 6">
+                    <input id="msg" type="text" placeholder="Enter Message" required autocomplete="off" />
+                </div>
+                <div class="col 6">
+                    <button id="btn-chat" class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
+                </div>
+            </form>
         </div>
     </div>
     <div id="screen"></div>
@@ -11,9 +23,3 @@
     <div id="bt2"></div>
     <div id="bt3"></div>
 </div>
-
-{{!-- <div class="chat-container">
-    <div class="chat-header">
-        <p>Let's Chat!</p>
-    </div>
-</div> --}}
