@@ -422,6 +422,7 @@ p {
     width: 620px;
     height: 10px;
     left: 12px;
+    top: -1px;
     border-left: 3px solid #C0C0C0;
     border-right: 3px solid #C0C0C0;
     content: "";
@@ -577,4 +578,22 @@ p {
     left: 35px;
     background: var(--pastelRed);
     border-radius: 5px 5px 5px 5px;
+}
+
+.chat-form-container {
+    z-index: 1;
+    position: absolute;
+    /* background: #999; */
+    width: 500px;
+    top: 355px;
+    left: 85px;
+}
+
+#msg {
+    width: 360px;
+}
+
+#btn-chat {
+    width: 90px;
+    top: 10px;
 }
