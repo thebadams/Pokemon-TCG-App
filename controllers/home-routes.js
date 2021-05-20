@@ -210,6 +210,10 @@ router.get('/profile/:id', async (req, res) => {
 
 
 router.get('/trading',async (req, res) => {
+  if (!req.session.logged_in){
+    res.redirect('login');
+  } else{
+// if user is logged in show Trading page
   const userCardData = await Card.findAll({
     where: {
       user_id: req.session.user_id,
@@ -230,6 +234,7 @@ router.get('/trading',async (req, res) => {
   const otherCards = otherCardData.map((card)=> card.get({ plain: true }));
 console.log(otherCards);
   res.render('trading', { logged_in: req.session.logged_in, userCards, otherCards });
+  }
 });
 
 
