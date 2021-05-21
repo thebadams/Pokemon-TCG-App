@@ -19,6 +19,9 @@ const addToCollection = async (event) => {
   const { description } = event.target.dataset;
   const card_image = event.target.dataset.image;
   const user_id = event.target.dataset.user;
+  if (!user_id) {
+    document.location.replace('/login');
+  }
   const info = {
     api_id,
     card_name,

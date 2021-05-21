@@ -6,10 +6,11 @@ Rutgers Coding Bootcamp Project. Using the MVC method.
 
 # Table of Contents
   * [Installation](#Installation)
-  * [Usage](#Usage)
+  * [Concept](#Concept)
   * [License](#License)
   * [Screenshot](#Screenshot)
   * [Contributions](#Contributions)
+  * [Application](#Application)
 
 
 # Installation
@@ -25,14 +26,23 @@ Next you will need to install the packages. To do so type in the following comma
 ```bash
 npm install
 ```
+Running this command will download the necessary dependancies for the application to run.
 
-# Usage
-
-To run the application, open up your Terminal/Bash and type in the following:
+If running locally, make sure to use the 'db' folder to set up the database, as well as running the command
 
 ```bash
-npm run start
+npm run seed
 ```
+
+This will seed your database with a starter environment to work from.
+
+# Concept
+
+For this application, we wanted to display different images from an api. Depending on the route, log in status, session, etc, we wanted to dynamically show information to the user.
+
+We settled on Pokemon, since we all grew up watching and loving the franchise. The user flow  was based mostly on the galleries activity we worked on in our class.
+
+The Pokemon data was referenced from the [Pokémon TCG Developers API](https://pokemontcg.io)
 
 # License
 
@@ -54,3 +64,8 @@ Clifford Morin | Frontend | [![Cliff](https://img.shields.io/badge/GitHub-Cliffo
 Ben Durham  | Backend | [![Ben](https://img.shields.io/badge/GitHub-Ben-368016.svg?style=flat-square&logo=github)](https://github.com/bdurham227)
 Takuya Matsumoto | Frontend | [![Tak](https://img.shields.io/badge/GitHub-Takuya-7F11C9.svg?style=flat-square&logo=github)](https://github.com/TakuyaMats)
 Jasper Abarquez  | Frontend | [![Jasper](https://img.shields.io/badge/GitHub-Jasper-B01030.svg?style=flat-square&logo=github)](https://github.com/KuyaJasper) 
+
+
+# Application
+
+[Click Here]( INSERT APPLICATION LINK ) , for the deployed application.

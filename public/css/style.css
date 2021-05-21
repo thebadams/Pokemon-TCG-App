@@ -139,6 +139,14 @@ main {
     font-family: 'Pokemon';
 }
 
+#right-trade {
+    color: white;
+}
+
+#left-trade {
+    color: #21437C;
+}
+
 /* sizing of carousel */
 .carousel .carousel-item {
     min-height: 400px;
@@ -191,8 +199,8 @@ main {
 
 .card-item {
     padding: 1em;
-    border-radius: 5px;
-    max-width: 15em;
+    border-radius: 25px;
+    max-width: 55em;
 }
 
 .l-grid-half {
@@ -236,6 +244,7 @@ main {
 #tradeBtn {
     display: inline-block;
     top: 50%;
+    border-radius: 25px;
 }
 
 .btn-color {
@@ -619,4 +628,9 @@ p {
     background-color: rgb(220, 159, 159);
     margin-right: 430px;
     opacity: 0.8;
+}
+
+#trade-icon {
+    margin-right: 12px;
+    margin-top: -4px;
 }
