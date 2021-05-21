@@ -1,6 +1,6 @@
 # Pokemon-TCG-App
 
-# Desctiption
+# Description
 
 Rutgers Coding Bootcamp Project. Using the MVC method.
 
