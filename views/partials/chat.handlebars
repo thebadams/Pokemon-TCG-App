@@ -18,8 +18,13 @@
             </form>
         </div>
     </div>
-    <div class="chat-messages">
-        <div class="message">
+   
+    {{#if logged_in}}
+
+    <div class="chat-messages" id="user" data-user={{user.username}}>
+       
+        
+        {{!-- <div class="message">
             <p class="meta">Brad <span>9:12pm</span></p>
             <p class="text">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
@@ -32,8 +37,9 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
                 repudiandae.
             </p>
-        </div>
+        </div> --}}
     </div>
+
     <div id="screen"></div>
     <div id="dpad"></div>
     <div id="bevel"></div>
@@ -41,3 +47,4 @@
     <div id="bt2"></div>
     <div id="bt3"></div>
 </div>
+{{/if}}

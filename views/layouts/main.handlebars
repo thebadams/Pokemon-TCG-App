@@ -44,6 +44,7 @@
           {{!-- <li><a href="/battle">Battle</a></li> --}}
           <li><a href="/pokedex">Pokedéx</a></li>
           <li><a href="/trading">Trading</a></li>
+        
           {{#if logged_in}}
           <li><a class="navbar-item" id="logout">Logout</a></li>
           {{else}}
@@ -89,6 +90,8 @@
 <script src="/js/deck.js"></script>
 <script src="/js/pokedex.js"></script>
 <script src="/js/profile.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/chat.js"></script>
 {{#if logged_in}}
 <script src="/js/logout.js"></script>
 {{/if}}

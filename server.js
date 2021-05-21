@@ -4,6 +4,9 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
+const formatMessage = require('./utils/messages');
+const { userJoin, getCurrentUser } = require('./utils/users');
+const pokemonBot = "Pokemon Bot ";
 
 //requirements to set up sockets.io
 const http = require('http');
@@ -18,31 +21,37 @@ const PORT = process.env.PORT || 3001;
 const server = http.createServer(app);
 const io = socketio(server);
 
-//run when client connects
+
 io.on('connection', socket => {
-  console.log('New Connection....')
+  console.log('new connection');
 
-  //Welcome message
-socket.emit('message', 'Welcome to BattleChat');
+  //welcome message
+  socket.emit('message', formatMessage(pokemonBot, "Welcome to the Trainer Chat") )
 
-//Broadcast when a user connects
-socket.broadcast.emit('message', 'A user has joined the chat');
+  //broadcast when a user connects
+  socket.broadcast.emit('message', formatMessage(pokemonBot, "A user has joined the chat"));
+
 
 //Runs when client disconnects
 socket.on('disconnect', () => {
-  io.emit('message', 'A user has left the chat')
+  io.emit('message', formatMessage(pokemonBot, 'A user has left the chat'));
 });
 
-//listen for chatMessage
-socket.on('chatMessage', (msg) => {
 
-io.emit('message', msg);
+// Listen for chatMessage
+socket.on('chatMessage', (msg, user) => {
+  console.log(user)
+
+  io.emit('message', formatMessage(user, msg));
+
+})
+
+
 })
 
 
 
 
-});
 
 // Set up Handlebars.js engine with custom helpers
 const hbs = exphbs.create({ helpers });
