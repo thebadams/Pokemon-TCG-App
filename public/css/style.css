@@ -579,6 +579,7 @@ p {
     background: var(--pastelRed);
     opacity: 0.8;
     border-radius: 5px 5px 5px 5px;
+    /* overflow: hidden; */
 }
 
 .chat-messages {
@@ -590,6 +591,7 @@ p {
     left: 35px;
     background: #AE9B32;
     border-radius: 5px 5px 5px 5px;
+    overflow: hidden;
 }
 
 .chat-form-container {
