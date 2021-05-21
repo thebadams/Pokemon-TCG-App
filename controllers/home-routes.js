@@ -40,7 +40,7 @@ router.get('/', async (req, res) => {
 
 // Uncomment and pass user thru serialized data
 // { user, logged_in: req.session.logged_in } this was on line 43 after 'homepage'
-    res.render('homepage');
+    res.render('homepage', { logged_in: req.session.logged_in });
   } catch (err) {
     res.render('404');
   }
