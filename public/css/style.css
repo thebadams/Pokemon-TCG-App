@@ -35,8 +35,40 @@ body {
     line-height: 1.5;
 }
 
+body.home {
+    /* background: #222222; */
+    background: #404040;
+}
+
 main {
     flex: 1 0 auto;
+}
+
+h2 {
+    color: white;
+}
+
+/* 3D title */
+
+h1, h2 {
+    top: 35%;
+    width: 100%;
+
+    text-shadow: 0 1px 0 hsl(174, 5%, 80%),
+        0 2px 0 hsl(174, 5%, 75%),
+        0 3px 0 hsl(174, 5%, 70%),
+        0 4px 0 hsl(174, 5%, 66%),
+        0 5px 0 hsl(174, 5%, 64%),
+        0 6px 0 hsl(174, 5%, 62%),
+        0 7px 0 hsl(174, 5%, 61%),
+        0 8px 0 hsl(174, 5%, 60%),
+
+        0 0 5px rgba(0, 0, 0, .05),
+        0 1px 3px rgba(0, 0, 0, .2),
+        0 3px 5px rgba(0, 0, 0, .2),
+        0 5px 10px rgba(0, 0, 0, .2),
+        0 10px 10px rgba(0, 0, 0, .2),
+        0 20px 20px rgba(0, 0, 0, .3);
 }
 
 #headerTitle {
@@ -263,7 +295,7 @@ p {
 .box {
     font-size: 18px;
     font-family: "Pokemon GB", Arial, sans-serif;
-    color: red;
+    /* color: red; */
     border-radius: 2px;
     padding: 8px;
     width: 450px;
@@ -395,8 +427,8 @@ p {
     position: absolute;
     top: calc(50% - 10rem);
     left: calc(50% - 10rem);
-    width: 12rem;
-    height: 12rem;
+    width: 15rem;
+    height: 15rem;
     background: url('https://wallpaperaccess.com/full/8611.jpg') 50% 50% no-repeat fixed;
     background-size: cover;
     border-radius: 50%;
@@ -658,14 +690,15 @@ p {
     transition: 0.5s;
     background-size: 200% auto;
     color: white;
-    text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 20px orangered;
     border-radius: 10px;
 }
 
 
 .chat-btn:hover {
-    background-position: right center; /* change the direction of the change here */
+    background-position: right center;
+    /* change the direction of the change here */
 }
 
 .btnC-2 {
@@ -728,15 +761,21 @@ p {
     transition: 0.5s;
     background-size: 200% auto;
     color: var(--red);
-    text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 20px orangered;
     border-radius: 10px;
 }
 
 .btnM:hover {
-    background-position: right center; /* change the direction of the change here */
+    background-position: right center;
+    /* change the direction of the change here */
 }
 
 .btnM-2 {
     background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
 }
+
+#oak {
+    margin-top: 50px;
+}
+

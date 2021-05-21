@@ -44,7 +44,6 @@ router.get('/', async (req, res) => {
   } catch (err) {
     res.render('404');
   }
- 
 });
 
 // router.get('/battle', async (req, res) => {
