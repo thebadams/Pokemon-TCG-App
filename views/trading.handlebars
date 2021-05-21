@@ -6,24 +6,24 @@
                 <ul class="collapsible">
                     <li>
                         <div class="collapsible-header">
-                            <i class="material-icons">filter_drama</i>
-                            User Cards
+                            <i class="iconify" data-icon="mdi-pokeball" data-inline="true" style="font-size: 26px;"
+                                id="trade-icon"></i>
+                            Your Cards
                             <span></span></div>
-                        <div class="collapsible-body">
+                        <div class="collapsible-body" id="left-trade">
                             <ul>
                                 {{#each userCards as |userCard|}}
                                 <li data-id="{{userCard.id}}" data-user="{{userCard.user_id}}" class="my-card">
                                     {{userCard.card_name}}</li>
                                 {{/each}}
                             </ul>
-                        </div>
                     </li>
                 </ul>
             </div>
         </div>
 
         <div class="btn-color">
-                <a class="waves-effect waves-light btn-large" id="tradeBtn">Trade</a>
+            <a onclick="M.toast({html: 'Traded!', classes: 'rounded red'})" class="waves-effect waves-light btn-large" id="tradeBtn">Trade</a>
         </div>
 
         <div class="t-white l-flex-child l-grid-half">
@@ -32,14 +32,16 @@
                 <ul class="collapsible">
                     <li>
                         <div class="collapsible-header">
-                            <i class="material-icons">filter_drama</i>
+                            <i class="iconify" data-icon="mdi-pokeball" data-inline="true" style="font-size: 26px;"
+                                id="trade-icon"></i>
                             Other User's Card
                             <span></span></div>
-                        <div class="collapsible-body">
+                        <div class="collapsible-body" id="right-trade">
                             <ul>
                                 {{#each otherCards as |otherCard|}}
                                 <li data-user="{{otherCard.user_id}}" data-id="{{otherCard.id}}" class="other-card">
                                     {{otherCard.card_name}}</li>
+
                                 {{/each}}
                             </ul>
                         </div>

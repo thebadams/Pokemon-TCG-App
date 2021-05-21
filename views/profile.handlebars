@@ -18,11 +18,11 @@
   </li>
   <li class="showD"><a class="waves-effect blue btn" id="water" href="#!"  data-number="{{decks.[0].id}}" data-cardimage="{{card.card_image}}"
   data-text="{{card.description}}" data-card="{{card.card_name}}" data-name="{{decks.[0].deck_name}}" data-user="{{card.user_id}}"
-   ><span
+  ><span
         class="iconify pokeball"
         data-icon="mdi:pokemon-go"
         data-inline="false"
-       
+
       ></span>Water Deck</a></li>
   <li class="showD"><a class="waves-effect red btn" href="#!" data-number="{{decks.[1].id}}" ><span
         class="iconify pokeball"
@@ -62,7 +62,7 @@
 </div>
 
 {{#each cards as |card|}}
- 
+
   <!-- Modal Structure -->
   <div id="modal{{card.id}}" class="modal">
     <div class="modal-content">
@@ -70,7 +70,7 @@
       <img src="{{card.card_image}}" alt="{{card.card_name}}" />
       <p>{{card.description}}</p>
     </div>
-   
+
     <div class="modal-footer" id="modal-footer">
       {{! FAB 1 }}
       <div class="fixed-action-btn btn1">
@@ -105,7 +105,7 @@
           <li class="card-deck"><a
               onclick="M.toast({html: '{{card.card_name}} Added to Water Deck', classes: 'rounded blue'})"
               class="btn-floating blue modal-close" data-id="{{card.id}}" data-name="water" data-user="{{card.user_id}}"
-               data-cardimage="{{card.card_image}}" 
+              data-cardimage="{{card.card_image}}" 
               data-text="{{card.description}}" data-card="{{card.card_name}}" 
             ><i class="material-icons" data-id="{{card.id}}" data-deck="{{@root.decks.[0].id}}">content_copy</i></a></li>
 
