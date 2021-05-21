@@ -42,7 +42,7 @@ router.get('/', async (req, res) => {
 // { user, logged_in: req.session.logged_in } this was on line 43 after 'homepage'
     res.render('homepage', { logged_in: req.session.logged_in });
   } catch (err) {
-    res.render('404');
+    res.render('404', { logged_in: req.session.logged_in });
   }
 });
 
