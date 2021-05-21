@@ -23,10 +23,24 @@
         </div>
 
         <div class="btn-color">
-            <a onclick="M.toast({html: 'Traded!', classes: 'rounded red'})" class="waves-effect waves-light btn-large" id="tradeBtn">Trade</a>
+            <a onclick="M.toast({html: 'Traded!', classes: 'rounded red'})" class="waves-effect waves-light btn-large"
+                id="tradeBtn">Trade</a>
+        </div>
+
+        <div class="pop-up">
+            <div class="content">
+                <div class="container">
+                    {{> chat}}
+                </div>
+            </div>
         </div>
 
         <div class="t-white l-flex-child l-grid-half">
+
+            <div class="chat-button">
+                <button class="chat-btn"><span>Let's Chat</span></button>
+            </div>
+
             <h4>The cards from other users</h4>
             <div class="card-item">
                 <ul class="collapsible">
@@ -41,7 +55,6 @@
                                 {{#each otherCards as |otherCard|}}
                                 <li data-user="{{otherCard.user_id}}" data-id="{{otherCard.id}}" class="other-card">
                                     {{otherCard.card_name}}</li>
-
                                 {{/each}}
                             </ul>
                         </div>
@@ -51,5 +64,7 @@
         </div>
     </div>
 </div>
+
+
 
 <script src="/js/trading.js"></script>

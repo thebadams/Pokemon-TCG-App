@@ -83,70 +83,6 @@ $(document).ready(() => {
   });
 });
 
-// pagination logic
-
-// $(document).ready(() => {
-//   $('#data').after('<div id="nav"></div>');
-//   const rowsShown = 4;
-//   const rowsTotal = $('#data tbody tr').length;
-//   const numPages = rowsTotal / rowsShown;
-//   for (i = 0; i < numPages; i++) {
-//     const pageNum = i + 1;
-//     $('#nav').append(`<a href="#" rel="${i}">${pageNum}</a> `);
-//   }
-//   $('#data tbody tr').hide();
-//   $('#data tbody tr').slice(0, rowsShown).show();
-//   $('#nav a:first').addClass('active');
-//   $('#nav a').bind('click', function () {
-//     $('#nav a').removeClass('active');
-//     $(this).addClass('active');
-//     const currPage = $(this).attr('rel');
-//     const startItem = currPage * rowsShown;
-//     const endItem = startItem + rowsShown;
-//     $('#data tbody tr').css('opacity', '0.0').hide().slice(startItem, endItem)
-//       .css('display', 'table-row')
-//       .animate({ opacity: 1 }, 300);
-//   });
-// });
-
-//pagination logic ----Left and Right Arrows
-// $(document).ready(() => {
-//   let pageItem = $(".pagination li").not(".previous, .next");
-//   let previous = $(".pagination li.previous");
-//   let next = $(".pagination li.next");
-
-
-//   pageItem.click(function () {
-//     pageItem.removeClass("active");
-//     $(this).not(".previous, .next").addClass("active");
-//   });
-
-
-//   next.click(function () {
-//     $("li.active").removeClass("active").next().addClass("active");
-//   });
-
-//   previous.click(function () {
-//     $("li.active").removeClass("active").previous().addClass("active");
-//   });
-
-
-
-// });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Preloader for Pokedex Page
 $(window).on('load', () => {
   $('.progress').delay(250).fadeOut();
@@ -169,4 +105,13 @@ $(document).ready(function() {
   $(document).on("mousemove", function(e) {
     $magic.css({"left": e.pageX - magicWHalf, "top": e.pageY - magicWHalf});
   });
+});
+
+// pop out button
+$('.chat-button').click(function(){
+  $('.pop-up').addClass('open');
+});
+
+$('.pop-up #close').click(function(){
+  $('.pop-up').removeClass('open');
 });

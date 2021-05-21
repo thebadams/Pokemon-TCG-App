@@ -213,11 +213,10 @@ main {
 }
 
 .l-flex-child {
-    padding: 1em;
+    padding: 3em;
     min-height: 100vh;
     align-items: center;
     display: flex;
-    justify-content: center;
     flex-direction: column;
 }
 
@@ -227,7 +226,7 @@ main {
 }
 
 .t-white {
-    background-color: #fff;
+    background-color: var(--yellow);
     color: var(--blue);
 }
 
@@ -237,18 +236,18 @@ main {
 }
 
 .t-purple .card-item {
-    background: #fff;
+    background: var(--yellow);
     color: #000;
 }
 
 #tradeBtn {
     display: inline-block;
-    top: 50%;
+    top: 20%;
     border-radius: 25px;
 }
 
 .btn-color {
-    background-image: linear-gradient(to left, white, white 50%, #21437C 50%, #21437C);
+    background-image: linear-gradient(to left, #F4CB08, #F4CB08 50%, #21437C 50%, #21437C);
 }
 
 /* FONT STYLING  */
@@ -408,7 +407,7 @@ p {
 
 #gameboy {
     position: relative;
-    margin: 100px auto;
+    /* margin: 100px auto; */
     height: 490px;
     width: 650px;
     background: #EEE;
@@ -576,6 +575,8 @@ p {
     -webkit-transform: rotate(45deg);
 }
 
+
+
 /* inside chat */
 
 .chat-container {
@@ -585,7 +586,7 @@ p {
     /* height: 30px; */
     top: 30px;
     left: 35px;
-    background: var(--pastelRed);
+    background: #AE9B32;
     opacity: 0.8;
     border-radius: 5px 5px 5px 5px;
     /* overflow: hidden; */
@@ -619,6 +620,7 @@ p {
 #btn-chat {
     width: 90px;
     top: 10px;
+    border-radius: 5px;
 }
 
 .meta {
@@ -633,4 +635,74 @@ p {
 #trade-icon {
     margin-right: 12px;
     margin-top: -4px;
+}
+
+/* pop out chat function */
+
+/* BUTTON
+========================================== */
+
+/* .chat-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+} */
+
+.chat-btn {
+    position: absolute;
+    bottom: 5%;
+    right: 20px;
+    font-family: "Pokemon GB";
+    background-color: #26A69A;
+    color: white;
+    border-radius: 25px;
+    padding: 15px 25px;
+    text-transform: uppercase;
+    width: 200px;
+    overflow: hidden;
+    outline: 0;
+    visibility: visible;
+    opacity: 1;
+    font-weight: bold;
+    border: none;
+    /* box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.6); */
+}
+
+
+/* span {
+    opacity: 1;
+} */
+
+
+/* POP-UP
+========================================== */
+
+.pop-up {
+    position: absolute;
+    bottom: 8%;
+    left: 20%;
+    visibility: hidden;
+    opacity: 0;
+};
+
+.content {
+    width: 100%;
+    max-width: 900px;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    min-height: 100vh;
+}
+
+#close {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.open {
+    visibility: visible;
+    opacity: 1;
 }

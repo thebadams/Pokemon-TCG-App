@@ -11,34 +11,16 @@
                     <input id="msg" type="text" placeholder="Enter Message" required autocomplete="off" />
                 </div>
                 <div class="col 6">
-                    <button id="btn-chat" class="btn waves-effect waves-light" type="submit"
-                        name="action">Submit
-                        </button>
+                    <button id="btn-chat" class="btn waves-effect waves-light" type="submit" name="action">Submit
+                    </button>
                 </div>
             </form>
         </div>
     </div>
-   
+
     {{#if logged_in}}
 
-    <div class="chat-messages" id="user" data-user={{user.username}}>
-       
-        
-        {{!-- <div class="message">
-            <p class="meta">Brad <span>9:12pm</span></p>
-            <p class="text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
-                repudiandae.
-            </p>
-        </div>
-        <div class="message">
-            <p class="meta">Mary <span>9:15pm</span></p>
-            <p class="text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
-                repudiandae.
-            </p>
-        </div> --}}
-    </div>
+    <div class="chat-messages" id="user" data-user={{user.username}}></div>
 
     <div id="screen"></div>
     <div id="dpad"></div>
@@ -46,5 +28,6 @@
     <div id="bt1"></div>
     <div id="bt2"></div>
     <div id="bt3"></div>
+    <div><button class="btn waves-effect waves-light" id="close">close</button></div>
 </div>
 {{/if}}
