@@ -40,6 +40,7 @@ body.home {
     background: #404040;
 }
 
+
 main {
     flex: 1 0 auto;
 }
@@ -302,6 +303,7 @@ p {
     line-height: 36px;
     margin: auto;
     background: white;
+    opacity: 0.7;
     border: 1px solid white;
     box-shadow: 0 1px 0 1px black,
         inset 0 1px 0 1px black,
