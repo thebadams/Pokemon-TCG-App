@@ -2,7 +2,7 @@
 
 # Description
 
-Rutgers Coding Bootcamp Project. Using the MVC method.
+Rutgers Coding Bootcamp Project, using the MVC method.
 
 # Table of Contents
   * [Installation](#Installation)
