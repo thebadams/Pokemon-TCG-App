@@ -30,7 +30,20 @@ const withAuth = require('../utils/auth');
 // });
 
 router.get('/', async (req, res) => {
-  res.render('homepage', { logged_in: req.session.logged_in });
+  try {
+    const userData = await User.findOne({
+      where: {
+        id: req.session.user_id,
+      }
+    });
+    const user = userData.get({ plain: true });
+
+// Uncomment and pass user thru serialized data
+    res.render('homepage', { user, logged_in: req.session.logged_in });
+  } catch (err) {
+    res.render('404');
+  }
+ 
 });
 
 // router.get('/battle', async (req, res) => {
