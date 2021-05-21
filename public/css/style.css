@@ -639,42 +639,38 @@ p {
 
 /* pop out chat function */
 
-/* BUTTON
-========================================== */
-
-/* .chat-button {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-} */
-
 .chat-btn {
+    flex: 1 1 auto;
     position: absolute;
     bottom: 5%;
     right: 20px;
-    font-family: "Pokemon GB";
-    background-color: #26A69A;
-    color: white;
-    border-radius: 25px;
-    padding: 15px 25px;
+    height: 10%;
+    width: 10%;
     text-transform: uppercase;
-    width: 200px;
     overflow: hidden;
     outline: 0;
     visibility: visible;
     opacity: 1;
     font-weight: bold;
     border: none;
-    /* box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.6); */
+    margin: 10px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 20px orangered;
+    border-radius: 10px;
 }
 
 
-/* span {
-    opacity: 1;
-} */
+.chat-btn:hover {
+    background-position: right center; /* change the direction of the change here */
+}
 
+.btnC-2 {
+    background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+}
 
 /* POP-UP
 ========================================== */
@@ -685,7 +681,9 @@ p {
     left: 20%;
     visibility: hidden;
     opacity: 0;
-};
+}
+
+;
 
 .content {
     width: 100%;
@@ -705,4 +703,39 @@ p {
 .open {
     visibility: visible;
     opacity: 1;
+}
+
+/* poke search bar */
+#poke-search {
+    width: 60%;
+}
+
+#toggleImg {
+    right: 5%;
+}
+
+
+/* custom button */
+
+.btnM {
+    flex: 1 1 auto;
+    height: 9%;
+    margin: 10px;
+    padding: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: var(--red);
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 20px orangered;
+    border-radius: 10px;
+}
+
+.btnM:hover {
+    background-position: right center; /* change the direction of the change here */
+}
+
+.btnM-2 {
+    background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
 }
