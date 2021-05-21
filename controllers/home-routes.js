@@ -31,15 +31,16 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    const userData = await User.findOne({
-      where: {
-        id: req.session.user_id,
-      }
-    });
-    const user = userData.get({ plain: true });
+    // const userData = await User.findOne({
+    //   where: {
+    //     id: req.session.user_id,
+    //   }
+    // });
+    // const user = userData.get({ plain: true });
 
 // Uncomment and pass user thru serialized data
-    res.render('homepage', { user, logged_in: req.session.logged_in });
+// { user, logged_in: req.session.logged_in } this was on line 43 after 'homepage'
+    res.render('homepage');
   } catch (err) {
     res.render('404');
   }

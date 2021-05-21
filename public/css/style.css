@@ -720,8 +720,9 @@ p {
 .btnM {
     flex: 1 1 auto;
     height: 9%;
-    margin: 10px;
-    padding: 30px;
+    /* margin: 10px; */
+    /* padding: 30px; */
+    font-family: "Pokemon GB";
     text-align: center;
     text-transform: uppercase;
     transition: 0.5s;
