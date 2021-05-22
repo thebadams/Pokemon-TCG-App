@@ -117,7 +117,7 @@ router.get('/profile', withAuth, async (req, res) => {
     });
 
     const decks = deckData.map((card) => card.get({ plain: true }));
-    console.log(decks);
+    // console.log(decks);
 
     const cards = results.map((card) => card.get({ plain: true }));
     //  console.log(cards);
@@ -170,10 +170,15 @@ router.get('/trading', async (req, res) => {
         where: {
           user_id: req.session.user_id,
         },
+        include: {
+          model: User,
+          attributes: ["username"],
+        }
 
       });
       const userCards = userCardData.map((card) => card.get({ plain: true }));
-      console.log(userCards);
+      console.log(userCards)
+      console.log(userCards[0].user.username);
 
       const otherCardData = await Card.findAll({
         where: {
@@ -184,7 +189,7 @@ router.get('/trading', async (req, res) => {
       });
 
       const otherCards = otherCardData.map((card) => card.get({ plain: true }));
-      console.log(otherCards);
+      // console.log(otherCards);
       res.render('trading', { logged_in: req.session.logged_in, userCards, otherCards });
     } catch (error) {
       res.render('404', { logged_in: req.session.logged_in });
