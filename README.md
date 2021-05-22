@@ -44,6 +44,8 @@ We settled on Pokemon, since we all grew up watching and loving the franchise. T
 
 The Pokemon data was referenced from the [Pokémon TCG Developers API](https://pokemontcg.io)
 
+The song played on the homepage was sourced from [Here](https://www.youtube.com/watch?v=b41z11kCZng). Clifford Morin recorded an electric wind instrument track over the original
+
 # License
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://github.com/thebadams/Pokemon-TCG-App/blob/development-trunk/LICENSE)
