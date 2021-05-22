@@ -16,6 +16,8 @@ https://www.color-hex.com/color-palette/1045 */
     --pastelRed: #D34836;
     --pastelYellow: #FFA001;
     --darkGrey: #3B3B3B;
+    --color1: rgb(0, 231, 255);
+    --color2: rgb(255, 0, 231);
 }
 
 html,
@@ -70,6 +72,10 @@ h1, h2 {
         0 5px 10px rgba(0, 0, 0, .2),
         0 10px 10px rgba(0, 0, 0, .2),
         0 20px 20px rgba(0, 0, 0, .3);
+}
+
+h3 {
+    color: white;
 }
 
 #headerTitle {
@@ -415,7 +421,6 @@ p {
 .cards-container {
     filter: drop-shadow(25px 25px 10px grey);
 }
-
 
 /* hover reveal background image */
 
@@ -780,4 +785,3 @@ p {
 #oak {
     margin-top: 50px;
 }
-
