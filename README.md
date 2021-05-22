@@ -8,7 +8,7 @@ Rutgers Coding Bootcamp Project, using the MVC method.
   * [Installation](#Installation)
   * [Concept](#Concept)
   * [License](#License)
-  * [Screenshot](#Screenshot)
+  * [Screen Recording](#Screen-Recording)
   * [Contributions](#Contributions)
   * [Application](#Application)
 
@@ -48,11 +48,11 @@ The Pokemon data was referenced from the [Pokémon TCG Developers API](https://p
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://github.com/thebadams/Pokemon-TCG-App/blob/development-trunk/LICENSE)
 
-# Screenshot
+# Screen Recording
 
 Example of how deployed application should run:
 
-![ScreenshotRecording](INSERT SCREEN RECORDING HERE)
+![ScreenshotRecording](./public/images/screenCapture/screenRecordPokemonApp.gif)
 
 # Contributions
 

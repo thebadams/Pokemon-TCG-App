@@ -115,3 +115,18 @@ $('.chat-button').click(function(){
 $('.pop-up #close').click(function(){
   $('.pop-up').removeClass('open');
 });
+
+// animated button
+var animateButton = function(e) {
+
+  e.preventDefault;
+  //reset animation
+  e.target.classList.remove('animate');
+  
+  e.target.classList.add('animate');
+  setTimeout(function(){
+    e.target.classList.remove('animate');
+  },700);
+};
+
+

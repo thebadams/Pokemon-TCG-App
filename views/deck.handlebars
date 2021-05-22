@@ -1,4 +1,55 @@
- <div class="carousel">
+{{! Slide out nav bar for decks }}
+
+
+{{#if logged_in}}
+
+
+<ul id="slide-out" class="sidenav">
+  <li>
+    <div class="user-view">
+      <div class="background profile-bg">
+        <img src="/images/profile.png" />
+      </div>
+      <a href="#name"><span class="white-text name">{{decks.user.[0].username}}</span></a>
+      <a href="#email"><span
+          class="white-text email"
+        >{{decks.user.[0].email}}</span></a>
+    </div>
+  </li>
+  <li class="showD"><a class="waves-effect blue btn" id="water" href="#!"  data-number="{{decks.[0].id}}" data-cardimage="{{decks.[0].card.card_image}}"
+  data-text="{{card.description}}" data-card="{{card.card_name}}" data-name="{{decks.[0].deck_name}}" data-user="{{card.user_id}}"
+  ><span
+        class="iconify pokeball"
+        data-icon="mdi:pokemon-go"
+        data-inline="false"
+
+      ></span>Water Deck</a></li>
+  <li class="showD"><a class="waves-effect red btn" href="#!" data-number="{{decks.[1].id}}" ><span
+        class="iconify pokeball"
+        data-icon="mdi:pokemon-go"
+        data-inline="false"
+      ></span>Fire Deck</a></li>
+  <li class="showD"><a class="waves-effect yellow btn" href="#!" data-number="{{decks.[2].id}}"><span
+        class="iconify pokeball"
+        data-icon="mdi:pokemon-go"
+        data-inline="false"
+      ></span>Electric Deck</a></li>
+  <li class="showD"><a class="waves-effect green btn" href="#!" data-number="{{decks.[3].id}}"><span
+        class="iconify pokeball"
+        data-icon="mdi:pokemon-go"
+        data-inline="false"
+      ></span>Grass Deck</a></li>
+</ul>
+<a
+  href="/profile/{{deck.id}}"
+  data-target="slide-out"
+  class="sidenav-trigger btn waves-effect waves-light"
+>My Decks</a>
+
+{{/if}} 
+ 
+
+ <div class="carousel" style="margin-top: 2rem;">
 
 {{> deck-details}}
 
