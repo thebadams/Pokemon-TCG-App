@@ -23,17 +23,17 @@ https://www.color-hex.com/color-palette/1045 */
 /* POKEMON FONT */
 @font-face {
   font-family: "Pokemon";
-  src: url('/fonts/pokemon/pokemon_solid-webfont.woff') format('woff'),
-  url('/fonts/pokemon/pokemon_solid-webfont.woff2') format('woff2')
+  src: url('./fonts/pokemon/pokemon_solid-webfont.woff') format('woff'),
+  url('./fonts/pokemon/pokemon_solid-webfont.woff2') format('woff2')
   ;
 }
 
 @font-face {
     font-family: "Pokemon GB";
-    src: url('/fonts/pokemonGB/Pokemon_GB.eot') format('embedded-opentype'),
-         url('/fonts/pokemonGB/Pokemon_GB.woff') format('woff'),
-         url('/fonts/pokemonGB/Pokemon_GB.ttf') format('truetype'),
-         url('/fonts/pokemonGB/Pokemon_GB.svg') format('svg');
+    src: url('./fonts/pokemonGB/Pokemon_GB.eot') format('embedded-opentype'),
+         url('./fonts/pokemonGB/Pokemon_GB.woff') format('woff'),
+         url('./fonts/pokemonGB/Pokemon_GB.ttf') format('truetype'),
+         url('./fonts/pokemonGB/Pokemon_GB.svg') format('svg');
   }
 
 html,
