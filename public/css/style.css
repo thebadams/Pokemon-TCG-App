@@ -23,27 +23,18 @@ https://www.color-hex.com/color-palette/1045 */
 /* POKEMON FONT */
 @font-face {
   font-family: "Pokemon GB";
-  src: url("//db.onlinewebfonts.com/t/831e1f4da157d96bc996f8c9f5f1e578.eot");
-  src: url("//db.onlinewebfonts.com/t/831e1f4da157d96bc996f8c9f5f1e578.eot?#iefix")
-      format("embedded-opentype"),
-    url("//db.onlinewebfonts.com/t/831e1f4da157d96bc996f8c9f5f1e578.woff2")
-      format("woff2"),
-    url("//db.onlinewebfonts.com/t/831e1f4da157d96bc996f8c9f5f1e578.woff")
-      format("woff"),
-    url("//db.onlinewebfonts.com/t/831e1f4da157d96bc996f8c9f5f1e578.ttf")
-      format("truetype"),
-    url("//db.onlinewebfonts.com/t/831e1f4da157d96bc996f8c9f5f1e578.svg#Pokemon GB")
-      format("svg");
+  src: url('/fonts/pokemon/pokemon_solid-webfont.woff') format('woff'),
+  url('/fonts/pokemon/pokemon_solid-webfont.woff2') format('woff2')
+  ;
 }
 
-@font-face {font-family: "Pokemon";
-    src: url("http://db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.eot"); /* IE9*/
-    src: url("http://db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-    url("http://db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.woff2") format("woff2"), /* chrome firefox */
-    url("http://db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.woff") format("woff"), /* chrome firefox */
-    url("http://db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
-    url("http://db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.svg#Pokemon") format("svg"); /* iOS 4.1- */
-}
+@font-face {
+    font-family: "Pokemon GB";
+    src: url('/fonts/pokemonGB/Pokemon_GB.eot') format('embedded-opentype'),
+         url('/fonts/pokemonGB/Pokemon_GB.woff') format('woff'),
+         url('/fonts/pokemonGB/Pokemon_GB.ttf') format('truetype'),
+         url('/fonts/pokemonGB/Pokemon_GB.svg') format('svg');
+  }
 
 html,
 body {
