@@ -28,13 +28,13 @@ https://www.color-hex.com/color-palette/1045 */
   ;
 }
 
-@font-face {
+/* @font-face {
     font-family: "Pokemon GB";
     src: url('/fonts/pokemonGB/Pokemon_GB.eot') format('embedded-opentype'),
          url('/fonts/pokemonGB/Pokemon_GB.woff') format('woff'),
          url('/fonts/pokemonGB/Pokemon_GB.ttf') format('truetype'),
          url('/fonts/pokemonGB/Pokemon_GB.svg') format('svg');
-  }
+  } */
 
 html,
 body {
