@@ -68,4 +68,4 @@ Jasper Abarquez  | Frontend | [![Jasper](https://img.shields.io/badge/GitHub-Jas
 
 # Application
 
-[Click Here]( INSERT APPLICATION LINK ) , for the deployed application.
+[Click Here](https://pokemon-deck-builder.herokuapp.com/) , for the deployed application.
