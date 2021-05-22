@@ -10,13 +10,13 @@
       <div class="background profile-bg">
         <img src="/images/profile.png" />
       </div>
-      <a href="#name"><span class="white-text name">{{cards.[0].user.username}}</span></a>
+      <a href="#name"><span class="white-text name">{{decks.user.[0].username}}</span></a>
       <a href="#email"><span
           class="white-text email"
-        >{{cards.[0].user.email}}</span></a>
+        >{{decks.user.[0].email}}</span></a>
     </div>
   </li>
-  <li class="showD"><a class="waves-effect blue btn" id="water" href="#!"  data-number="{{decks.[0].id}}" data-cardimage="{{card.card_image}}"
+  <li class="showD"><a class="waves-effect blue btn" id="water" href="#!"  data-number="{{decks.[0].id}}" data-cardimage="{{decks.[0].card.card_image}}"
   data-text="{{card.description}}" data-card="{{card.card_name}}" data-name="{{decks.[0].deck_name}}" data-user="{{card.user_id}}"
   ><span
         class="iconify pokeball"
@@ -48,9 +48,7 @@
 
 {{/if}} 
  
- 
- 
- 
+
  <div class="carousel" style="margin-top: 2rem;">
 
 {{> deck-details}}

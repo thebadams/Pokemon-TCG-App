@@ -92,10 +92,10 @@ router.get('/profile', withAuth, async (req, res) => {
         {
           model: User,
           attributes: ['username', 'email'],
-          include: {
-            model: Deck,
-            attributes: ['deck_name', 'user_id'],
-          },
+          // include: {
+          //   model: Deck,
+          //   attributes: ['deck_name', 'user_id'],
+          // },
         },
         {
           model: Deck,
@@ -103,26 +103,20 @@ router.get('/profile', withAuth, async (req, res) => {
         },
       ],
     });
-
-    // const deckData = await Deck.findAll({
-    //   where: {
-    //     id: req.params.user_id,
-    //   },
-    //   attributes: ["id"]
-    // });
+    const usernameData = await User.findByPk(req.session.user_id);
+    const user = usernameData.get({ plain: true });
+    
     const deckData = await Deck.findAll({
-      // where: {
-      //   user_id: req.session.user_id,
-      // }
+      where: {
+        user_id: req.session.user_id,
+      }
     });
 
     const decks = deckData.map((card) => card.get({ plain: true }));
-    // console.log(decks);
 
     const cards = results.map((card) => card.get({ plain: true }));
-    //  console.log(cards);
 
-    res.render('profile', { logged_in: req.session.logged_in, cards, decks });
+    res.render('profile', { logged_in: req.session.logged_in, cards, decks, user });
   } catch (err) {
     res.status(500).render('404', { logged_in: req.session.logged_in });
   }
@@ -130,29 +124,54 @@ router.get('/profile', withAuth, async (req, res) => {
 
 router.get('/profile/:id', async (req, res) => {
   try {
-    const deckData = await Deck.findOne({
-      where: {
-        id: req.params.id,
-      },
-      attributes: ['id', 'deck_name', 'user_id'],
-      include: [
-        {
-          model: Card,
-          attributes: ['id', 'card_name', 'description', 'card_image', 'deck_id', 'user_id'],
-          include: {
-            model: User,
-            attributes: ['username'],
-          },
-        },
-      ],
-    });
-    const decks = deckData.get({ plain: true });
+    // const deckData = await Deck.findOne({
+    //   where: {
+    //     id: req.params.id,
+    //   },
+    //   attributes: ['id', 'deck_name', 'user_id'],
+    //   include: [
+    //     {
+    //       model: Card,
+    //       attributes: ['id', 'card_name', 'description', 'card_image', 'deck_id', 'user_id'],
+    //       include: {
+    //         model: User,
+    //         attributes: ['username'],
+    //       },
+    //     },
+    //   ],
+    // });
+    // const decks = deckData.get({ plain: true });
     // console.log(decks);
-    // // console.log(decks.deck_name);
-    // res.status(200).json(decks);
 
+    const deckData = await Deck.findAll({
+      where: {
+        user_id: req.session.user_id,
+      },
+      include: [
+            {
+              model: Card,
+              attributes: ['id', 'card_name', 'description', 'card_image', 'deck_id', 'user_id'],
+            },
+           {
+              model: User,
+              attributes: ['username', 'email'],
+            },
+          ],
+    });
+    const decks = deckData.map((deck) => deck.get({ plain: true }));
+    // console.log(decks[0].cards);
+
+    const cardData = await Card.findAll({
+      where: {
+        deck_id: req.params.id,
+      },
+    });
+
+    const cards = cardData.map((card) => card.get({ plain: true }));
+console.log(cards);
     res.status(200).render('deck', {
       decks,
+      cards,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -177,8 +196,7 @@ router.get('/trading', async (req, res) => {
 
       });
       const userCards = userCardData.map((card) => card.get({ plain: true }));
-      console.log(userCards)
-      console.log(userCards[0].user.username);
+   
 
       const otherCardData = await Card.findAll({
         where: {

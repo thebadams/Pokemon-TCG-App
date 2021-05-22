@@ -4,7 +4,7 @@ const socket = io();
 const chatForm = document.querySelector('#chat-form');
 // const leaveBtn = document.querySelector('.btn');
 const chatMessages = document.querySelector('.chat-messages');
-let user = document.querySelector('#user').dataset.user;
+const user = document.querySelector('#user').dataset.user;
 
 
 
