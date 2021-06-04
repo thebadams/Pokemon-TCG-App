@@ -7,6 +7,7 @@ const helpers = require('./utils/helpers');
 const formatMessage = require('./utils/messages');
 const { userJoin, getCurrentUser } = require('./utils/users');
 const pokemonBot = "Pokemon Bot ";
+const compression = require('compression');
 
 //requirements to set up sockets.io
 const http = require('http');
@@ -67,6 +68,7 @@ const sess = {
 };
 
 app.use(session(sess));
+app.use(compression());
 
 // Inform Express.js on which template engine to use
 app.engine('handlebars', hbs.engine);
